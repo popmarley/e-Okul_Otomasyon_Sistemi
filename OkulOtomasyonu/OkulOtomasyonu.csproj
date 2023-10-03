@@ -173,7 +173,11 @@
     <Compile Include="Entity\CourseEnrollment.cs" />
     <Compile Include="Entity\Exam.cs" />
     <Compile Include="Entity\ExamResult.cs" />
+    <Compile Include="Entity\Manager.cs" />
+    <Compile Include="Entity\Parent.cs" />
+    <Compile Include="Entity\Room.cs" />
     <Compile Include="Entity\Student.cs" />
+    <Compile Include="Entity\Teacher.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Entity\UserType.cs" />
     <Compile Include="Giris.cs">

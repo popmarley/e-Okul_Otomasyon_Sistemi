@@ -17,6 +17,10 @@ namespace OkulOtomasyonu.Context
 		public DbSet<Student> Students { get; set; }
 		public DbSet<User> Users { get; set; }
 		public DbSet<UserType> UserTypes { get; set; }
+		public DbSet<Parent> Parents { get; set; }
+		public DbSet<Manager> Managers { get; set; }
+		public DbSet<Teacher> Teachers { get; set; }
+		public DbSet<Room> Rooms { get; set; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
