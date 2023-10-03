@@ -28,8 +28,8 @@ namespace OkulOtomasyonu
 				if (userInDb != null)
 				{
 
-					KayitOl kayitOlForm = new KayitOl();
-					kayitOlForm.Show();
+					AnaMenu anaMenuForm = new AnaMenu();
+					anaMenuForm.Show();
 					this.Hide();
 				}
 				else
@@ -37,6 +37,13 @@ namespace OkulOtomasyonu
 					MessageBox.Show("Hatalı kullanıcı adı veya şifre!");
 				}
 			}
+		}
+
+		private void lbl_KayitOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			KayitOl kayitOlForm = new KayitOl();
+			kayitOlForm.Show();
+			this.Hide();
 		}
 	}
 }

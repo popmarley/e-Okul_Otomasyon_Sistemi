@@ -31,6 +31,10 @@
 			this.txt_UserName = new System.Windows.Forms.TextBox();
 			this.txt_Password = new System.Windows.Forms.TextBox();
 			this.btn_Giris = new System.Windows.Forms.Button();
+			this.lbl_KayitOl = new System.Windows.Forms.LinkLabel();
+			this.lbl_SifremiUnuttum = new System.Windows.Forms.LinkLabel();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// txt_UserName
@@ -53,15 +57,58 @@
 			this.btn_Giris.Name = "btn_Giris";
 			this.btn_Giris.Size = new System.Drawing.Size(75, 23);
 			this.btn_Giris.TabIndex = 2;
-			this.btn_Giris.Text = "button1";
+			this.btn_Giris.Text = "Giriş";
 			this.btn_Giris.UseVisualStyleBackColor = true;
 			this.btn_Giris.Click += new System.EventHandler(this.btn_Giris_Click);
+			// 
+			// lbl_KayitOl
+			// 
+			this.lbl_KayitOl.AutoSize = true;
+			this.lbl_KayitOl.Location = new System.Drawing.Point(245, 369);
+			this.lbl_KayitOl.Name = "lbl_KayitOl";
+			this.lbl_KayitOl.Size = new System.Drawing.Size(52, 16);
+			this.lbl_KayitOl.TabIndex = 3;
+			this.lbl_KayitOl.TabStop = true;
+			this.lbl_KayitOl.Text = "Kayıt Ol";
+			this.lbl_KayitOl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_KayitOl_LinkClicked);
+			// 
+			// lbl_SifremiUnuttum
+			// 
+			this.lbl_SifremiUnuttum.AutoSize = true;
+			this.lbl_SifremiUnuttum.Location = new System.Drawing.Point(413, 369);
+			this.lbl_SifremiUnuttum.Name = "lbl_SifremiUnuttum";
+			this.lbl_SifremiUnuttum.Size = new System.Drawing.Size(99, 16);
+			this.lbl_SifremiUnuttum.TabIndex = 4;
+			this.lbl_SifremiUnuttum.TabStop = true;
+			this.lbl_SifremiUnuttum.Text = "Şifremi Unuttum";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(200, 118);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(82, 16);
+			this.label1.TabIndex = 5;
+			this.label1.Text = "Kullanıcı Adı:";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(245, 218);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(37, 16);
+			this.label2.TabIndex = 5;
+			this.label2.Text = "Şifre:";
 			// 
 			// Giris
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lbl_SifremiUnuttum);
+			this.Controls.Add(this.lbl_KayitOl);
 			this.Controls.Add(this.btn_Giris);
 			this.Controls.Add(this.txt_Password);
 			this.Controls.Add(this.txt_UserName);
@@ -77,6 +124,10 @@
 		private System.Windows.Forms.TextBox txt_UserName;
 		private System.Windows.Forms.TextBox txt_Password;
 		private System.Windows.Forms.Button btn_Giris;
+		private System.Windows.Forms.LinkLabel lbl_KayitOl;
+		private System.Windows.Forms.LinkLabel lbl_SifremiUnuttum;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
 	}
 }
 

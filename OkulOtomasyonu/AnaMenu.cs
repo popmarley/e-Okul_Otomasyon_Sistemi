@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace OkulOtomasyonu
 {
-	public partial class KayitOl : Form
+	public partial class AnaMenu : Form
 	{
-		public KayitOl()
+		public AnaMenu()
 		{
 			InitializeComponent();
 		}
 
-		private void btn_Geri_Click(object sender, EventArgs e)
+		private void btn_Cikis_Click(object sender, EventArgs e)
 		{
 			Giris girisForm = new Giris();
 			girisForm.Show();

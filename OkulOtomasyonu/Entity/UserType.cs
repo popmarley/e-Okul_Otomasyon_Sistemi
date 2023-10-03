@@ -9,7 +9,7 @@ namespace OkulOtomasyonu.Entity
 		public int UserTypeID { get; set; }
 		public string Name { get; set; }
 
-		// User sınıfıyla ilişkilendirme (opsiyonel)
+		
 		public virtual ICollection<User> Users { get; set; } = new List<User>();
 	}
 }
