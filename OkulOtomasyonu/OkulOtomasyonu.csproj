@@ -169,6 +169,7 @@
       <DependentUpon>AnaMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Context\MyDbContext.cs" />
+    <Compile Include="DbScript\DbScript.cs" />
     <Compile Include="Entity\Ders.cs" />
     <Compile Include="Entity\Kullanici.cs" />
     <Compile Include="Entity\KullaniciTipi.cs" />
