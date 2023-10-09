@@ -22,8 +22,8 @@ namespace OkulOtomasyonu
 		{
 			using (var context = new MyDbContext())
 			{
-				var userInDb = context.Users
-									  .FirstOrDefault(u => u.Username == txt_UserName.Text && u.Password == txt_Password.Text);
+				var userInDb = context.Kullanicilar
+									  .FirstOrDefault(u => u.KullaniciAdi == txt_UserName.Text && u.Sifre == txt_Password.Text);
 
 				if (userInDb != null)
 				{

@@ -2,29 +2,35 @@
 using OkulOtomasyonu.Entity;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace OkulOtomasyonu.Context
 {
-	public class MyDbContext:DbContext
+	public class MyDbContext : DbContext
 	{
-		public DbSet<CourseEnrollment> CourseEnrollments { get; set; }
-		public DbSet<Course> Courses { get; set; }
-		public DbSet<Exam> Exams { get; set; }
-		public DbSet<ExamResult> ExamResults { get; set; }
-		public DbSet<Student> Students { get; set; }
-		public DbSet<User> Users { get; set; }
-		public DbSet<UserType> UserTypes { get; set; }
-		public DbSet<Parent> Parents { get; set; }
-		public DbSet<Manager> Managers { get; set; }
-		public DbSet<Teacher> Teachers { get; set; }
-		public DbSet<Room> Rooms { get; set; }
+		public DbSet<KullaniciTipi> KullaniciTipleri { get; set; }
+		public DbSet<Kullanici> Kullanicilar { get; set; }
+		public DbSet<Sinif> Siniflar { get; set; }
+		public DbSet<Ders> Dersler { get; set; }
+		public DbSet<Sinav> Sinavlar { get; set; }
+		public DbSet<Ogrenci> Ogrenciler { get; set; }
+		public DbSet<Veli> Veliler { get; set; }
+		public DbSet<Ogretmen> Ogretmenler { get; set; }
+		public DbSet<Mudur> Mudurler { get; set; }
+		public DbSet<SinavSonucu> SinavSonuclari { get; set; }
+
+
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("Data Source=OZGUVEN;Initial Catalog=TechCareerEgitimOtomasyon;Integrated Security=True");
+			optionsBuilder.UseSqlServer(@"Data Source=OZGUVEN;Initial Catalog=EgitimOtomasyonu;Integrated Security=True");
 		}
+
+		
 	}
 }

@@ -169,17 +169,16 @@
       <DependentUpon>AnaMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Context\MyDbContext.cs" />
-    <Compile Include="Entity\Course.cs" />
-    <Compile Include="Entity\CourseEnrollment.cs" />
-    <Compile Include="Entity\Exam.cs" />
-    <Compile Include="Entity\ExamResult.cs" />
-    <Compile Include="Entity\Manager.cs" />
-    <Compile Include="Entity\Parent.cs" />
-    <Compile Include="Entity\Room.cs" />
-    <Compile Include="Entity\Student.cs" />
-    <Compile Include="Entity\Teacher.cs" />
-    <Compile Include="Entity\User.cs" />
-    <Compile Include="Entity\UserType.cs" />
+    <Compile Include="Entity\Ders.cs" />
+    <Compile Include="Entity\Kullanici.cs" />
+    <Compile Include="Entity\KullaniciTipi.cs" />
+    <Compile Include="Entity\Mudur.cs" />
+    <Compile Include="Entity\Ogrenci.cs" />
+    <Compile Include="Entity\Ogretmen.cs" />
+    <Compile Include="Entity\Sinav.cs" />
+    <Compile Include="Entity\SinavSonucu.cs" />
+    <Compile Include="Entity\Sinif.cs" />
+    <Compile Include="Entity\Veli.cs" />
     <Compile Include="Giris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +191,15 @@
     <Compile Include="KayitOl.Designer.cs">
       <DependentUpon>KayitOl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20231009170959_1.cs" />
+    <Compile Include="Migrations\20231009170959_1.designer.cs">
+      <DependentUpon>20231009170959_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20231009171203_2.cs" />
+    <Compile Include="Migrations\20231009171203_2.designer.cs">
+      <DependentUpon>20231009171203_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\MyDbContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AnaMenu.resx">
