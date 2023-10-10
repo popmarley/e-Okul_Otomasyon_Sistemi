@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OkulOtomasyonu.Entity
@@ -11,6 +12,9 @@ namespace OkulOtomasyonu.Entity
 		public int KullaniciID { get; set; }
 		public string Ad { get; set; }
 		public string Soyad { get; set; }
+		public int TCNo { get; set; }
+		public DateTime DogumTarihi { get; set; }
+
 
 		public Kullanici Kullanici { get; set; }
 	}

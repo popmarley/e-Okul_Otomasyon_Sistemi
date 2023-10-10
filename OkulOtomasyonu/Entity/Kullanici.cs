@@ -11,6 +11,8 @@ namespace OkulOtomasyonu.Entity
 		public int TipID { get; set; }
 		public string KullaniciAdi { get; set; }
 		public string Sifre { get; set; }
+		public string Eposta { get; set; }
+		public int Telefon { get; set; }
 
 		public KullaniciTipi KullaniciTipi { get; set; }
 	}

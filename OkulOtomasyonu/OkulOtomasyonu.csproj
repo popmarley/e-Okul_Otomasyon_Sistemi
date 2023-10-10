@@ -200,6 +200,10 @@
     <Compile Include="Migrations\20231009171203_2.designer.cs">
       <DependentUpon>20231009171203_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20231010204755_3.cs" />
+    <Compile Include="Migrations\20231010204755_3.designer.cs">
+      <DependentUpon>20231010204755_3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MyDbContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

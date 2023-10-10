@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -16,6 +17,10 @@ namespace OkulOtomasyonu.Entity
 		public int VeliID { get; set; }
 		public string Ad { get; set; }
 		public string Soyad { get; set; }
+		public string Adres { get; set; }
+		public int OgrenciNo { get; set; }
+		public int TCNo { get; set; }
+		public DateTime DogumTarihi { get; set; }
 
 		public Kullanici Kullanici { get; set; }
 		public Sinif Sinif { get; set; }

@@ -23,5 +23,7 @@ namespace OkulOtomasyonu
 			girisForm.Show();
 			this.Hide();
 		}
+
+		
 	}
 }
