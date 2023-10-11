@@ -39,11 +39,11 @@
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.radioButton1 = new System.Windows.Forms.RadioButton();
-			this.radioButton2 = new System.Windows.Forms.RadioButton();
-			this.radioButton3 = new System.Windows.Forms.RadioButton();
+			this.btnTurOgrenci = new System.Windows.Forms.RadioButton();
+			this.btnTurOgretmen = new System.Windows.Forms.RadioButton();
+			this.btnTurMudur = new System.Windows.Forms.RadioButton();
 			this.label6 = new System.Windows.Forms.Label();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.gboxOgrenci = new System.Windows.Forms.GroupBox();
 			this.textBox13 = new System.Windows.Forms.TextBox();
 			this.textBox12 = new System.Windows.Forms.TextBox();
 			this.textBox11 = new System.Windows.Forms.TextBox();
@@ -65,7 +65,7 @@
 			this.label9 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.gboxOgretmen = new System.Windows.Forms.GroupBox();
 			this.textBox19 = new System.Windows.Forms.TextBox();
 			this.label18 = new System.Windows.Forms.Label();
 			this.label19 = new System.Windows.Forms.Label();
@@ -74,18 +74,18 @@
 			this.textBox16 = new System.Windows.Forms.TextBox();
 			this.textBox17 = new System.Windows.Forms.TextBox();
 			this.textBox18 = new System.Windows.Forms.TextBox();
-			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.gboxMudur = new System.Windows.Forms.GroupBox();
+			this.textBox23 = new System.Windows.Forms.TextBox();
+			this.label25 = new System.Windows.Forms.Label();
 			this.textBox20 = new System.Windows.Forms.TextBox();
+			this.label24 = new System.Windows.Forms.Label();
 			this.textBox21 = new System.Windows.Forms.TextBox();
+			this.label23 = new System.Windows.Forms.Label();
 			this.textBox22 = new System.Windows.Forms.TextBox();
 			this.label22 = new System.Windows.Forms.Label();
-			this.label23 = new System.Windows.Forms.Label();
-			this.label24 = new System.Windows.Forms.Label();
-			this.label25 = new System.Windows.Forms.Label();
-			this.textBox23 = new System.Windows.Forms.TextBox();
-			this.groupBox1.SuspendLayout();
-			this.groupBox2.SuspendLayout();
-			this.groupBox3.SuspendLayout();
+			this.gboxOgrenci.SuspendLayout();
+			this.gboxOgretmen.SuspendLayout();
+			this.gboxMudur.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// btn_Geri
@@ -185,77 +185,77 @@
 			this.textBox5.Size = new System.Drawing.Size(100, 22);
 			this.textBox5.TabIndex = 2;
 			// 
-			// radioButton1
+			// btnTurOgrenci
 			// 
-			this.radioButton1.AutoSize = true;
-			this.radioButton1.Location = new System.Drawing.Point(105, 291);
-			this.radioButton1.Name = "radioButton1";
-			this.radioButton1.Size = new System.Drawing.Size(75, 20);
-			this.radioButton1.TabIndex = 3;
-			this.radioButton1.TabStop = true;
-			this.radioButton1.Text = "Öğrenci";
-			this.radioButton1.UseVisualStyleBackColor = true;
+			this.btnTurOgrenci.AutoSize = true;
+			this.btnTurOgrenci.Location = new System.Drawing.Point(105, 291);
+			this.btnTurOgrenci.Name = "btnTurOgrenci";
+			this.btnTurOgrenci.Size = new System.Drawing.Size(75, 20);
+			this.btnTurOgrenci.TabIndex = 3;
+			this.btnTurOgrenci.TabStop = true;
+			this.btnTurOgrenci.Text = "Öğrenci";
+			this.btnTurOgrenci.UseVisualStyleBackColor = true;
 			// 
-			// radioButton2
+			// btnTurOgretmen
 			// 
-			this.radioButton2.AutoSize = true;
-			this.radioButton2.Location = new System.Drawing.Point(105, 317);
-			this.radioButton2.Name = "radioButton2";
-			this.radioButton2.Size = new System.Drawing.Size(87, 20);
-			this.radioButton2.TabIndex = 3;
-			this.radioButton2.TabStop = true;
-			this.radioButton2.Text = "Öğretmen";
-			this.radioButton2.UseVisualStyleBackColor = true;
+			this.btnTurOgretmen.AutoSize = true;
+			this.btnTurOgretmen.Location = new System.Drawing.Point(105, 317);
+			this.btnTurOgretmen.Name = "btnTurOgretmen";
+			this.btnTurOgretmen.Size = new System.Drawing.Size(87, 20);
+			this.btnTurOgretmen.TabIndex = 3;
+			this.btnTurOgretmen.TabStop = true;
+			this.btnTurOgretmen.Text = "Öğretmen";
+			this.btnTurOgretmen.UseVisualStyleBackColor = true;
 			// 
-			// radioButton3
+			// btnTurMudur
 			// 
-			this.radioButton3.AutoSize = true;
-			this.radioButton3.Location = new System.Drawing.Point(105, 343);
-			this.radioButton3.Name = "radioButton3";
-			this.radioButton3.Size = new System.Drawing.Size(65, 20);
-			this.radioButton3.TabIndex = 3;
-			this.radioButton3.TabStop = true;
-			this.radioButton3.Text = "Müdür";
-			this.radioButton3.UseVisualStyleBackColor = true;
+			this.btnTurMudur.AutoSize = true;
+			this.btnTurMudur.Location = new System.Drawing.Point(105, 343);
+			this.btnTurMudur.Name = "btnTurMudur";
+			this.btnTurMudur.Size = new System.Drawing.Size(65, 20);
+			this.btnTurMudur.TabIndex = 3;
+			this.btnTurMudur.TabStop = true;
+			this.btnTurMudur.Text = "Müdür";
+			this.btnTurMudur.UseVisualStyleBackColor = true;
 			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Location = new System.Drawing.Point(29, 317);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(44, 16);
+			this.label6.Size = new System.Drawing.Size(30, 16);
 			this.label6.TabIndex = 1;
-			this.label6.Text = "label1";
+			this.label6.Text = "Tür:";
 			// 
-			// groupBox1
+			// gboxOgrenci
 			// 
-			this.groupBox1.Controls.Add(this.textBox13);
-			this.groupBox1.Controls.Add(this.textBox12);
-			this.groupBox1.Controls.Add(this.textBox11);
-			this.groupBox1.Controls.Add(this.textBox15);
-			this.groupBox1.Controls.Add(this.textBox14);
-			this.groupBox1.Controls.Add(this.textBox10);
-			this.groupBox1.Controls.Add(this.textBox9);
-			this.groupBox1.Controls.Add(this.textBox8);
-			this.groupBox1.Controls.Add(this.textBox7);
-			this.groupBox1.Controls.Add(this.textBox6);
-			this.groupBox1.Controls.Add(this.label14);
-			this.groupBox1.Controls.Add(this.label13);
-			this.groupBox1.Controls.Add(this.label15);
-			this.groupBox1.Controls.Add(this.label17);
-			this.groupBox1.Controls.Add(this.label12);
-			this.groupBox1.Controls.Add(this.label16);
-			this.groupBox1.Controls.Add(this.label11);
-			this.groupBox1.Controls.Add(this.label10);
-			this.groupBox1.Controls.Add(this.label9);
-			this.groupBox1.Controls.Add(this.label8);
-			this.groupBox1.Controls.Add(this.label7);
-			this.groupBox1.Location = new System.Drawing.Point(254, 53);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(270, 454);
-			this.groupBox1.TabIndex = 4;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Öğrenci";
+			this.gboxOgrenci.Controls.Add(this.textBox13);
+			this.gboxOgrenci.Controls.Add(this.textBox12);
+			this.gboxOgrenci.Controls.Add(this.textBox11);
+			this.gboxOgrenci.Controls.Add(this.textBox15);
+			this.gboxOgrenci.Controls.Add(this.textBox14);
+			this.gboxOgrenci.Controls.Add(this.textBox10);
+			this.gboxOgrenci.Controls.Add(this.textBox9);
+			this.gboxOgrenci.Controls.Add(this.textBox8);
+			this.gboxOgrenci.Controls.Add(this.textBox7);
+			this.gboxOgrenci.Controls.Add(this.textBox6);
+			this.gboxOgrenci.Controls.Add(this.label14);
+			this.gboxOgrenci.Controls.Add(this.label13);
+			this.gboxOgrenci.Controls.Add(this.label15);
+			this.gboxOgrenci.Controls.Add(this.label17);
+			this.gboxOgrenci.Controls.Add(this.label12);
+			this.gboxOgrenci.Controls.Add(this.label16);
+			this.gboxOgrenci.Controls.Add(this.label11);
+			this.gboxOgrenci.Controls.Add(this.label10);
+			this.gboxOgrenci.Controls.Add(this.label9);
+			this.gboxOgrenci.Controls.Add(this.label8);
+			this.gboxOgrenci.Controls.Add(this.label7);
+			this.gboxOgrenci.Location = new System.Drawing.Point(254, 53);
+			this.gboxOgrenci.Name = "gboxOgrenci";
+			this.gboxOgrenci.Size = new System.Drawing.Size(270, 454);
+			this.gboxOgrenci.TabIndex = 4;
+			this.gboxOgrenci.TabStop = false;
+			this.gboxOgrenci.Text = "Öğrenci";
 			// 
 			// textBox13
 			// 
@@ -438,22 +438,22 @@
 			this.label7.TabIndex = 1;
 			this.label7.Text = "Adı:";
 			// 
-			// groupBox2
+			// gboxOgretmen
 			// 
-			this.groupBox2.Controls.Add(this.textBox19);
-			this.groupBox2.Controls.Add(this.label18);
-			this.groupBox2.Controls.Add(this.label19);
-			this.groupBox2.Controls.Add(this.label20);
-			this.groupBox2.Controls.Add(this.label21);
-			this.groupBox2.Controls.Add(this.textBox16);
-			this.groupBox2.Controls.Add(this.textBox17);
-			this.groupBox2.Controls.Add(this.textBox18);
-			this.groupBox2.Location = new System.Drawing.Point(567, 56);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(267, 187);
-			this.groupBox2.TabIndex = 4;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Öğretmen";
+			this.gboxOgretmen.Controls.Add(this.textBox19);
+			this.gboxOgretmen.Controls.Add(this.label18);
+			this.gboxOgretmen.Controls.Add(this.label19);
+			this.gboxOgretmen.Controls.Add(this.label20);
+			this.gboxOgretmen.Controls.Add(this.label21);
+			this.gboxOgretmen.Controls.Add(this.textBox16);
+			this.gboxOgretmen.Controls.Add(this.textBox17);
+			this.gboxOgretmen.Controls.Add(this.textBox18);
+			this.gboxOgretmen.Location = new System.Drawing.Point(567, 56);
+			this.gboxOgretmen.Name = "gboxOgretmen";
+			this.gboxOgretmen.Size = new System.Drawing.Size(267, 187);
+			this.gboxOgretmen.TabIndex = 4;
+			this.gboxOgretmen.TabStop = false;
+			this.gboxOgretmen.Text = "Öğretmen";
 			// 
 			// textBox19
 			// 
@@ -523,22 +523,39 @@
 			this.textBox18.Size = new System.Drawing.Size(146, 22);
 			this.textBox18.TabIndex = 2;
 			// 
-			// groupBox3
+			// gboxMudur
 			// 
-			this.groupBox3.Controls.Add(this.textBox23);
-			this.groupBox3.Controls.Add(this.label25);
-			this.groupBox3.Controls.Add(this.textBox20);
-			this.groupBox3.Controls.Add(this.label24);
-			this.groupBox3.Controls.Add(this.textBox21);
-			this.groupBox3.Controls.Add(this.label23);
-			this.groupBox3.Controls.Add(this.textBox22);
-			this.groupBox3.Controls.Add(this.label22);
-			this.groupBox3.Location = new System.Drawing.Point(567, 291);
-			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(267, 180);
-			this.groupBox3.TabIndex = 4;
-			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "Müdür";
+			this.gboxMudur.Controls.Add(this.textBox23);
+			this.gboxMudur.Controls.Add(this.label25);
+			this.gboxMudur.Controls.Add(this.textBox20);
+			this.gboxMudur.Controls.Add(this.label24);
+			this.gboxMudur.Controls.Add(this.textBox21);
+			this.gboxMudur.Controls.Add(this.label23);
+			this.gboxMudur.Controls.Add(this.textBox22);
+			this.gboxMudur.Controls.Add(this.label22);
+			this.gboxMudur.Location = new System.Drawing.Point(567, 291);
+			this.gboxMudur.Name = "gboxMudur";
+			this.gboxMudur.Size = new System.Drawing.Size(267, 180);
+			this.gboxMudur.TabIndex = 4;
+			this.gboxMudur.TabStop = false;
+			this.gboxMudur.Text = "Müdür";
+			// 
+			// textBox23
+			// 
+			this.textBox23.Location = new System.Drawing.Point(106, 138);
+			this.textBox23.MaxLength = 11;
+			this.textBox23.Name = "textBox23";
+			this.textBox23.Size = new System.Drawing.Size(146, 22);
+			this.textBox23.TabIndex = 2;
+			// 
+			// label25
+			// 
+			this.label25.AutoSize = true;
+			this.label25.Location = new System.Drawing.Point(70, 25);
+			this.label25.Name = "label25";
+			this.label25.Size = new System.Drawing.Size(30, 16);
+			this.label25.TabIndex = 1;
+			this.label25.Text = "Adı:";
 			// 
 			// textBox20
 			// 
@@ -548,6 +565,15 @@
 			this.textBox20.Size = new System.Drawing.Size(146, 22);
 			this.textBox20.TabIndex = 2;
 			// 
+			// label24
+			// 
+			this.label24.AutoSize = true;
+			this.label24.Location = new System.Drawing.Point(47, 65);
+			this.label24.Name = "label24";
+			this.label24.Size = new System.Drawing.Size(53, 16);
+			this.label24.TabIndex = 1;
+			this.label24.Text = "Soyadı:";
+			// 
 			// textBox21
 			// 
 			this.textBox21.Location = new System.Drawing.Point(106, 59);
@@ -555,6 +581,15 @@
 			this.textBox21.Name = "textBox21";
 			this.textBox21.Size = new System.Drawing.Size(146, 22);
 			this.textBox21.TabIndex = 2;
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.Location = new System.Drawing.Point(51, 104);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(49, 16);
+			this.label23.TabIndex = 1;
+			this.label23.Text = "TC No:";
 			// 
 			// textBox22
 			// 
@@ -573,52 +608,17 @@
 			this.label22.TabIndex = 1;
 			this.label22.Text = "Doğum Tarihi:";
 			// 
-			// label23
-			// 
-			this.label23.AutoSize = true;
-			this.label23.Location = new System.Drawing.Point(51, 104);
-			this.label23.Name = "label23";
-			this.label23.Size = new System.Drawing.Size(49, 16);
-			this.label23.TabIndex = 1;
-			this.label23.Text = "TC No:";
-			// 
-			// label24
-			// 
-			this.label24.AutoSize = true;
-			this.label24.Location = new System.Drawing.Point(47, 65);
-			this.label24.Name = "label24";
-			this.label24.Size = new System.Drawing.Size(53, 16);
-			this.label24.TabIndex = 1;
-			this.label24.Text = "Soyadı:";
-			// 
-			// label25
-			// 
-			this.label25.AutoSize = true;
-			this.label25.Location = new System.Drawing.Point(70, 25);
-			this.label25.Name = "label25";
-			this.label25.Size = new System.Drawing.Size(30, 16);
-			this.label25.TabIndex = 1;
-			this.label25.Text = "Adı:";
-			// 
-			// textBox23
-			// 
-			this.textBox23.Location = new System.Drawing.Point(106, 138);
-			this.textBox23.MaxLength = 11;
-			this.textBox23.Name = "textBox23";
-			this.textBox23.Size = new System.Drawing.Size(146, 22);
-			this.textBox23.TabIndex = 2;
-			// 
 			// KayitOl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(848, 519);
-			this.Controls.Add(this.groupBox3);
-			this.Controls.Add(this.groupBox2);
-			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.radioButton3);
-			this.Controls.Add(this.radioButton2);
-			this.Controls.Add(this.radioButton1);
+			this.Controls.Add(this.gboxMudur);
+			this.Controls.Add(this.gboxOgretmen);
+			this.Controls.Add(this.gboxOgrenci);
+			this.Controls.Add(this.btnTurMudur);
+			this.Controls.Add(this.btnTurOgretmen);
+			this.Controls.Add(this.btnTurOgrenci);
 			this.Controls.Add(this.textBox5);
 			this.Controls.Add(this.textBox4);
 			this.Controls.Add(this.textBox3);
@@ -633,12 +633,12 @@
 			this.Controls.Add(this.btn_Geri);
 			this.Name = "KayitOl";
 			this.Text = "KayıtOl";
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
-			this.groupBox2.ResumeLayout(false);
-			this.groupBox2.PerformLayout();
-			this.groupBox3.ResumeLayout(false);
-			this.groupBox3.PerformLayout();
+			this.gboxOgrenci.ResumeLayout(false);
+			this.gboxOgrenci.PerformLayout();
+			this.gboxOgretmen.ResumeLayout(false);
+			this.gboxOgretmen.PerformLayout();
+			this.gboxMudur.ResumeLayout(false);
+			this.gboxMudur.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -657,13 +657,13 @@
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.TextBox textBox4;
 		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.RadioButton radioButton1;
-		private System.Windows.Forms.RadioButton radioButton2;
-		private System.Windows.Forms.RadioButton radioButton3;
+		private System.Windows.Forms.RadioButton btnTurOgrenci;
+		private System.Windows.Forms.RadioButton btnTurOgretmen;
+		private System.Windows.Forms.RadioButton btnTurMudur;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.GroupBox gboxOgrenci;
+		private System.Windows.Forms.GroupBox gboxOgretmen;
+		private System.Windows.Forms.GroupBox gboxMudur;
 		private System.Windows.Forms.TextBox textBox13;
 		private System.Windows.Forms.TextBox textBox12;
 		private System.Windows.Forms.TextBox textBox11;

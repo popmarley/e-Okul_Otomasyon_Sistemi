@@ -15,6 +15,16 @@ namespace OkulOtomasyonu
 		public KayitOl()
 		{
 			InitializeComponent();
+
+			// Başlangıçta tüm grup kutularını devre dışı bırak
+			gboxOgrenci.Enabled = false;
+			gboxOgretmen.Enabled = false;
+			gboxMudur.Enabled = false;
+
+			// Radyo butonlarına tıklama olayını ekleyin
+			btnTurOgrenci.Click += RadyoButon_Tiklandi;
+			btnTurOgretmen.Click += RadyoButon_Tiklandi;
+			btnTurMudur.Click += RadyoButon_Tiklandi;
 		}
 
 		private void btn_Geri_Click(object sender, EventArgs e)
@@ -24,6 +34,27 @@ namespace OkulOtomasyonu
 			this.Hide();
 		}
 
-		
+		private void RadyoButon_Tiklandi(object sender, EventArgs e)
+		{
+			// Tüm grup kutularını devre dışı bırak
+			gboxOgrenci.Enabled = false;
+			gboxOgretmen.Enabled = false;
+			gboxMudur.Enabled = false;
+
+			// Hangi radyo butonuna tıklanırsa ilgili grup kutusunu aktif yap
+			if (btnTurOgrenci.Checked)
+			{
+				gboxOgrenci.Enabled = true;
+			}
+			else if (btnTurOgretmen.Checked)
+			{
+				gboxOgretmen.Enabled = true;
+			}
+			else if (btnTurMudur.Checked)
+			{
+				gboxMudur.Enabled = true;
+			}
+		}
+
 	}
 }
