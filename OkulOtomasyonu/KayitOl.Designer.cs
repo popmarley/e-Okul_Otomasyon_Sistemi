@@ -34,26 +34,25 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
+			this.txtSifre = new System.Windows.Forms.TextBox();
+			this.txtSifreTekrar = new System.Windows.Forms.TextBox();
+			this.txtEPosta = new System.Windows.Forms.TextBox();
+			this.txtTelefon = new System.Windows.Forms.TextBox();
 			this.btnTurOgrenci = new System.Windows.Forms.RadioButton();
 			this.btnTurOgretmen = new System.Windows.Forms.RadioButton();
 			this.btnTurMudur = new System.Windows.Forms.RadioButton();
 			this.label6 = new System.Windows.Forms.Label();
 			this.gboxOgrenci = new System.Windows.Forms.GroupBox();
-			this.textBox13 = new System.Windows.Forms.TextBox();
-			this.textBox12 = new System.Windows.Forms.TextBox();
-			this.textBox11 = new System.Windows.Forms.TextBox();
-			this.textBox15 = new System.Windows.Forms.TextBox();
-			this.textBox14 = new System.Windows.Forms.TextBox();
-			this.textBox10 = new System.Windows.Forms.TextBox();
-			this.textBox9 = new System.Windows.Forms.TextBox();
-			this.textBox8 = new System.Windows.Forms.TextBox();
-			this.textBox7 = new System.Windows.Forms.TextBox();
-			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.txtOgrenciVeliTel = new System.Windows.Forms.TextBox();
+			this.txtOgrenciVeliSoyadi = new System.Windows.Forms.TextBox();
+			this.txtOgrenciVeliAdi = new System.Windows.Forms.TextBox();
+			this.txtOgrenciAdres = new System.Windows.Forms.TextBox();
+			this.txtOgrenciNo = new System.Windows.Forms.TextBox();
+			this.txtOgrenciDogumTarihi = new System.Windows.Forms.TextBox();
+			this.txtOgrenciTC = new System.Windows.Forms.TextBox();
+			this.txtOgrenciSoyadi = new System.Windows.Forms.TextBox();
+			this.txtOgrenciAdi = new System.Windows.Forms.TextBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.label13 = new System.Windows.Forms.Label();
 			this.label15 = new System.Windows.Forms.Label();
@@ -66,23 +65,26 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.gboxOgretmen = new System.Windows.Forms.GroupBox();
-			this.textBox19 = new System.Windows.Forms.TextBox();
+			this.txtOgretmenDogumTarihi = new System.Windows.Forms.TextBox();
 			this.label18 = new System.Windows.Forms.Label();
 			this.label19 = new System.Windows.Forms.Label();
 			this.label20 = new System.Windows.Forms.Label();
 			this.label21 = new System.Windows.Forms.Label();
-			this.textBox16 = new System.Windows.Forms.TextBox();
-			this.textBox17 = new System.Windows.Forms.TextBox();
-			this.textBox18 = new System.Windows.Forms.TextBox();
+			this.txtOgretmenAdi = new System.Windows.Forms.TextBox();
+			this.txtOgretmenSoyadi = new System.Windows.Forms.TextBox();
+			this.txtOgretmenTC = new System.Windows.Forms.TextBox();
 			this.gboxMudur = new System.Windows.Forms.GroupBox();
-			this.textBox23 = new System.Windows.Forms.TextBox();
+			this.txtMudurDogumTarihi = new System.Windows.Forms.TextBox();
 			this.label25 = new System.Windows.Forms.Label();
-			this.textBox20 = new System.Windows.Forms.TextBox();
+			this.txtMudurTC = new System.Windows.Forms.TextBox();
 			this.label24 = new System.Windows.Forms.Label();
-			this.textBox21 = new System.Windows.Forms.TextBox();
+			this.txtMudurSoyadi = new System.Windows.Forms.TextBox();
 			this.label23 = new System.Windows.Forms.Label();
-			this.textBox22 = new System.Windows.Forms.TextBox();
+			this.txtMudurAdi = new System.Windows.Forms.TextBox();
 			this.label22 = new System.Windows.Forms.Label();
+			this.cboxOgrenciSinif = new System.Windows.Forms.ComboBox();
+			this.label26 = new System.Windows.Forms.Label();
+			this.txtOgretmenBrans = new System.Windows.Forms.TextBox();
 			this.gboxOgrenci.SuspendLayout();
 			this.gboxOgretmen.SuspendLayout();
 			this.gboxMudur.SuspendLayout();
@@ -143,47 +145,47 @@
 			this.label5.TabIndex = 1;
 			this.label5.Text = "Telefon No";
 			// 
-			// textBox1
+			// txtKullaniciAdi
 			// 
-			this.textBox1.Location = new System.Drawing.Point(108, 50);
-			this.textBox1.MaxLength = 16;
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(100, 22);
-			this.textBox1.TabIndex = 2;
+			this.txtKullaniciAdi.Location = new System.Drawing.Point(108, 50);
+			this.txtKullaniciAdi.MaxLength = 16;
+			this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+			this.txtKullaniciAdi.Size = new System.Drawing.Size(100, 22);
+			this.txtKullaniciAdi.TabIndex = 2;
 			// 
-			// textBox2
+			// txtSifre
 			// 
-			this.textBox2.Location = new System.Drawing.Point(108, 91);
-			this.textBox2.MaxLength = 16;
-			this.textBox2.Name = "textBox2";
-			this.textBox2.PasswordChar = '*';
-			this.textBox2.Size = new System.Drawing.Size(100, 22);
-			this.textBox2.TabIndex = 2;
+			this.txtSifre.Location = new System.Drawing.Point(108, 91);
+			this.txtSifre.MaxLength = 16;
+			this.txtSifre.Name = "txtSifre";
+			this.txtSifre.PasswordChar = '*';
+			this.txtSifre.Size = new System.Drawing.Size(100, 22);
+			this.txtSifre.TabIndex = 2;
 			// 
-			// textBox3
+			// txtSifreTekrar
 			// 
-			this.textBox3.Location = new System.Drawing.Point(108, 135);
-			this.textBox3.MaxLength = 16;
-			this.textBox3.Name = "textBox3";
-			this.textBox3.PasswordChar = '*';
-			this.textBox3.Size = new System.Drawing.Size(100, 22);
-			this.textBox3.TabIndex = 2;
+			this.txtSifreTekrar.Location = new System.Drawing.Point(108, 135);
+			this.txtSifreTekrar.MaxLength = 16;
+			this.txtSifreTekrar.Name = "txtSifreTekrar";
+			this.txtSifreTekrar.PasswordChar = '*';
+			this.txtSifreTekrar.Size = new System.Drawing.Size(100, 22);
+			this.txtSifreTekrar.TabIndex = 2;
 			// 
-			// textBox4
+			// txtEPosta
 			// 
-			this.textBox4.Location = new System.Drawing.Point(108, 180);
-			this.textBox4.MaxLength = 32;
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(100, 22);
-			this.textBox4.TabIndex = 2;
+			this.txtEPosta.Location = new System.Drawing.Point(108, 180);
+			this.txtEPosta.MaxLength = 32;
+			this.txtEPosta.Name = "txtEPosta";
+			this.txtEPosta.Size = new System.Drawing.Size(100, 22);
+			this.txtEPosta.TabIndex = 2;
 			// 
-			// textBox5
+			// txtTelefon
 			// 
-			this.textBox5.Location = new System.Drawing.Point(108, 221);
-			this.textBox5.MaxLength = 11;
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(100, 22);
-			this.textBox5.TabIndex = 2;
+			this.txtTelefon.Location = new System.Drawing.Point(108, 221);
+			this.txtTelefon.MaxLength = 11;
+			this.txtTelefon.Name = "txtTelefon";
+			this.txtTelefon.Size = new System.Drawing.Size(100, 22);
+			this.txtTelefon.TabIndex = 2;
 			// 
 			// btnTurOgrenci
 			// 
@@ -229,16 +231,16 @@
 			// 
 			// gboxOgrenci
 			// 
-			this.gboxOgrenci.Controls.Add(this.textBox13);
-			this.gboxOgrenci.Controls.Add(this.textBox12);
-			this.gboxOgrenci.Controls.Add(this.textBox11);
-			this.gboxOgrenci.Controls.Add(this.textBox15);
-			this.gboxOgrenci.Controls.Add(this.textBox14);
-			this.gboxOgrenci.Controls.Add(this.textBox10);
-			this.gboxOgrenci.Controls.Add(this.textBox9);
-			this.gboxOgrenci.Controls.Add(this.textBox8);
-			this.gboxOgrenci.Controls.Add(this.textBox7);
-			this.gboxOgrenci.Controls.Add(this.textBox6);
+			this.gboxOgrenci.Controls.Add(this.cboxOgrenciSinif);
+			this.gboxOgrenci.Controls.Add(this.txtOgrenciVeliTel);
+			this.gboxOgrenci.Controls.Add(this.txtOgrenciVeliSoyadi);
+			this.gboxOgrenci.Controls.Add(this.txtOgrenciVeliAdi);
+			this.gboxOgrenci.Controls.Add(this.txtOgrenciAdres);
+			this.gboxOgrenci.Controls.Add(this.txtOgrenciNo);
+			this.gboxOgrenci.Controls.Add(this.txtOgrenciDogumTarihi);
+			this.gboxOgrenci.Controls.Add(this.txtOgrenciTC);
+			this.gboxOgrenci.Controls.Add(this.txtOgrenciSoyadi);
+			this.gboxOgrenci.Controls.Add(this.txtOgrenciAdi);
 			this.gboxOgrenci.Controls.Add(this.label14);
 			this.gboxOgrenci.Controls.Add(this.label13);
 			this.gboxOgrenci.Controls.Add(this.label15);
@@ -257,87 +259,79 @@
 			this.gboxOgrenci.TabStop = false;
 			this.gboxOgrenci.Text = "Öğrenci";
 			// 
-			// textBox13
+			// txtOgrenciVeliTel
 			// 
-			this.textBox13.Location = new System.Drawing.Point(103, 408);
-			this.textBox13.MaxLength = 11;
-			this.textBox13.Name = "textBox13";
-			this.textBox13.Size = new System.Drawing.Size(146, 22);
-			this.textBox13.TabIndex = 2;
+			this.txtOgrenciVeliTel.Location = new System.Drawing.Point(103, 408);
+			this.txtOgrenciVeliTel.MaxLength = 11;
+			this.txtOgrenciVeliTel.Name = "txtOgrenciVeliTel";
+			this.txtOgrenciVeliTel.Size = new System.Drawing.Size(146, 22);
+			this.txtOgrenciVeliTel.TabIndex = 2;
 			// 
-			// textBox12
+			// txtOgrenciVeliSoyadi
 			// 
-			this.textBox12.Location = new System.Drawing.Point(103, 374);
-			this.textBox12.MaxLength = 11;
-			this.textBox12.Name = "textBox12";
-			this.textBox12.Size = new System.Drawing.Size(146, 22);
-			this.textBox12.TabIndex = 2;
+			this.txtOgrenciVeliSoyadi.Location = new System.Drawing.Point(103, 374);
+			this.txtOgrenciVeliSoyadi.MaxLength = 11;
+			this.txtOgrenciVeliSoyadi.Name = "txtOgrenciVeliSoyadi";
+			this.txtOgrenciVeliSoyadi.Size = new System.Drawing.Size(146, 22);
+			this.txtOgrenciVeliSoyadi.TabIndex = 2;
 			// 
-			// textBox11
+			// txtOgrenciVeliAdi
 			// 
-			this.textBox11.Location = new System.Drawing.Point(103, 341);
-			this.textBox11.MaxLength = 11;
-			this.textBox11.Name = "textBox11";
-			this.textBox11.Size = new System.Drawing.Size(146, 22);
-			this.textBox11.TabIndex = 2;
+			this.txtOgrenciVeliAdi.Location = new System.Drawing.Point(103, 341);
+			this.txtOgrenciVeliAdi.MaxLength = 11;
+			this.txtOgrenciVeliAdi.Name = "txtOgrenciVeliAdi";
+			this.txtOgrenciVeliAdi.Size = new System.Drawing.Size(146, 22);
+			this.txtOgrenciVeliAdi.TabIndex = 2;
 			// 
-			// textBox15
+			// txtOgrenciAdres
 			// 
-			this.textBox15.Location = new System.Drawing.Point(103, 263);
-			this.textBox15.MaxLength = 11;
-			this.textBox15.Multiline = true;
-			this.textBox15.Name = "textBox15";
-			this.textBox15.Size = new System.Drawing.Size(146, 22);
-			this.textBox15.TabIndex = 2;
+			this.txtOgrenciAdres.Location = new System.Drawing.Point(103, 263);
+			this.txtOgrenciAdres.MaxLength = 11;
+			this.txtOgrenciAdres.Multiline = true;
+			this.txtOgrenciAdres.Name = "txtOgrenciAdres";
+			this.txtOgrenciAdres.Size = new System.Drawing.Size(146, 22);
+			this.txtOgrenciAdres.TabIndex = 2;
 			// 
-			// textBox14
+			// txtOgrenciNo
 			// 
-			this.textBox14.Location = new System.Drawing.Point(103, 225);
-			this.textBox14.MaxLength = 11;
-			this.textBox14.Multiline = true;
-			this.textBox14.Name = "textBox14";
-			this.textBox14.Size = new System.Drawing.Size(146, 22);
-			this.textBox14.TabIndex = 2;
+			this.txtOgrenciNo.Location = new System.Drawing.Point(103, 225);
+			this.txtOgrenciNo.MaxLength = 11;
+			this.txtOgrenciNo.Multiline = true;
+			this.txtOgrenciNo.Name = "txtOgrenciNo";
+			this.txtOgrenciNo.Size = new System.Drawing.Size(146, 22);
+			this.txtOgrenciNo.TabIndex = 2;
 			// 
-			// textBox10
+			// txtOgrenciDogumTarihi
 			// 
-			this.textBox10.Location = new System.Drawing.Point(103, 185);
-			this.textBox10.MaxLength = 11;
-			this.textBox10.Name = "textBox10";
-			this.textBox10.Size = new System.Drawing.Size(146, 22);
-			this.textBox10.TabIndex = 2;
+			this.txtOgrenciDogumTarihi.Location = new System.Drawing.Point(103, 143);
+			this.txtOgrenciDogumTarihi.MaxLength = 11;
+			this.txtOgrenciDogumTarihi.Name = "txtOgrenciDogumTarihi";
+			this.txtOgrenciDogumTarihi.Size = new System.Drawing.Size(146, 22);
+			this.txtOgrenciDogumTarihi.TabIndex = 2;
 			// 
-			// textBox9
+			// txtOgrenciTC
 			// 
-			this.textBox9.Location = new System.Drawing.Point(103, 143);
-			this.textBox9.MaxLength = 11;
-			this.textBox9.Name = "textBox9";
-			this.textBox9.Size = new System.Drawing.Size(146, 22);
-			this.textBox9.TabIndex = 2;
+			this.txtOgrenciTC.Location = new System.Drawing.Point(103, 103);
+			this.txtOgrenciTC.MaxLength = 11;
+			this.txtOgrenciTC.Name = "txtOgrenciTC";
+			this.txtOgrenciTC.Size = new System.Drawing.Size(146, 22);
+			this.txtOgrenciTC.TabIndex = 2;
 			// 
-			// textBox8
+			// txtOgrenciSoyadi
 			// 
-			this.textBox8.Location = new System.Drawing.Point(103, 103);
-			this.textBox8.MaxLength = 11;
-			this.textBox8.Name = "textBox8";
-			this.textBox8.Size = new System.Drawing.Size(146, 22);
-			this.textBox8.TabIndex = 2;
+			this.txtOgrenciSoyadi.Location = new System.Drawing.Point(103, 64);
+			this.txtOgrenciSoyadi.MaxLength = 11;
+			this.txtOgrenciSoyadi.Name = "txtOgrenciSoyadi";
+			this.txtOgrenciSoyadi.Size = new System.Drawing.Size(146, 22);
+			this.txtOgrenciSoyadi.TabIndex = 2;
 			// 
-			// textBox7
+			// txtOgrenciAdi
 			// 
-			this.textBox7.Location = new System.Drawing.Point(103, 64);
-			this.textBox7.MaxLength = 11;
-			this.textBox7.Name = "textBox7";
-			this.textBox7.Size = new System.Drawing.Size(146, 22);
-			this.textBox7.TabIndex = 2;
-			// 
-			// textBox6
-			// 
-			this.textBox6.Location = new System.Drawing.Point(103, 24);
-			this.textBox6.MaxLength = 11;
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(146, 22);
-			this.textBox6.TabIndex = 2;
+			this.txtOgrenciAdi.Location = new System.Drawing.Point(103, 24);
+			this.txtOgrenciAdi.MaxLength = 11;
+			this.txtOgrenciAdi.Name = "txtOgrenciAdi";
+			this.txtOgrenciAdi.Size = new System.Drawing.Size(146, 22);
+			this.txtOgrenciAdi.TabIndex = 2;
 			// 
 			// label14
 			// 
@@ -440,28 +434,30 @@
 			// 
 			// gboxOgretmen
 			// 
-			this.gboxOgretmen.Controls.Add(this.textBox19);
+			this.gboxOgretmen.Controls.Add(this.txtOgretmenBrans);
+			this.gboxOgretmen.Controls.Add(this.txtOgretmenDogumTarihi);
 			this.gboxOgretmen.Controls.Add(this.label18);
 			this.gboxOgretmen.Controls.Add(this.label19);
+			this.gboxOgretmen.Controls.Add(this.label26);
 			this.gboxOgretmen.Controls.Add(this.label20);
 			this.gboxOgretmen.Controls.Add(this.label21);
-			this.gboxOgretmen.Controls.Add(this.textBox16);
-			this.gboxOgretmen.Controls.Add(this.textBox17);
-			this.gboxOgretmen.Controls.Add(this.textBox18);
+			this.gboxOgretmen.Controls.Add(this.txtOgretmenAdi);
+			this.gboxOgretmen.Controls.Add(this.txtOgretmenSoyadi);
+			this.gboxOgretmen.Controls.Add(this.txtOgretmenTC);
 			this.gboxOgretmen.Location = new System.Drawing.Point(567, 56);
 			this.gboxOgretmen.Name = "gboxOgretmen";
-			this.gboxOgretmen.Size = new System.Drawing.Size(267, 187);
+			this.gboxOgretmen.Size = new System.Drawing.Size(267, 209);
 			this.gboxOgretmen.TabIndex = 4;
 			this.gboxOgretmen.TabStop = false;
 			this.gboxOgretmen.Text = "Öğretmen";
 			// 
-			// textBox19
+			// txtOgretmenDogumTarihi
 			// 
-			this.textBox19.Location = new System.Drawing.Point(106, 143);
-			this.textBox19.MaxLength = 11;
-			this.textBox19.Name = "textBox19";
-			this.textBox19.Size = new System.Drawing.Size(146, 22);
-			this.textBox19.TabIndex = 2;
+			this.txtOgretmenDogumTarihi.Location = new System.Drawing.Point(106, 143);
+			this.txtOgretmenDogumTarihi.MaxLength = 11;
+			this.txtOgretmenDogumTarihi.Name = "txtOgretmenDogumTarihi";
+			this.txtOgretmenDogumTarihi.Size = new System.Drawing.Size(146, 22);
+			this.txtOgretmenDogumTarihi.TabIndex = 2;
 			// 
 			// label18
 			// 
@@ -499,39 +495,39 @@
 			this.label21.TabIndex = 1;
 			this.label21.Text = "Doğum Tarihi:";
 			// 
-			// textBox16
+			// txtOgretmenAdi
 			// 
-			this.textBox16.Location = new System.Drawing.Point(106, 24);
-			this.textBox16.MaxLength = 11;
-			this.textBox16.Name = "textBox16";
-			this.textBox16.Size = new System.Drawing.Size(146, 22);
-			this.textBox16.TabIndex = 2;
+			this.txtOgretmenAdi.Location = new System.Drawing.Point(106, 24);
+			this.txtOgretmenAdi.MaxLength = 11;
+			this.txtOgretmenAdi.Name = "txtOgretmenAdi";
+			this.txtOgretmenAdi.Size = new System.Drawing.Size(146, 22);
+			this.txtOgretmenAdi.TabIndex = 2;
 			// 
-			// textBox17
+			// txtOgretmenSoyadi
 			// 
-			this.textBox17.Location = new System.Drawing.Point(106, 64);
-			this.textBox17.MaxLength = 11;
-			this.textBox17.Name = "textBox17";
-			this.textBox17.Size = new System.Drawing.Size(146, 22);
-			this.textBox17.TabIndex = 2;
+			this.txtOgretmenSoyadi.Location = new System.Drawing.Point(106, 64);
+			this.txtOgretmenSoyadi.MaxLength = 11;
+			this.txtOgretmenSoyadi.Name = "txtOgretmenSoyadi";
+			this.txtOgretmenSoyadi.Size = new System.Drawing.Size(146, 22);
+			this.txtOgretmenSoyadi.TabIndex = 2;
 			// 
-			// textBox18
+			// txtOgretmenTC
 			// 
-			this.textBox18.Location = new System.Drawing.Point(106, 103);
-			this.textBox18.MaxLength = 11;
-			this.textBox18.Name = "textBox18";
-			this.textBox18.Size = new System.Drawing.Size(146, 22);
-			this.textBox18.TabIndex = 2;
+			this.txtOgretmenTC.Location = new System.Drawing.Point(106, 103);
+			this.txtOgretmenTC.MaxLength = 11;
+			this.txtOgretmenTC.Name = "txtOgretmenTC";
+			this.txtOgretmenTC.Size = new System.Drawing.Size(146, 22);
+			this.txtOgretmenTC.TabIndex = 2;
 			// 
 			// gboxMudur
 			// 
-			this.gboxMudur.Controls.Add(this.textBox23);
+			this.gboxMudur.Controls.Add(this.txtMudurDogumTarihi);
 			this.gboxMudur.Controls.Add(this.label25);
-			this.gboxMudur.Controls.Add(this.textBox20);
+			this.gboxMudur.Controls.Add(this.txtMudurTC);
 			this.gboxMudur.Controls.Add(this.label24);
-			this.gboxMudur.Controls.Add(this.textBox21);
+			this.gboxMudur.Controls.Add(this.txtMudurSoyadi);
 			this.gboxMudur.Controls.Add(this.label23);
-			this.gboxMudur.Controls.Add(this.textBox22);
+			this.gboxMudur.Controls.Add(this.txtMudurAdi);
 			this.gboxMudur.Controls.Add(this.label22);
 			this.gboxMudur.Location = new System.Drawing.Point(567, 291);
 			this.gboxMudur.Name = "gboxMudur";
@@ -540,13 +536,13 @@
 			this.gboxMudur.TabStop = false;
 			this.gboxMudur.Text = "Müdür";
 			// 
-			// textBox23
+			// txtMudurDogumTarihi
 			// 
-			this.textBox23.Location = new System.Drawing.Point(106, 138);
-			this.textBox23.MaxLength = 11;
-			this.textBox23.Name = "textBox23";
-			this.textBox23.Size = new System.Drawing.Size(146, 22);
-			this.textBox23.TabIndex = 2;
+			this.txtMudurDogumTarihi.Location = new System.Drawing.Point(106, 138);
+			this.txtMudurDogumTarihi.MaxLength = 11;
+			this.txtMudurDogumTarihi.Name = "txtMudurDogumTarihi";
+			this.txtMudurDogumTarihi.Size = new System.Drawing.Size(146, 22);
+			this.txtMudurDogumTarihi.TabIndex = 2;
 			// 
 			// label25
 			// 
@@ -557,13 +553,13 @@
 			this.label25.TabIndex = 1;
 			this.label25.Text = "Adı:";
 			// 
-			// textBox20
+			// txtMudurTC
 			// 
-			this.textBox20.Location = new System.Drawing.Point(106, 98);
-			this.textBox20.MaxLength = 11;
-			this.textBox20.Name = "textBox20";
-			this.textBox20.Size = new System.Drawing.Size(146, 22);
-			this.textBox20.TabIndex = 2;
+			this.txtMudurTC.Location = new System.Drawing.Point(106, 98);
+			this.txtMudurTC.MaxLength = 11;
+			this.txtMudurTC.Name = "txtMudurTC";
+			this.txtMudurTC.Size = new System.Drawing.Size(146, 22);
+			this.txtMudurTC.TabIndex = 2;
 			// 
 			// label24
 			// 
@@ -574,13 +570,13 @@
 			this.label24.TabIndex = 1;
 			this.label24.Text = "Soyadı:";
 			// 
-			// textBox21
+			// txtMudurSoyadi
 			// 
-			this.textBox21.Location = new System.Drawing.Point(106, 59);
-			this.textBox21.MaxLength = 11;
-			this.textBox21.Name = "textBox21";
-			this.textBox21.Size = new System.Drawing.Size(146, 22);
-			this.textBox21.TabIndex = 2;
+			this.txtMudurSoyadi.Location = new System.Drawing.Point(106, 59);
+			this.txtMudurSoyadi.MaxLength = 11;
+			this.txtMudurSoyadi.Name = "txtMudurSoyadi";
+			this.txtMudurSoyadi.Size = new System.Drawing.Size(146, 22);
+			this.txtMudurSoyadi.TabIndex = 2;
 			// 
 			// label23
 			// 
@@ -591,13 +587,13 @@
 			this.label23.TabIndex = 1;
 			this.label23.Text = "TC No:";
 			// 
-			// textBox22
+			// txtMudurAdi
 			// 
-			this.textBox22.Location = new System.Drawing.Point(106, 19);
-			this.textBox22.MaxLength = 11;
-			this.textBox22.Name = "textBox22";
-			this.textBox22.Size = new System.Drawing.Size(146, 22);
-			this.textBox22.TabIndex = 2;
+			this.txtMudurAdi.Location = new System.Drawing.Point(106, 19);
+			this.txtMudurAdi.MaxLength = 11;
+			this.txtMudurAdi.Name = "txtMudurAdi";
+			this.txtMudurAdi.Size = new System.Drawing.Size(146, 22);
+			this.txtMudurAdi.TabIndex = 2;
 			// 
 			// label22
 			// 
@@ -607,6 +603,31 @@
 			this.label22.Size = new System.Drawing.Size(91, 16);
 			this.label22.TabIndex = 1;
 			this.label22.Text = "Doğum Tarihi:";
+			// 
+			// cboxOgrenciSinif
+			// 
+			this.cboxOgrenciSinif.FormattingEnabled = true;
+			this.cboxOgrenciSinif.Location = new System.Drawing.Point(103, 188);
+			this.cboxOgrenciSinif.Name = "cboxOgrenciSinif";
+			this.cboxOgrenciSinif.Size = new System.Drawing.Size(146, 24);
+			this.cboxOgrenciSinif.TabIndex = 3;
+			// 
+			// label26
+			// 
+			this.label26.AutoSize = true;
+			this.label26.Location = new System.Drawing.Point(52, 180);
+			this.label26.Name = "label26";
+			this.label26.Size = new System.Drawing.Size(48, 16);
+			this.label26.TabIndex = 1;
+			this.label26.Text = "Branşı:";
+			// 
+			// txtOgretmenBrans
+			// 
+			this.txtOgretmenBrans.Location = new System.Drawing.Point(106, 177);
+			this.txtOgretmenBrans.MaxLength = 11;
+			this.txtOgretmenBrans.Name = "txtOgretmenBrans";
+			this.txtOgretmenBrans.Size = new System.Drawing.Size(146, 22);
+			this.txtOgretmenBrans.TabIndex = 2;
 			// 
 			// KayitOl
 			// 
@@ -619,11 +640,11 @@
 			this.Controls.Add(this.btnTurMudur);
 			this.Controls.Add(this.btnTurOgretmen);
 			this.Controls.Add(this.btnTurOgrenci);
-			this.Controls.Add(this.textBox5);
-			this.Controls.Add(this.textBox4);
-			this.Controls.Add(this.textBox3);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.txtTelefon);
+			this.Controls.Add(this.txtEPosta);
+			this.Controls.Add(this.txtSifreTekrar);
+			this.Controls.Add(this.txtSifre);
+			this.Controls.Add(this.txtKullaniciAdi);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
@@ -652,11 +673,11 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.TextBox txtKullaniciAdi;
+		private System.Windows.Forms.TextBox txtSifre;
+		private System.Windows.Forms.TextBox txtSifreTekrar;
+		private System.Windows.Forms.TextBox txtEPosta;
+		private System.Windows.Forms.TextBox txtTelefon;
 		private System.Windows.Forms.RadioButton btnTurOgrenci;
 		private System.Windows.Forms.RadioButton btnTurOgretmen;
 		private System.Windows.Forms.RadioButton btnTurMudur;
@@ -664,14 +685,13 @@
 		private System.Windows.Forms.GroupBox gboxOgrenci;
 		private System.Windows.Forms.GroupBox gboxOgretmen;
 		private System.Windows.Forms.GroupBox gboxMudur;
-		private System.Windows.Forms.TextBox textBox13;
-		private System.Windows.Forms.TextBox textBox12;
-		private System.Windows.Forms.TextBox textBox11;
-		private System.Windows.Forms.TextBox textBox10;
-		private System.Windows.Forms.TextBox textBox9;
-		private System.Windows.Forms.TextBox textBox8;
-		private System.Windows.Forms.TextBox textBox7;
-		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.TextBox txtOgrenciVeliTel;
+		private System.Windows.Forms.TextBox txtOgrenciVeliSoyadi;
+		private System.Windows.Forms.TextBox txtOgrenciVeliAdi;
+		private System.Windows.Forms.TextBox txtOgrenciDogumTarihi;
+		private System.Windows.Forms.TextBox txtOgrenciTC;
+		private System.Windows.Forms.TextBox txtOgrenciSoyadi;
+		private System.Windows.Forms.TextBox txtOgrenciAdi;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Label label15;
@@ -681,25 +701,28 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.TextBox textBox14;
+		private System.Windows.Forms.TextBox txtOgrenciNo;
 		private System.Windows.Forms.Label label16;
-		private System.Windows.Forms.TextBox textBox15;
+		private System.Windows.Forms.TextBox txtOgrenciAdres;
 		private System.Windows.Forms.Label label17;
-		private System.Windows.Forms.TextBox textBox19;
+		private System.Windows.Forms.TextBox txtOgretmenDogumTarihi;
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.Label label19;
 		private System.Windows.Forms.Label label20;
 		private System.Windows.Forms.Label label21;
-		private System.Windows.Forms.TextBox textBox16;
-		private System.Windows.Forms.TextBox textBox17;
-		private System.Windows.Forms.TextBox textBox18;
-		private System.Windows.Forms.TextBox textBox23;
+		private System.Windows.Forms.TextBox txtOgretmenAdi;
+		private System.Windows.Forms.TextBox txtOgretmenSoyadi;
+		private System.Windows.Forms.TextBox txtOgretmenTC;
+		private System.Windows.Forms.TextBox txtMudurDogumTarihi;
 		private System.Windows.Forms.Label label25;
-		private System.Windows.Forms.TextBox textBox20;
+		private System.Windows.Forms.TextBox txtMudurTC;
 		private System.Windows.Forms.Label label24;
-		private System.Windows.Forms.TextBox textBox21;
+		private System.Windows.Forms.TextBox txtMudurSoyadi;
 		private System.Windows.Forms.Label label23;
-		private System.Windows.Forms.TextBox textBox22;
+		private System.Windows.Forms.TextBox txtMudurAdi;
 		private System.Windows.Forms.Label label22;
+		private System.Windows.Forms.ComboBox cboxOgrenciSinif;
+		private System.Windows.Forms.TextBox txtOgretmenBrans;
+		private System.Windows.Forms.Label label26;
 	}
 }
