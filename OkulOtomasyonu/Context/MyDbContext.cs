@@ -23,6 +23,7 @@ namespace OkulOtomasyonu.Context
 		public DbSet<Ogretmen> Ogretmenler { get; set; }
 		public DbSet<Mudur> Mudurler { get; set; }
 		public DbSet<SinavSonucu> SinavSonuclari { get; set; }
+		public DbSet<OgrenciDers> OgrenciDersleri { get; set; }
 
 
 

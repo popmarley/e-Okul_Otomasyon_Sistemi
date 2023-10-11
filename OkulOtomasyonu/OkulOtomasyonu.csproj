@@ -175,6 +175,7 @@
     <Compile Include="Entity\KullaniciTipi.cs" />
     <Compile Include="Entity\Mudur.cs" />
     <Compile Include="Entity\Ogrenci.cs" />
+    <Compile Include="Entity\OgrenciDers.cs" />
     <Compile Include="Entity\Ogretmen.cs" />
     <Compile Include="Entity\Sinav.cs" />
     <Compile Include="Entity\SinavSonucu.cs" />
@@ -203,6 +204,10 @@
     <Compile Include="Migrations\20231010204755_3.cs" />
     <Compile Include="Migrations\20231010204755_3.designer.cs">
       <DependentUpon>20231010204755_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20231011175512_4.cs" />
+    <Compile Include="Migrations\20231011175512_4.designer.cs">
+      <DependentUpon>20231011175512_4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MyDbContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />

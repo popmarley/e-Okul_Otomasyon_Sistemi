@@ -22,6 +22,8 @@ namespace OkulOtomasyonu.Entity
 		public int TCNo { get; set; }
 		public DateTime DogumTarihi { get; set; }
 
+
+		public List<OgrenciDers> OgrenciDersleri { get; set; }
 		public Kullanici Kullanici { get; set; }
 		public Sinif Sinif { get; set; }
 		public Veli Veli { get; set; }

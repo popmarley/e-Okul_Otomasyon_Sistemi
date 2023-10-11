@@ -49,7 +49,6 @@
 			this.txtOgrenciVeliAdi = new System.Windows.Forms.TextBox();
 			this.txtOgrenciAdres = new System.Windows.Forms.TextBox();
 			this.txtOgrenciNo = new System.Windows.Forms.TextBox();
-			this.txtOgrenciDogumTarihi = new System.Windows.Forms.TextBox();
 			this.txtOgrenciTC = new System.Windows.Forms.TextBox();
 			this.txtOgrenciSoyadi = new System.Windows.Forms.TextBox();
 			this.txtOgrenciAdi = new System.Windows.Forms.TextBox();
@@ -65,7 +64,6 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.gboxOgretmen = new System.Windows.Forms.GroupBox();
-			this.txtOgretmenDogumTarihi = new System.Windows.Forms.TextBox();
 			this.label18 = new System.Windows.Forms.Label();
 			this.label19 = new System.Windows.Forms.Label();
 			this.label20 = new System.Windows.Forms.Label();
@@ -74,7 +72,6 @@
 			this.txtOgretmenSoyadi = new System.Windows.Forms.TextBox();
 			this.txtOgretmenTC = new System.Windows.Forms.TextBox();
 			this.gboxMudur = new System.Windows.Forms.GroupBox();
-			this.txtMudurDogumTarihi = new System.Windows.Forms.TextBox();
 			this.label25 = new System.Windows.Forms.Label();
 			this.txtMudurTC = new System.Windows.Forms.TextBox();
 			this.label24 = new System.Windows.Forms.Label();
@@ -84,7 +81,11 @@
 			this.label22 = new System.Windows.Forms.Label();
 			this.cboxOgrenciSinif = new System.Windows.Forms.ComboBox();
 			this.label26 = new System.Windows.Forms.Label();
-			this.txtOgretmenBrans = new System.Windows.Forms.TextBox();
+			this.btnKayitOl = new System.Windows.Forms.Button();
+			this.dateOgrenciDogumTarihi = new System.Windows.Forms.DateTimePicker();
+			this.cboxOgretmenBrans = new System.Windows.Forms.ComboBox();
+			this.dateOgretmenDogumTarihi = new System.Windows.Forms.DateTimePicker();
+			this.dateMudurDogumTarihi = new System.Windows.Forms.DateTimePicker();
 			this.gboxOgrenci.SuspendLayout();
 			this.gboxOgretmen.SuspendLayout();
 			this.gboxMudur.SuspendLayout();
@@ -103,7 +104,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(20, 53);
+			this.label1.Location = new System.Drawing.Point(20, 79);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(82, 16);
 			this.label1.TabIndex = 1;
@@ -112,7 +113,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(29, 97);
+			this.label2.Location = new System.Drawing.Point(29, 123);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(34, 16);
 			this.label2.TabIndex = 1;
@@ -121,7 +122,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(20, 141);
+			this.label3.Location = new System.Drawing.Point(20, 167);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(77, 16);
 			this.label3.TabIndex = 1;
@@ -130,7 +131,7 @@
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(29, 186);
+			this.label4.Location = new System.Drawing.Point(29, 212);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(55, 16);
 			this.label4.TabIndex = 1;
@@ -139,7 +140,7 @@
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(20, 227);
+			this.label5.Location = new System.Drawing.Point(20, 253);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(74, 16);
 			this.label5.TabIndex = 1;
@@ -147,7 +148,7 @@
 			// 
 			// txtKullaniciAdi
 			// 
-			this.txtKullaniciAdi.Location = new System.Drawing.Point(108, 50);
+			this.txtKullaniciAdi.Location = new System.Drawing.Point(108, 76);
 			this.txtKullaniciAdi.MaxLength = 16;
 			this.txtKullaniciAdi.Name = "txtKullaniciAdi";
 			this.txtKullaniciAdi.Size = new System.Drawing.Size(100, 22);
@@ -155,7 +156,7 @@
 			// 
 			// txtSifre
 			// 
-			this.txtSifre.Location = new System.Drawing.Point(108, 91);
+			this.txtSifre.Location = new System.Drawing.Point(108, 117);
 			this.txtSifre.MaxLength = 16;
 			this.txtSifre.Name = "txtSifre";
 			this.txtSifre.PasswordChar = '*';
@@ -164,7 +165,7 @@
 			// 
 			// txtSifreTekrar
 			// 
-			this.txtSifreTekrar.Location = new System.Drawing.Point(108, 135);
+			this.txtSifreTekrar.Location = new System.Drawing.Point(108, 161);
 			this.txtSifreTekrar.MaxLength = 16;
 			this.txtSifreTekrar.Name = "txtSifreTekrar";
 			this.txtSifreTekrar.PasswordChar = '*';
@@ -173,7 +174,7 @@
 			// 
 			// txtEPosta
 			// 
-			this.txtEPosta.Location = new System.Drawing.Point(108, 180);
+			this.txtEPosta.Location = new System.Drawing.Point(108, 206);
 			this.txtEPosta.MaxLength = 32;
 			this.txtEPosta.Name = "txtEPosta";
 			this.txtEPosta.Size = new System.Drawing.Size(100, 22);
@@ -181,7 +182,7 @@
 			// 
 			// txtTelefon
 			// 
-			this.txtTelefon.Location = new System.Drawing.Point(108, 221);
+			this.txtTelefon.Location = new System.Drawing.Point(108, 247);
 			this.txtTelefon.MaxLength = 11;
 			this.txtTelefon.Name = "txtTelefon";
 			this.txtTelefon.Size = new System.Drawing.Size(100, 22);
@@ -190,7 +191,7 @@
 			// btnTurOgrenci
 			// 
 			this.btnTurOgrenci.AutoSize = true;
-			this.btnTurOgrenci.Location = new System.Drawing.Point(105, 291);
+			this.btnTurOgrenci.Location = new System.Drawing.Point(105, 317);
 			this.btnTurOgrenci.Name = "btnTurOgrenci";
 			this.btnTurOgrenci.Size = new System.Drawing.Size(75, 20);
 			this.btnTurOgrenci.TabIndex = 3;
@@ -201,7 +202,7 @@
 			// btnTurOgretmen
 			// 
 			this.btnTurOgretmen.AutoSize = true;
-			this.btnTurOgretmen.Location = new System.Drawing.Point(105, 317);
+			this.btnTurOgretmen.Location = new System.Drawing.Point(105, 343);
 			this.btnTurOgretmen.Name = "btnTurOgretmen";
 			this.btnTurOgretmen.Size = new System.Drawing.Size(87, 20);
 			this.btnTurOgretmen.TabIndex = 3;
@@ -212,7 +213,7 @@
 			// btnTurMudur
 			// 
 			this.btnTurMudur.AutoSize = true;
-			this.btnTurMudur.Location = new System.Drawing.Point(105, 343);
+			this.btnTurMudur.Location = new System.Drawing.Point(105, 369);
 			this.btnTurMudur.Name = "btnTurMudur";
 			this.btnTurMudur.Size = new System.Drawing.Size(65, 20);
 			this.btnTurMudur.TabIndex = 3;
@@ -223,7 +224,7 @@
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(29, 317);
+			this.label6.Location = new System.Drawing.Point(29, 343);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(30, 16);
 			this.label6.TabIndex = 1;
@@ -231,13 +232,13 @@
 			// 
 			// gboxOgrenci
 			// 
+			this.gboxOgrenci.Controls.Add(this.dateOgrenciDogumTarihi);
 			this.gboxOgrenci.Controls.Add(this.cboxOgrenciSinif);
 			this.gboxOgrenci.Controls.Add(this.txtOgrenciVeliTel);
 			this.gboxOgrenci.Controls.Add(this.txtOgrenciVeliSoyadi);
 			this.gboxOgrenci.Controls.Add(this.txtOgrenciVeliAdi);
 			this.gboxOgrenci.Controls.Add(this.txtOgrenciAdres);
 			this.gboxOgrenci.Controls.Add(this.txtOgrenciNo);
-			this.gboxOgrenci.Controls.Add(this.txtOgrenciDogumTarihi);
 			this.gboxOgrenci.Controls.Add(this.txtOgrenciTC);
 			this.gboxOgrenci.Controls.Add(this.txtOgrenciSoyadi);
 			this.gboxOgrenci.Controls.Add(this.txtOgrenciAdi);
@@ -300,14 +301,6 @@
 			this.txtOgrenciNo.Name = "txtOgrenciNo";
 			this.txtOgrenciNo.Size = new System.Drawing.Size(146, 22);
 			this.txtOgrenciNo.TabIndex = 2;
-			// 
-			// txtOgrenciDogumTarihi
-			// 
-			this.txtOgrenciDogumTarihi.Location = new System.Drawing.Point(103, 143);
-			this.txtOgrenciDogumTarihi.MaxLength = 11;
-			this.txtOgrenciDogumTarihi.Name = "txtOgrenciDogumTarihi";
-			this.txtOgrenciDogumTarihi.Size = new System.Drawing.Size(146, 22);
-			this.txtOgrenciDogumTarihi.TabIndex = 2;
 			// 
 			// txtOgrenciTC
 			// 
@@ -434,8 +427,8 @@
 			// 
 			// gboxOgretmen
 			// 
-			this.gboxOgretmen.Controls.Add(this.txtOgretmenBrans);
-			this.gboxOgretmen.Controls.Add(this.txtOgretmenDogumTarihi);
+			this.gboxOgretmen.Controls.Add(this.dateOgretmenDogumTarihi);
+			this.gboxOgretmen.Controls.Add(this.cboxOgretmenBrans);
 			this.gboxOgretmen.Controls.Add(this.label18);
 			this.gboxOgretmen.Controls.Add(this.label19);
 			this.gboxOgretmen.Controls.Add(this.label26);
@@ -450,14 +443,6 @@
 			this.gboxOgretmen.TabIndex = 4;
 			this.gboxOgretmen.TabStop = false;
 			this.gboxOgretmen.Text = "Öğretmen";
-			// 
-			// txtOgretmenDogumTarihi
-			// 
-			this.txtOgretmenDogumTarihi.Location = new System.Drawing.Point(106, 143);
-			this.txtOgretmenDogumTarihi.MaxLength = 11;
-			this.txtOgretmenDogumTarihi.Name = "txtOgretmenDogumTarihi";
-			this.txtOgretmenDogumTarihi.Size = new System.Drawing.Size(146, 22);
-			this.txtOgretmenDogumTarihi.TabIndex = 2;
 			// 
 			// label18
 			// 
@@ -521,7 +506,7 @@
 			// 
 			// gboxMudur
 			// 
-			this.gboxMudur.Controls.Add(this.txtMudurDogumTarihi);
+			this.gboxMudur.Controls.Add(this.dateMudurDogumTarihi);
 			this.gboxMudur.Controls.Add(this.label25);
 			this.gboxMudur.Controls.Add(this.txtMudurTC);
 			this.gboxMudur.Controls.Add(this.label24);
@@ -535,14 +520,6 @@
 			this.gboxMudur.TabIndex = 4;
 			this.gboxMudur.TabStop = false;
 			this.gboxMudur.Text = "Müdür";
-			// 
-			// txtMudurDogumTarihi
-			// 
-			this.txtMudurDogumTarihi.Location = new System.Drawing.Point(106, 138);
-			this.txtMudurDogumTarihi.MaxLength = 11;
-			this.txtMudurDogumTarihi.Name = "txtMudurDogumTarihi";
-			this.txtMudurDogumTarihi.Size = new System.Drawing.Size(146, 22);
-			this.txtMudurDogumTarihi.TabIndex = 2;
 			// 
 			// label25
 			// 
@@ -621,13 +598,49 @@
 			this.label26.TabIndex = 1;
 			this.label26.Text = "Branşı:";
 			// 
-			// txtOgretmenBrans
+			// btnKayitOl
 			// 
-			this.txtOgretmenBrans.Location = new System.Drawing.Point(106, 177);
-			this.txtOgretmenBrans.MaxLength = 11;
-			this.txtOgretmenBrans.Name = "txtOgretmenBrans";
-			this.txtOgretmenBrans.Size = new System.Drawing.Size(146, 22);
-			this.txtOgretmenBrans.TabIndex = 2;
+			this.btnKayitOl.Location = new System.Drawing.Point(673, 484);
+			this.btnKayitOl.Name = "btnKayitOl";
+			this.btnKayitOl.Size = new System.Drawing.Size(75, 23);
+			this.btnKayitOl.TabIndex = 0;
+			this.btnKayitOl.Text = "Kayıt Ol";
+			this.btnKayitOl.UseVisualStyleBackColor = true;
+			this.btnKayitOl.Click += new System.EventHandler(this.btn_Geri_Click);
+			// 
+			// dateOgrenciDogumTarihi
+			// 
+			this.dateOgrenciDogumTarihi.Location = new System.Drawing.Point(103, 146);
+			this.dateOgrenciDogumTarihi.Name = "dateOgrenciDogumTarihi";
+			this.dateOgrenciDogumTarihi.Size = new System.Drawing.Size(146, 22);
+			this.dateOgrenciDogumTarihi.TabIndex = 4;
+			// 
+			// cboxOgretmenBrans
+			// 
+			this.cboxOgretmenBrans.FormattingEnabled = true;
+			this.cboxOgretmenBrans.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+			this.cboxOgretmenBrans.Location = new System.Drawing.Point(106, 177);
+			this.cboxOgretmenBrans.Name = "cboxOgretmenBrans";
+			this.cboxOgretmenBrans.Size = new System.Drawing.Size(146, 24);
+			this.cboxOgretmenBrans.TabIndex = 3;
+			// 
+			// dateOgretmenDogumTarihi
+			// 
+			this.dateOgretmenDogumTarihi.Location = new System.Drawing.Point(106, 144);
+			this.dateOgretmenDogumTarihi.Name = "dateOgretmenDogumTarihi";
+			this.dateOgretmenDogumTarihi.Size = new System.Drawing.Size(146, 22);
+			this.dateOgretmenDogumTarihi.TabIndex = 4;
+			// 
+			// dateMudurDogumTarihi
+			// 
+			this.dateMudurDogumTarihi.Location = new System.Drawing.Point(106, 142);
+			this.dateMudurDogumTarihi.Name = "dateMudurDogumTarihi";
+			this.dateMudurDogumTarihi.Size = new System.Drawing.Size(146, 22);
+			this.dateMudurDogumTarihi.TabIndex = 4;
 			// 
 			// KayitOl
 			// 
@@ -651,6 +664,7 @@
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
+			this.Controls.Add(this.btnKayitOl);
 			this.Controls.Add(this.btn_Geri);
 			this.Name = "KayitOl";
 			this.Text = "KayıtOl";
@@ -688,7 +702,6 @@
 		private System.Windows.Forms.TextBox txtOgrenciVeliTel;
 		private System.Windows.Forms.TextBox txtOgrenciVeliSoyadi;
 		private System.Windows.Forms.TextBox txtOgrenciVeliAdi;
-		private System.Windows.Forms.TextBox txtOgrenciDogumTarihi;
 		private System.Windows.Forms.TextBox txtOgrenciTC;
 		private System.Windows.Forms.TextBox txtOgrenciSoyadi;
 		private System.Windows.Forms.TextBox txtOgrenciAdi;
@@ -705,7 +718,6 @@
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.TextBox txtOgrenciAdres;
 		private System.Windows.Forms.Label label17;
-		private System.Windows.Forms.TextBox txtOgretmenDogumTarihi;
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.Label label19;
 		private System.Windows.Forms.Label label20;
@@ -713,7 +725,6 @@
 		private System.Windows.Forms.TextBox txtOgretmenAdi;
 		private System.Windows.Forms.TextBox txtOgretmenSoyadi;
 		private System.Windows.Forms.TextBox txtOgretmenTC;
-		private System.Windows.Forms.TextBox txtMudurDogumTarihi;
 		private System.Windows.Forms.Label label25;
 		private System.Windows.Forms.TextBox txtMudurTC;
 		private System.Windows.Forms.Label label24;
@@ -722,7 +733,11 @@
 		private System.Windows.Forms.TextBox txtMudurAdi;
 		private System.Windows.Forms.Label label22;
 		private System.Windows.Forms.ComboBox cboxOgrenciSinif;
-		private System.Windows.Forms.TextBox txtOgretmenBrans;
 		private System.Windows.Forms.Label label26;
+		private System.Windows.Forms.Button btnKayitOl;
+		private System.Windows.Forms.DateTimePicker dateOgrenciDogumTarihi;
+		private System.Windows.Forms.DateTimePicker dateOgretmenDogumTarihi;
+		private System.Windows.Forms.ComboBox cboxOgretmenBrans;
+		private System.Windows.Forms.DateTimePicker dateMudurDogumTarihi;
 	}
 }

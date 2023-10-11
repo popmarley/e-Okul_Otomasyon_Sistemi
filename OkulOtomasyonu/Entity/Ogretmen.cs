@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -16,5 +17,6 @@ namespace OkulOtomasyonu.Entity
 		public DateTime DogumTarihi { get; set; }
 
 		public Kullanici Kullanici { get; set; }
+		public List<Ders> Dersleri { get; set; }
 	}
 }
