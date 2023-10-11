@@ -1,24 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace OkulOtomasyonu.Migrations
 {
-    public partial class _1 : Migration
+    public partial class _9 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Dersler",
-                columns: table => new
-                {
-                    DersID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DersAdi = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Dersler", x => x.DersID);
-                });
-
             migrationBuilder.CreateTable(
                 name: "KullaniciTipleri",
                 columns: table => new
@@ -61,25 +49,6 @@ namespace OkulOtomasyonu.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Sinavlar",
-                columns: table => new
-                {
-                    SinavID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DersID = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Sinavlar", x => x.SinavID);
-                    table.ForeignKey(
-                        name: "FK_Sinavlar_Dersler_DersID",
-                        column: x => x.DersID,
-                        principalTable: "Dersler",
-                        principalColumn: "DersID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Kullanicilar",
                 columns: table => new
                 {
@@ -88,17 +57,18 @@ namespace OkulOtomasyonu.Migrations
                     TipID = table.Column<int>(nullable: false),
                     KullaniciAdi = table.Column<string>(nullable: true),
                     Sifre = table.Column<string>(nullable: true),
-                    KullaniciTipiTipID = table.Column<int>(nullable: true)
+                    Eposta = table.Column<string>(nullable: true),
+                    Telefon = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Kullanicilar", x => x.KullaniciID);
                     table.ForeignKey(
-                        name: "FK_Kullanicilar_KullaniciTipleri_KullaniciTipiTipID",
-                        column: x => x.KullaniciTipiTipID,
+                        name: "FK_Kullanicilar_KullaniciTipleri_TipID",
+                        column: x => x.TipID,
                         principalTable: "KullaniciTipleri",
                         principalColumn: "TipID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -109,7 +79,9 @@ namespace OkulOtomasyonu.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     KullaniciID = table.Column<int>(nullable: false),
                     Ad = table.Column<string>(nullable: true),
-                    Soyad = table.Column<string>(nullable: true)
+                    Soyad = table.Column<string>(nullable: true),
+                    TCNo = table.Column<int>(nullable: false),
+                    DogumTarihi = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -132,7 +104,11 @@ namespace OkulOtomasyonu.Migrations
                     SinifID = table.Column<int>(nullable: false),
                     VeliID = table.Column<int>(nullable: false),
                     Ad = table.Column<string>(nullable: true),
-                    Soyad = table.Column<string>(nullable: true)
+                    Soyad = table.Column<string>(nullable: true),
+                    Adres = table.Column<string>(nullable: true),
+                    OgrenciNo = table.Column<int>(nullable: false),
+                    TCNo = table.Column<int>(nullable: false),
+                    DogumTarihi = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -164,8 +140,11 @@ namespace OkulOtomasyonu.Migrations
                     OgretmenID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     KullaniciID = table.Column<int>(nullable: false),
+                    DersID = table.Column<int>(nullable: false),
                     Ad = table.Column<string>(nullable: true),
-                    Soyad = table.Column<string>(nullable: true)
+                    Soyad = table.Column<string>(nullable: true),
+                    TCNo = table.Column<int>(nullable: false),
+                    DogumTarihi = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -175,6 +154,72 @@ namespace OkulOtomasyonu.Migrations
                         column: x => x.KullaniciID,
                         principalTable: "Kullanicilar",
                         principalColumn: "KullaniciID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Dersler",
+                columns: table => new
+                {
+                    DersID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DersAdi = table.Column<string>(nullable: true),
+                    OgretmenID = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Dersler", x => x.DersID);
+                    table.ForeignKey(
+                        name: "FK_Dersler_Ogretmenler_OgretmenID",
+                        column: x => x.OgretmenID,
+                        principalTable: "Ogretmenler",
+                        principalColumn: "OgretmenID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OgrenciDersleri",
+                columns: table => new
+                {
+                    OgrenciDersID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DersAdi = table.Column<string>(nullable: true),
+                    OgrenciID = table.Column<int>(nullable: false),
+                    DersID = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OgrenciDersleri", x => x.OgrenciDersID);
+                    table.ForeignKey(
+                        name: "FK_OgrenciDersleri_Dersler_DersID",
+                        column: x => x.DersID,
+                        principalTable: "Dersler",
+                        principalColumn: "DersID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_OgrenciDersleri_Ogrenciler_OgrenciID",
+                        column: x => x.OgrenciID,
+                        principalTable: "Ogrenciler",
+                        principalColumn: "OgrenciID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Sinavlar",
+                columns: table => new
+                {
+                    SinavID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DersID = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sinavlar", x => x.SinavID);
+                    table.ForeignKey(
+                        name: "FK_Sinavlar_Dersler_DersID",
+                        column: x => x.DersID,
+                        principalTable: "Dersler",
+                        principalColumn: "DersID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -206,14 +251,29 @@ namespace OkulOtomasyonu.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Kullanicilar_KullaniciTipiTipID",
+                name: "IX_Dersler_OgretmenID",
+                table: "Dersler",
+                column: "OgretmenID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Kullanicilar_TipID",
                 table: "Kullanicilar",
-                column: "KullaniciTipiTipID");
+                column: "TipID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Mudurler_KullaniciID",
                 table: "Mudurler",
                 column: "KullaniciID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OgrenciDersleri_DersID",
+                table: "OgrenciDersleri",
+                column: "DersID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OgrenciDersleri_OgrenciID",
+                table: "OgrenciDersleri",
+                column: "OgrenciID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Ogrenciler_KullaniciID",
@@ -258,7 +318,7 @@ namespace OkulOtomasyonu.Migrations
                 name: "Mudurler");
 
             migrationBuilder.DropTable(
-                name: "Ogretmenler");
+                name: "OgrenciDersleri");
 
             migrationBuilder.DropTable(
                 name: "SinavSonuclari");
@@ -270,9 +330,6 @@ namespace OkulOtomasyonu.Migrations
                 name: "Sinavlar");
 
             migrationBuilder.DropTable(
-                name: "Kullanicilar");
-
-            migrationBuilder.DropTable(
                 name: "Siniflar");
 
             migrationBuilder.DropTable(
@@ -280,6 +337,12 @@ namespace OkulOtomasyonu.Migrations
 
             migrationBuilder.DropTable(
                 name: "Dersler");
+
+            migrationBuilder.DropTable(
+                name: "Ogretmenler");
+
+            migrationBuilder.DropTable(
+                name: "Kullanicilar");
 
             migrationBuilder.DropTable(
                 name: "KullaniciTipleri");

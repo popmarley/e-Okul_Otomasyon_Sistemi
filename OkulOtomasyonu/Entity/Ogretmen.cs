@@ -11,6 +11,8 @@ namespace OkulOtomasyonu.Entity
 		public int OgretmenID { get; set; }
 		[ForeignKey("Kullanici")]
 		public int KullaniciID { get; set; }
+		[ForeignKey("Ders")]
+		public int DersID { get; set; }
 		public string Ad { get; set; }
 		public string Soyad { get; set; }
 		public int TCNo { get; set; }

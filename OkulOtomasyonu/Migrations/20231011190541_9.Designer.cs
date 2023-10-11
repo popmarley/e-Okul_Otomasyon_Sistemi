@@ -10,8 +10,8 @@ using OkulOtomasyonu.Context;
 namespace OkulOtomasyonu.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20231011175512_4")]
-    partial class _4
+    [Migration("20231011190541_9")]
+    partial class _9
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,7 +31,7 @@ namespace OkulOtomasyonu.Migrations
                     b.Property<string>("DersAdi")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OgretmenID")
+                    b.Property<int?>("OgretmenID")
                         .HasColumnType("int");
 
                     b.HasKey("DersID");
@@ -195,6 +195,9 @@ namespace OkulOtomasyonu.Migrations
                     b.Property<string>("Ad")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("DersID")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("DogumTarihi")
                         .HasColumnType("datetime2");
 
@@ -294,11 +297,9 @@ namespace OkulOtomasyonu.Migrations
 
             modelBuilder.Entity("OkulOtomasyonu.Entity.Ders", b =>
                 {
-                    b.HasOne("OkulOtomasyonu.Entity.Ogretmen", "Ogretmen")
+                    b.HasOne("OkulOtomasyonu.Entity.Ogretmen", null)
                         .WithMany("Dersleri")
-                        .HasForeignKey("OgretmenID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("OgretmenID");
                 });
 
             modelBuilder.Entity("OkulOtomasyonu.Entity.Kullanici", b =>

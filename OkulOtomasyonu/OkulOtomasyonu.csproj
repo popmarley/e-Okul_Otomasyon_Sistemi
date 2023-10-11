@@ -193,21 +193,9 @@
     <Compile Include="KayitOl.Designer.cs">
       <DependentUpon>KayitOl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20231009170959_1.cs" />
-    <Compile Include="Migrations\20231009170959_1.designer.cs">
-      <DependentUpon>20231009170959_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20231009171203_2.cs" />
-    <Compile Include="Migrations\20231009171203_2.designer.cs">
-      <DependentUpon>20231009171203_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20231010204755_3.cs" />
-    <Compile Include="Migrations\20231010204755_3.designer.cs">
-      <DependentUpon>20231010204755_3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20231011175512_4.cs" />
-    <Compile Include="Migrations\20231011175512_4.designer.cs">
-      <DependentUpon>20231011175512_4.cs</DependentUpon>
+    <Compile Include="Migrations\20231011190541_9.cs" />
+    <Compile Include="Migrations\20231011190541_9.designer.cs">
+      <DependentUpon>20231011190541_9.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MyDbContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />

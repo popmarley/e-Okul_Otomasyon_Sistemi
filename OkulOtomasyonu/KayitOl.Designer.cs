@@ -44,6 +44,8 @@
 			this.btnTurMudur = new System.Windows.Forms.RadioButton();
 			this.label6 = new System.Windows.Forms.Label();
 			this.gboxOgrenci = new System.Windows.Forms.GroupBox();
+			this.dateOgrenciDogumTarihi = new System.Windows.Forms.DateTimePicker();
+			this.cboxOgrenciSinif = new System.Windows.Forms.ComboBox();
 			this.txtOgrenciVeliTel = new System.Windows.Forms.TextBox();
 			this.txtOgrenciVeliSoyadi = new System.Windows.Forms.TextBox();
 			this.txtOgrenciVeliAdi = new System.Windows.Forms.TextBox();
@@ -64,14 +66,18 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.gboxOgretmen = new System.Windows.Forms.GroupBox();
+			this.dateOgretmenDogumTarihi = new System.Windows.Forms.DateTimePicker();
+			this.cboxOgretmenBrans = new System.Windows.Forms.ComboBox();
 			this.label18 = new System.Windows.Forms.Label();
 			this.label19 = new System.Windows.Forms.Label();
+			this.label26 = new System.Windows.Forms.Label();
 			this.label20 = new System.Windows.Forms.Label();
 			this.label21 = new System.Windows.Forms.Label();
 			this.txtOgretmenAdi = new System.Windows.Forms.TextBox();
 			this.txtOgretmenSoyadi = new System.Windows.Forms.TextBox();
 			this.txtOgretmenTC = new System.Windows.Forms.TextBox();
 			this.gboxMudur = new System.Windows.Forms.GroupBox();
+			this.dateMudurDogumTarihi = new System.Windows.Forms.DateTimePicker();
 			this.label25 = new System.Windows.Forms.Label();
 			this.txtMudurTC = new System.Windows.Forms.TextBox();
 			this.label24 = new System.Windows.Forms.Label();
@@ -79,13 +85,7 @@
 			this.label23 = new System.Windows.Forms.Label();
 			this.txtMudurAdi = new System.Windows.Forms.TextBox();
 			this.label22 = new System.Windows.Forms.Label();
-			this.cboxOgrenciSinif = new System.Windows.Forms.ComboBox();
-			this.label26 = new System.Windows.Forms.Label();
 			this.btnKayitOl = new System.Windows.Forms.Button();
-			this.dateOgrenciDogumTarihi = new System.Windows.Forms.DateTimePicker();
-			this.cboxOgretmenBrans = new System.Windows.Forms.ComboBox();
-			this.dateOgretmenDogumTarihi = new System.Windows.Forms.DateTimePicker();
-			this.dateMudurDogumTarihi = new System.Windows.Forms.DateTimePicker();
 			this.gboxOgrenci.SuspendLayout();
 			this.gboxOgretmen.SuspendLayout();
 			this.gboxMudur.SuspendLayout();
@@ -259,6 +259,21 @@
 			this.gboxOgrenci.TabIndex = 4;
 			this.gboxOgrenci.TabStop = false;
 			this.gboxOgrenci.Text = "Öğrenci";
+			// 
+			// dateOgrenciDogumTarihi
+			// 
+			this.dateOgrenciDogumTarihi.Location = new System.Drawing.Point(103, 146);
+			this.dateOgrenciDogumTarihi.Name = "dateOgrenciDogumTarihi";
+			this.dateOgrenciDogumTarihi.Size = new System.Drawing.Size(146, 22);
+			this.dateOgrenciDogumTarihi.TabIndex = 4;
+			// 
+			// cboxOgrenciSinif
+			// 
+			this.cboxOgrenciSinif.FormattingEnabled = true;
+			this.cboxOgrenciSinif.Location = new System.Drawing.Point(103, 188);
+			this.cboxOgrenciSinif.Name = "cboxOgrenciSinif";
+			this.cboxOgrenciSinif.Size = new System.Drawing.Size(146, 24);
+			this.cboxOgrenciSinif.TabIndex = 3;
 			// 
 			// txtOgrenciVeliTel
 			// 
@@ -444,6 +459,26 @@
 			this.gboxOgretmen.TabStop = false;
 			this.gboxOgretmen.Text = "Öğretmen";
 			// 
+			// dateOgretmenDogumTarihi
+			// 
+			this.dateOgretmenDogumTarihi.Location = new System.Drawing.Point(106, 144);
+			this.dateOgretmenDogumTarihi.Name = "dateOgretmenDogumTarihi";
+			this.dateOgretmenDogumTarihi.Size = new System.Drawing.Size(146, 22);
+			this.dateOgretmenDogumTarihi.TabIndex = 4;
+			// 
+			// cboxOgretmenBrans
+			// 
+			this.cboxOgretmenBrans.FormattingEnabled = true;
+			this.cboxOgretmenBrans.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+			this.cboxOgretmenBrans.Location = new System.Drawing.Point(106, 177);
+			this.cboxOgretmenBrans.Name = "cboxOgretmenBrans";
+			this.cboxOgretmenBrans.Size = new System.Drawing.Size(146, 24);
+			this.cboxOgretmenBrans.TabIndex = 3;
+			// 
 			// label18
 			// 
 			this.label18.AutoSize = true;
@@ -461,6 +496,15 @@
 			this.label19.Size = new System.Drawing.Size(53, 16);
 			this.label19.TabIndex = 1;
 			this.label19.Text = "Soyadı:";
+			// 
+			// label26
+			// 
+			this.label26.AutoSize = true;
+			this.label26.Location = new System.Drawing.Point(52, 180);
+			this.label26.Name = "label26";
+			this.label26.Size = new System.Drawing.Size(48, 16);
+			this.label26.TabIndex = 1;
+			this.label26.Text = "Branşı:";
 			// 
 			// label20
 			// 
@@ -520,6 +564,13 @@
 			this.gboxMudur.TabIndex = 4;
 			this.gboxMudur.TabStop = false;
 			this.gboxMudur.Text = "Müdür";
+			// 
+			// dateMudurDogumTarihi
+			// 
+			this.dateMudurDogumTarihi.Location = new System.Drawing.Point(106, 142);
+			this.dateMudurDogumTarihi.Name = "dateMudurDogumTarihi";
+			this.dateMudurDogumTarihi.Size = new System.Drawing.Size(146, 22);
+			this.dateMudurDogumTarihi.TabIndex = 4;
 			// 
 			// label25
 			// 
@@ -581,23 +632,6 @@
 			this.label22.TabIndex = 1;
 			this.label22.Text = "Doğum Tarihi:";
 			// 
-			// cboxOgrenciSinif
-			// 
-			this.cboxOgrenciSinif.FormattingEnabled = true;
-			this.cboxOgrenciSinif.Location = new System.Drawing.Point(103, 188);
-			this.cboxOgrenciSinif.Name = "cboxOgrenciSinif";
-			this.cboxOgrenciSinif.Size = new System.Drawing.Size(146, 24);
-			this.cboxOgrenciSinif.TabIndex = 3;
-			// 
-			// label26
-			// 
-			this.label26.AutoSize = true;
-			this.label26.Location = new System.Drawing.Point(52, 180);
-			this.label26.Name = "label26";
-			this.label26.Size = new System.Drawing.Size(48, 16);
-			this.label26.TabIndex = 1;
-			this.label26.Text = "Branşı:";
-			// 
 			// btnKayitOl
 			// 
 			this.btnKayitOl.Location = new System.Drawing.Point(673, 484);
@@ -606,41 +640,7 @@
 			this.btnKayitOl.TabIndex = 0;
 			this.btnKayitOl.Text = "Kayıt Ol";
 			this.btnKayitOl.UseVisualStyleBackColor = true;
-			this.btnKayitOl.Click += new System.EventHandler(this.btn_Geri_Click);
-			// 
-			// dateOgrenciDogumTarihi
-			// 
-			this.dateOgrenciDogumTarihi.Location = new System.Drawing.Point(103, 146);
-			this.dateOgrenciDogumTarihi.Name = "dateOgrenciDogumTarihi";
-			this.dateOgrenciDogumTarihi.Size = new System.Drawing.Size(146, 22);
-			this.dateOgrenciDogumTarihi.TabIndex = 4;
-			// 
-			// cboxOgretmenBrans
-			// 
-			this.cboxOgretmenBrans.FormattingEnabled = true;
-			this.cboxOgretmenBrans.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-			this.cboxOgretmenBrans.Location = new System.Drawing.Point(106, 177);
-			this.cboxOgretmenBrans.Name = "cboxOgretmenBrans";
-			this.cboxOgretmenBrans.Size = new System.Drawing.Size(146, 24);
-			this.cboxOgretmenBrans.TabIndex = 3;
-			// 
-			// dateOgretmenDogumTarihi
-			// 
-			this.dateOgretmenDogumTarihi.Location = new System.Drawing.Point(106, 144);
-			this.dateOgretmenDogumTarihi.Name = "dateOgretmenDogumTarihi";
-			this.dateOgretmenDogumTarihi.Size = new System.Drawing.Size(146, 22);
-			this.dateOgretmenDogumTarihi.TabIndex = 4;
-			// 
-			// dateMudurDogumTarihi
-			// 
-			this.dateMudurDogumTarihi.Location = new System.Drawing.Point(106, 142);
-			this.dateMudurDogumTarihi.Name = "dateMudurDogumTarihi";
-			this.dateMudurDogumTarihi.Size = new System.Drawing.Size(146, 22);
-			this.dateMudurDogumTarihi.TabIndex = 4;
+			this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);
 			// 
 			// KayitOl
 			// 
@@ -668,6 +668,7 @@
 			this.Controls.Add(this.btn_Geri);
 			this.Name = "KayitOl";
 			this.Text = "KayıtOl";
+			this.Load += new System.EventHandler(this.KayitOl_Load);
 			this.gboxOgrenci.ResumeLayout(false);
 			this.gboxOgrenci.PerformLayout();
 			this.gboxOgretmen.ResumeLayout(false);
