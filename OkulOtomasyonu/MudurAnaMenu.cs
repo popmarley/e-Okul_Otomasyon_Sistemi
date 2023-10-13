@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OkulOtomasyonu
 {
-	public partial class AnaMenu : Form
+	public partial class MudurAnaMenu : Form
 	{
-		public AnaMenu()
+		public MudurAnaMenu()
 		{
 			InitializeComponent();
 		}

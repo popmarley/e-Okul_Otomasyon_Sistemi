@@ -27,13 +27,33 @@ namespace OkulOtomasyonu
 
 				if (userInDb != null)
 				{
+					switch (userInDb.TipID)
+					{
+						case 1: // Mudur
+							MudurAnaMenu mudurMenuForm = new MudurAnaMenu();
+							mudurMenuForm.Show();
+							break;
 
-					AnaMenu anaMenuForm = new AnaMenu();
-					anaMenuForm.Show();
+						case 2: // Ogretmen
+							OgretmenAnaMenu ogretmenMenuForm = new OgretmenAnaMenu();
+							ogretmenMenuForm.Show();
+							break;
+
+						case 3: // Ogrenci
+							OgrenciAnaMenu ogrenciMenuForm = new OgrenciAnaMenu();
+							ogrenciMenuForm.Show();
+							break;
+
+						default:
+							MessageBox.Show("Tanımsız kullanıcı tipi!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+							break;
+					}
 					this.Hide();
 				}
 				else
 				{
+					txt_UserName.Clear();
+					txt_Password.Clear();
 					MessageBox.Show("Hatalı kullanıcı adı veya şifre!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				}
 			}
