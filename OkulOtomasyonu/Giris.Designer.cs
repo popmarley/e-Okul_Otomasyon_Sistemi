@@ -100,7 +100,7 @@
 			this.btnSistemdenCikis.Location = new System.Drawing.Point(734, 37);
 			this.btnSistemdenCikis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnSistemdenCikis.Name = "btnSistemdenCikis";
-			this.btnSistemdenCikis.Size = new System.Drawing.Size(116, 48);
+			this.btnSistemdenCikis.Size = new System.Drawing.Size(116, 73);
 			this.btnSistemdenCikis.TabIndex = 5;
 			this.btnSistemdenCikis.Text = "Ana Menüye Dön";
 			this.btnSistemdenCikis.UseVisualStyleBackColor = false;

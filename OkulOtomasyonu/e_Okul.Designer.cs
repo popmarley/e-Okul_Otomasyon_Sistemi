@@ -50,10 +50,10 @@
 			// lblYonetimGiris
 			// 
 			this.lblYonetimGiris.AutoSize = true;
-			this.lblYonetimGiris.Font = new System.Drawing.Font("Montserrat Medium", 7F, System.Drawing.FontStyle.Bold);
-			this.lblYonetimGiris.Location = new System.Drawing.Point(544, 188);
+			this.lblYonetimGiris.Font = new System.Drawing.Font("Montserrat Medium", 6F, System.Drawing.FontStyle.Bold);
+			this.lblYonetimGiris.Location = new System.Drawing.Point(546, 192);
 			this.lblYonetimGiris.Name = "lblYonetimGiris";
-			this.lblYonetimGiris.Size = new System.Drawing.Size(140, 32);
+			this.lblYonetimGiris.Size = new System.Drawing.Size(125, 28);
 			this.lblYonetimGiris.TabIndex = 1;
 			this.lblYonetimGiris.Text = "Okul Yönetimi Bilgi\r\nSistemi Girişi\r\n";
 			this.lblYonetimGiris.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -74,10 +74,10 @@
 			// lblOgrenciGiris
 			// 
 			this.lblOgrenciGiris.AutoSize = true;
-			this.lblOgrenciGiris.Font = new System.Drawing.Font("Montserrat Medium", 7F, System.Drawing.FontStyle.Bold);
-			this.lblOgrenciGiris.Location = new System.Drawing.Point(714, 188);
+			this.lblOgrenciGiris.Font = new System.Drawing.Font("Montserrat Medium", 6F, System.Drawing.FontStyle.Bold);
+			this.lblOgrenciGiris.Location = new System.Drawing.Point(721, 192);
 			this.lblOgrenciGiris.Name = "lblOgrenciGiris";
-			this.lblOgrenciGiris.Size = new System.Drawing.Size(159, 32);
+			this.lblOgrenciGiris.Size = new System.Drawing.Size(143, 28);
 			this.lblOgrenciGiris.TabIndex = 1;
 			this.lblOgrenciGiris.Text = "Öğrenci Bilgilendirme\r\nSistemi Girişi\r\n";
 			this.lblOgrenciGiris.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
