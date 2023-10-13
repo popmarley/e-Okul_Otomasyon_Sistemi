@@ -11,14 +11,16 @@ namespace OkulOtomasyonu.Entity
 		public int OgretmenID { get; set; }
 		[ForeignKey("Kullanici")]
 		public int KullaniciID { get; set; }
-		[ForeignKey("Ders")]
-		public int DersID { get; set; }
+		[ForeignKey("OgretmenBrans")]
+		public int OgretmenBransID { get; set; }
 		public string Ad { get; set; }
 		public string Soyad { get; set; }
 		public int TCNo { get; set; }
 		public DateTime DogumTarihi { get; set; }
 
 		public Kullanici Kullanici { get; set; }
-		public List<Ders> Dersleri { get; set; }
+		public OgretmenBrans OgretmenBrans { get; set; }
+		
+		
 	}
 }

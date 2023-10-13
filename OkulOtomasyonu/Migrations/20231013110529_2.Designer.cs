@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OkulOtomasyonu.Context;
 
 namespace OkulOtomasyonu.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231013110529_2")]
+    partial class _2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -222,7 +224,12 @@ namespace OkulOtomasyonu.Migrations
                     b.Property<int>("DersID")
                         .HasColumnType("int");
 
+                    b.Property<int>("OgretmenID")
+                        .HasColumnType("int");
+
                     b.HasKey("OgretmenBransID");
+
+                    b.HasIndex("OgretmenID");
 
                     b.ToTable("OgretmenBranslari");
                 });
@@ -368,8 +375,17 @@ namespace OkulOtomasyonu.Migrations
                         .IsRequired();
 
                     b.HasOne("OkulOtomasyonu.Entity.OgretmenBrans", "OgretmenBrans")
-                        .WithMany("Ogretmen")
+                        .WithMany()
                         .HasForeignKey("OgretmenBransID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OkulOtomasyonu.Entity.OgretmenBrans", b =>
+                {
+                    b.HasOne("OkulOtomasyonu.Entity.Ogretmen", "Ogretmen")
+                        .WithMany()
+                        .HasForeignKey("OgretmenID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

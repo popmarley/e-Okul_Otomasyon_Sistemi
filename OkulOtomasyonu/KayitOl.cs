@@ -129,6 +129,13 @@ namespace OkulOtomasyonu
 				}
 				else if (btnTurOgretmen.Checked)
 				{
+					var ogretmenBrans = new OgretmenBrans
+					{
+						DersID = (int)cboxOgretmenBrans.SelectedValue
+					};
+					context.OgretmenBranslari.Add(ogretmenBrans);
+					context.SaveChanges();  // Öğretmen branşını kaydedip ID'sini almak için SaveChanges yapıyoruz.
+
 					var ogretmen = new Ogretmen
 					{
 						KullaniciID = kullanici.KullaniciID,
@@ -136,7 +143,7 @@ namespace OkulOtomasyonu
 						Soyad = txtOgretmenSoyadi.Text,
 						TCNo = int.Parse(txtOgretmenTC.Text),
 						DogumTarihi = dateOgretmenDogumTarihi.Value,
-						DersID = (int)cboxOgretmenBrans.SelectedValue
+						OgretmenBransID = ogretmenBrans.OgretmenBransID
 					};
 					context.Ogretmenler.Add(ogretmen);
 				}

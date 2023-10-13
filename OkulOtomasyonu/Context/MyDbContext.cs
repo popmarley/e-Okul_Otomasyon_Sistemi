@@ -24,12 +24,14 @@ namespace OkulOtomasyonu.Context
 		public DbSet<Mudur> Mudurler { get; set; }
 		public DbSet<SinavSonucu> SinavSonuclari { get; set; }
 		public DbSet<OgrenciDers> OgrenciDersleri { get; set; }
+		public DbSet<OgretmenBrans> OgretmenBranslari { get; set; }
 
 
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer(@"Data Source=OZGUVEN;Initial Catalog=EgitimOtomasyonu;Integrated Security=True");
+			//optionsBuilder.UseSqlServer(@"Data Source=OZGUVEN;Initial Catalog=EgitimOtomasyonu;Integrated Security=True");
+			optionsBuilder.UseSqlServer(@"Data Source=CD-BT02\FERRA;Initial Catalog=EgitimOtomasyonu;Integrated Security=True");
 		}
 
 		
