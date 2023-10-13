@@ -162,6 +162,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="e_Okul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="e_Okul.Designer.cs">
+      <DependentUpon>e_Okul.cs</DependentUpon>
+    </Compile>
     <Compile Include="MudurAnaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     <Compile Include="SifremiUnuttum.Designer.cs">
       <DependentUpon>SifremiUnuttum.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="e_Okul.resx">
+      <DependentUpon>e_Okul.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MudurAnaMenu.resx">
       <DependentUpon>MudurAnaMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,7 +277,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resimler\giris.png" />
+    <Content Include="Resimler\giris_.png" />
+    <Content Include="Resimler\user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
