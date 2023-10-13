@@ -76,6 +76,13 @@ namespace OkulOtomasyonu
 
 		private void btnKayitOl_Click(object sender, EventArgs e)
 		{
+			// Şifrelerin uyuşup uyuşmadığını kontrol ediyoruz.
+			if (txtSifre.Text != txtSifreTekrar.Text)
+			{
+				// Uyuşmuyorsa bir uyarı verip metottan çıkıyoruz.
+				MessageBox.Show("Şifreler uyuşmuyor!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
 			using (var context = new MyDbContext())
 			{
 				int secilenTipID = 0;
@@ -164,6 +171,35 @@ namespace OkulOtomasyonu
 			}
 
 			MessageBox.Show("Kayıt başarıyla tamamlandı!");
+			Giris GirisForm = new Giris();
+			GirisForm.Show();
+			this.Hide();
+		}
+
+	
+	
+
+		private void txtSifre_TextChanged(object sender, EventArgs e)
+		{
+			SifreUyusuyorMu();
+		}
+
+		private void txtSifreTekrar_TextChanged(object sender, EventArgs e)
+		{
+			SifreUyusuyorMu();
+		}
+
+		private void SifreUyusuyorMu()
+		{
+			if (txtSifre.Text != txtSifreTekrar.Text)
+			{
+				lblSifreUyari.Text = "Şifreler uyuşmuyor!";
+				lblSifreUyari.ForeColor = Color.Red;
+			}
+			else
+			{
+				lblSifreUyari.Text = ""; // Şifreler eşleştiğinde uyarı mesajını temizle
+			}
 		}
 	}
 }
