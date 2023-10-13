@@ -160,13 +160,13 @@
 			this.txtKullaniciAdi.MaxLength = 16;
 			this.txtKullaniciAdi.Name = "txtKullaniciAdi";
 			this.txtKullaniciAdi.Size = new System.Drawing.Size(76, 20);
-			this.txtKullaniciAdi.TabIndex = 2;
+			this.txtKullaniciAdi.TabIndex = 1;
 			// 
 			// txtSifre
 			// 
 			this.txtSifre.Location = new System.Drawing.Point(81, 95);
 			this.txtSifre.Margin = new System.Windows.Forms.Padding(2);
-			this.txtSifre.MaxLength = 16;
+			this.txtSifre.MaxLength = 8;
 			this.txtSifre.Name = "txtSifre";
 			this.txtSifre.PasswordChar = '*';
 			this.txtSifre.Size = new System.Drawing.Size(76, 20);
@@ -177,11 +177,11 @@
 			// 
 			this.txtSifreTekrar.Location = new System.Drawing.Point(81, 131);
 			this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(2);
-			this.txtSifreTekrar.MaxLength = 16;
+			this.txtSifreTekrar.MaxLength = 8;
 			this.txtSifreTekrar.Name = "txtSifreTekrar";
 			this.txtSifreTekrar.PasswordChar = '*';
 			this.txtSifreTekrar.Size = new System.Drawing.Size(76, 20);
-			this.txtSifreTekrar.TabIndex = 2;
+			this.txtSifreTekrar.TabIndex = 3;
 			this.txtSifreTekrar.TextChanged += new System.EventHandler(this.txtSifreTekrar_TextChanged);
 			// 
 			// txtEPosta
@@ -191,7 +191,7 @@
 			this.txtEPosta.MaxLength = 32;
 			this.txtEPosta.Name = "txtEPosta";
 			this.txtEPosta.Size = new System.Drawing.Size(76, 20);
-			this.txtEPosta.TabIndex = 2;
+			this.txtEPosta.TabIndex = 4;
 			// 
 			// txtTelefon
 			// 
@@ -200,7 +200,7 @@
 			this.txtTelefon.MaxLength = 11;
 			this.txtTelefon.Name = "txtTelefon";
 			this.txtTelefon.Size = new System.Drawing.Size(76, 20);
-			this.txtTelefon.TabIndex = 2;
+			this.txtTelefon.TabIndex = 5;
 			// 
 			// btnTurOgrenci
 			// 
@@ -209,7 +209,7 @@
 			this.btnTurOgrenci.Margin = new System.Windows.Forms.Padding(2);
 			this.btnTurOgrenci.Name = "btnTurOgrenci";
 			this.btnTurOgrenci.Size = new System.Drawing.Size(62, 17);
-			this.btnTurOgrenci.TabIndex = 3;
+			this.btnTurOgrenci.TabIndex = 6;
 			this.btnTurOgrenci.TabStop = true;
 			this.btnTurOgrenci.Text = "Öğrenci";
 			this.btnTurOgrenci.UseVisualStyleBackColor = true;
@@ -221,7 +221,7 @@
 			this.btnTurOgretmen.Margin = new System.Windows.Forms.Padding(2);
 			this.btnTurOgretmen.Name = "btnTurOgretmen";
 			this.btnTurOgretmen.Size = new System.Drawing.Size(71, 17);
-			this.btnTurOgretmen.TabIndex = 3;
+			this.btnTurOgretmen.TabIndex = 7;
 			this.btnTurOgretmen.TabStop = true;
 			this.btnTurOgretmen.Text = "Öğretmen";
 			this.btnTurOgretmen.UseVisualStyleBackColor = true;
@@ -233,7 +233,7 @@
 			this.btnTurMudur.Margin = new System.Windows.Forms.Padding(2);
 			this.btnTurMudur.Name = "btnTurMudur";
 			this.btnTurMudur.Size = new System.Drawing.Size(55, 17);
-			this.btnTurMudur.TabIndex = 3;
+			this.btnTurMudur.TabIndex = 8;
 			this.btnTurMudur.TabStop = true;
 			this.btnTurMudur.Text = "Müdür";
 			this.btnTurMudur.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
 			this.cboxOgrenciSinif.Margin = new System.Windows.Forms.Padding(2);
 			this.cboxOgrenciSinif.Name = "cboxOgrenciSinif";
 			this.cboxOgrenciSinif.Size = new System.Drawing.Size(110, 21);
-			this.cboxOgrenciSinif.TabIndex = 3;
+			this.cboxOgrenciSinif.TabIndex = 5;
 			// 
 			// txtOgrenciVeliTel
 			// 
@@ -304,35 +304,35 @@
 			this.txtOgrenciVeliTel.MaxLength = 11;
 			this.txtOgrenciVeliTel.Name = "txtOgrenciVeliTel";
 			this.txtOgrenciVeliTel.Size = new System.Drawing.Size(110, 20);
-			this.txtOgrenciVeliTel.TabIndex = 2;
+			this.txtOgrenciVeliTel.TabIndex = 10;
 			// 
 			// txtOgrenciVeliSoyadi
 			// 
 			this.txtOgrenciVeliSoyadi.Location = new System.Drawing.Point(77, 304);
 			this.txtOgrenciVeliSoyadi.Margin = new System.Windows.Forms.Padding(2);
-			this.txtOgrenciVeliSoyadi.MaxLength = 11;
+			this.txtOgrenciVeliSoyadi.MaxLength = 16;
 			this.txtOgrenciVeliSoyadi.Name = "txtOgrenciVeliSoyadi";
 			this.txtOgrenciVeliSoyadi.Size = new System.Drawing.Size(110, 20);
-			this.txtOgrenciVeliSoyadi.TabIndex = 2;
+			this.txtOgrenciVeliSoyadi.TabIndex = 9;
 			// 
 			// txtOgrenciVeliAdi
 			// 
 			this.txtOgrenciVeliAdi.Location = new System.Drawing.Point(77, 277);
 			this.txtOgrenciVeliAdi.Margin = new System.Windows.Forms.Padding(2);
-			this.txtOgrenciVeliAdi.MaxLength = 11;
+			this.txtOgrenciVeliAdi.MaxLength = 16;
 			this.txtOgrenciVeliAdi.Name = "txtOgrenciVeliAdi";
 			this.txtOgrenciVeliAdi.Size = new System.Drawing.Size(110, 20);
-			this.txtOgrenciVeliAdi.TabIndex = 2;
+			this.txtOgrenciVeliAdi.TabIndex = 8;
 			// 
 			// txtOgrenciAdres
 			// 
 			this.txtOgrenciAdres.Location = new System.Drawing.Point(77, 214);
 			this.txtOgrenciAdres.Margin = new System.Windows.Forms.Padding(2);
-			this.txtOgrenciAdres.MaxLength = 11;
+			this.txtOgrenciAdres.MaxLength = 255;
 			this.txtOgrenciAdres.Multiline = true;
 			this.txtOgrenciAdres.Name = "txtOgrenciAdres";
 			this.txtOgrenciAdres.Size = new System.Drawing.Size(110, 19);
-			this.txtOgrenciAdres.TabIndex = 2;
+			this.txtOgrenciAdres.TabIndex = 7;
 			// 
 			// txtOgrenciNo
 			// 
@@ -342,7 +342,7 @@
 			this.txtOgrenciNo.Multiline = true;
 			this.txtOgrenciNo.Name = "txtOgrenciNo";
 			this.txtOgrenciNo.Size = new System.Drawing.Size(110, 19);
-			this.txtOgrenciNo.TabIndex = 2;
+			this.txtOgrenciNo.TabIndex = 6;
 			// 
 			// txtOgrenciTC
 			// 
@@ -351,13 +351,13 @@
 			this.txtOgrenciTC.MaxLength = 11;
 			this.txtOgrenciTC.Name = "txtOgrenciTC";
 			this.txtOgrenciTC.Size = new System.Drawing.Size(110, 20);
-			this.txtOgrenciTC.TabIndex = 2;
+			this.txtOgrenciTC.TabIndex = 3;
 			// 
 			// txtOgrenciSoyadi
 			// 
 			this.txtOgrenciSoyadi.Location = new System.Drawing.Point(77, 52);
 			this.txtOgrenciSoyadi.Margin = new System.Windows.Forms.Padding(2);
-			this.txtOgrenciSoyadi.MaxLength = 11;
+			this.txtOgrenciSoyadi.MaxLength = 32;
 			this.txtOgrenciSoyadi.Name = "txtOgrenciSoyadi";
 			this.txtOgrenciSoyadi.Size = new System.Drawing.Size(110, 20);
 			this.txtOgrenciSoyadi.TabIndex = 2;
@@ -366,10 +366,10 @@
 			// 
 			this.txtOgrenciAdi.Location = new System.Drawing.Point(77, 20);
 			this.txtOgrenciAdi.Margin = new System.Windows.Forms.Padding(2);
-			this.txtOgrenciAdi.MaxLength = 11;
+			this.txtOgrenciAdi.MaxLength = 32;
 			this.txtOgrenciAdi.Name = "txtOgrenciAdi";
 			this.txtOgrenciAdi.Size = new System.Drawing.Size(110, 20);
-			this.txtOgrenciAdi.TabIndex = 2;
+			this.txtOgrenciAdi.TabIndex = 1;
 			// 
 			// label14
 			// 
@@ -522,7 +522,7 @@
 			this.cboxOgretmenBrans.Margin = new System.Windows.Forms.Padding(2);
 			this.cboxOgretmenBrans.Name = "cboxOgretmenBrans";
 			this.cboxOgretmenBrans.Size = new System.Drawing.Size(110, 21);
-			this.cboxOgretmenBrans.TabIndex = 3;
+			this.cboxOgretmenBrans.TabIndex = 5;
 			// 
 			// label18
 			// 
@@ -578,16 +578,16 @@
 			// 
 			this.txtOgretmenAdi.Location = new System.Drawing.Point(80, 20);
 			this.txtOgretmenAdi.Margin = new System.Windows.Forms.Padding(2);
-			this.txtOgretmenAdi.MaxLength = 11;
+			this.txtOgretmenAdi.MaxLength = 16;
 			this.txtOgretmenAdi.Name = "txtOgretmenAdi";
 			this.txtOgretmenAdi.Size = new System.Drawing.Size(110, 20);
-			this.txtOgretmenAdi.TabIndex = 2;
+			this.txtOgretmenAdi.TabIndex = 1;
 			// 
 			// txtOgretmenSoyadi
 			// 
 			this.txtOgretmenSoyadi.Location = new System.Drawing.Point(80, 52);
 			this.txtOgretmenSoyadi.Margin = new System.Windows.Forms.Padding(2);
-			this.txtOgretmenSoyadi.MaxLength = 11;
+			this.txtOgretmenSoyadi.MaxLength = 16;
 			this.txtOgretmenSoyadi.Name = "txtOgretmenSoyadi";
 			this.txtOgretmenSoyadi.Size = new System.Drawing.Size(110, 20);
 			this.txtOgretmenSoyadi.TabIndex = 2;
@@ -599,7 +599,7 @@
 			this.txtOgretmenTC.MaxLength = 11;
 			this.txtOgretmenTC.Name = "txtOgretmenTC";
 			this.txtOgretmenTC.Size = new System.Drawing.Size(110, 20);
-			this.txtOgretmenTC.TabIndex = 2;
+			this.txtOgretmenTC.TabIndex = 3;
 			// 
 			// gboxMudur
 			// 
@@ -645,7 +645,7 @@
 			this.txtMudurTC.MaxLength = 11;
 			this.txtMudurTC.Name = "txtMudurTC";
 			this.txtMudurTC.Size = new System.Drawing.Size(110, 20);
-			this.txtMudurTC.TabIndex = 2;
+			this.txtMudurTC.TabIndex = 3;
 			// 
 			// label24
 			// 
@@ -661,7 +661,7 @@
 			// 
 			this.txtMudurSoyadi.Location = new System.Drawing.Point(80, 48);
 			this.txtMudurSoyadi.Margin = new System.Windows.Forms.Padding(2);
-			this.txtMudurSoyadi.MaxLength = 11;
+			this.txtMudurSoyadi.MaxLength = 32;
 			this.txtMudurSoyadi.Name = "txtMudurSoyadi";
 			this.txtMudurSoyadi.Size = new System.Drawing.Size(110, 20);
 			this.txtMudurSoyadi.TabIndex = 2;
@@ -680,10 +680,10 @@
 			// 
 			this.txtMudurAdi.Location = new System.Drawing.Point(80, 15);
 			this.txtMudurAdi.Margin = new System.Windows.Forms.Padding(2);
-			this.txtMudurAdi.MaxLength = 11;
+			this.txtMudurAdi.MaxLength = 32;
 			this.txtMudurAdi.Name = "txtMudurAdi";
 			this.txtMudurAdi.Size = new System.Drawing.Size(110, 20);
-			this.txtMudurAdi.TabIndex = 2;
+			this.txtMudurAdi.TabIndex = 1;
 			// 
 			// label22
 			// 
@@ -701,7 +701,7 @@
 			this.btnKayitOl.Margin = new System.Windows.Forms.Padding(2);
 			this.btnKayitOl.Name = "btnKayitOl";
 			this.btnKayitOl.Size = new System.Drawing.Size(56, 28);
-			this.btnKayitOl.TabIndex = 0;
+			this.btnKayitOl.TabIndex = 9;
 			this.btnKayitOl.Text = "Kayıt Ol";
 			this.btnKayitOl.UseVisualStyleBackColor = true;
 			this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);

@@ -40,9 +40,10 @@
 			// 
 			// btn_Cikis
 			// 
-			this.btn_Cikis.Location = new System.Drawing.Point(713, 69);
+			this.btn_Cikis.Location = new System.Drawing.Point(511, 138);
+			this.btn_Cikis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.btn_Cikis.Name = "btn_Cikis";
-			this.btn_Cikis.Size = new System.Drawing.Size(75, 23);
+			this.btn_Cikis.Size = new System.Drawing.Size(56, 19);
 			this.btn_Cikis.TabIndex = 0;
 			this.btn_Cikis.Text = "Çıkış";
 			this.btn_Cikis.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
 			// menuStrip1
 			// 
 			this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-			this.menuStrip1.Location = new System.Drawing.Point(0, 28);
+			this.menuStrip1.Location = new System.Drawing.Point(0, 24);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+			this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+			this.menuStrip1.Size = new System.Drawing.Size(600, 24);
 			this.menuStrip1.TabIndex = 1;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -67,44 +69,47 @@
             this.yardımToolStripMenuItem});
 			this.menuStrip2.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip2.Name = "menuStrip2";
-			this.menuStrip2.Size = new System.Drawing.Size(800, 28);
+			this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+			this.menuStrip2.Size = new System.Drawing.Size(600, 24);
 			this.menuStrip2.TabIndex = 2;
 			this.menuStrip2.Text = "menuStrip2";
 			// 
 			// dosyaToolStripMenuItem
 			// 
 			this.dosyaToolStripMenuItem.Name = "dosyaToolStripMenuItem";
-			this.dosyaToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+			this.dosyaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
 			this.dosyaToolStripMenuItem.Text = "Dosya";
 			// 
 			// yönetimToolStripMenuItem
 			// 
 			this.yönetimToolStripMenuItem.Name = "yönetimToolStripMenuItem";
-			this.yönetimToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+			this.yönetimToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
 			this.yönetimToolStripMenuItem.Text = "Yönetim";
 			// 
 			// raporlarToolStripMenuItem
 			// 
 			this.raporlarToolStripMenuItem.Name = "raporlarToolStripMenuItem";
-			this.raporlarToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+			this.raporlarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
 			this.raporlarToolStripMenuItem.Text = "Raporlar";
 			// 
 			// yardımToolStripMenuItem
 			// 
 			this.yardımToolStripMenuItem.Name = "yardımToolStripMenuItem";
-			this.yardımToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+			this.yardımToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
 			this.yardımToolStripMenuItem.Text = "Yardım";
 			// 
 			// AnaMenu
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(600, 366);
 			this.Controls.Add(this.btn_Cikis);
 			this.Controls.Add(this.menuStrip1);
 			this.Controls.Add(this.menuStrip2);
 			this.MainMenuStrip = this.menuStrip1;
+			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.Name = "AnaMenu";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "AnaMenu";
 			this.menuStrip2.ResumeLayout(false);
 			this.menuStrip2.PerformLayout();

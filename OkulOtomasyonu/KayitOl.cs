@@ -80,7 +80,7 @@ namespace OkulOtomasyonu
 			if (txtSifre.Text != txtSifreTekrar.Text)
 			{
 				// Uyuşmuyorsa bir uyarı verip metottan çıkıyoruz.
-				MessageBox.Show("Şifreler uyuşmuyor!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				MessageBox.Show("Şifreler uyuşmuyor!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				return;
 			}
 			using (var context = new MyDbContext())

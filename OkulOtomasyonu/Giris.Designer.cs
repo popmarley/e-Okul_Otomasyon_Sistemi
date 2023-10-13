@@ -121,7 +121,8 @@
 			this.Controls.Add(this.txt_UserName);
 			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.Name = "Giris";
-			this.Text = "BÇAL Yönetim Bilgi Sistemi I Giriş Ekranı ";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "BÇAL Yönetim Bilgi Sistemi ";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
