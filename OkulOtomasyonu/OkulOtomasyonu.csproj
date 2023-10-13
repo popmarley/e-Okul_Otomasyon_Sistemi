@@ -278,8 +278,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resimler\giris.png" />
-    <Content Include="Resimler\giris_.png" />
+    <Content Include="Resimler\giris__.png" />
     <Content Include="Resimler\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

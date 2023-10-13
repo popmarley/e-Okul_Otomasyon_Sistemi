@@ -31,7 +31,7 @@ namespace OkulOtomasyonu
 
 		private void btn_Geri_Click(object sender, EventArgs e)
 		{
-			Giris girisForm = new Giris();
+			e_Okul girisForm = new e_Okul();
 			girisForm.Show();
 			this.Hide();
 		}
@@ -171,8 +171,8 @@ namespace OkulOtomasyonu
 			}
 
 			MessageBox.Show("Kayıt başarıyla tamamlandı!");
-			Giris GirisForm = new Giris();
-			GirisForm.Show();
+			e_Okul girisForm = new e_Okul();
+			girisForm.Show();
 			this.Hide();
 		}
 

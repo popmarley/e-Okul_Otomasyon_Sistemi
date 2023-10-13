@@ -59,23 +59,13 @@ namespace OkulOtomasyonu
 			}
 		}
 
-		private void lbl_KayitOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			KayitOl kayitOlForm = new KayitOl();
-			kayitOlForm.Show();
-			this.Hide();
-		}
-
-		private void lbl_SifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			SifremiUnuttum sifremiUnuttumForm = new SifremiUnuttum();
-			sifremiUnuttumForm.Show();
-			this.Hide();
-		}
+		
 
 		private void btnSistemdenCikis_Click(object sender, EventArgs e)
 		{
-			Application.Exit();
+			e_Okul girisForm = new e_Okul();
+			girisForm.Show();
+			this.Hide();
 		}
 	}
 }

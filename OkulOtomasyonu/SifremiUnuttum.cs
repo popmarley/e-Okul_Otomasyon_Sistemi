@@ -88,7 +88,7 @@ namespace OkulOtomasyonu
 
 		private void btnSifremiUnuttumGeri_Click(object sender, EventArgs e)
 		{
-			Giris girisForm = new Giris();
+			e_Okul girisForm = new e_Okul();
 			girisForm.Show();
 			this.Hide();
 		}

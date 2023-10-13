@@ -17,6 +17,32 @@ namespace OkulOtomasyonu
 			InitializeComponent();
 		}
 
-		
+		private void lbl_KayitOl_Click(object sender, EventArgs e)
+		{
+			KayitOl kayitOlForm = new KayitOl();
+			kayitOlForm.Show();
+			this.Hide();
+		}
+
+		private void lbl_SifremiUnuttum_Click(object sender, EventArgs e)
+		{
+			SifremiUnuttum sifremiUnuttumForm = new SifremiUnuttum();
+			sifremiUnuttumForm.Show();
+			this.Hide();
+		}
+
+		private void lblYonetimGiris_Click(object sender, EventArgs e)
+		{
+			Giris girisForm = new Giris();
+			girisForm.Show();
+			this.Hide();
+		}
+
+		private void lblOgrenciGiris_Click(object sender, EventArgs e)
+		{
+			Giris girisForm = new Giris();
+			girisForm.Show();
+			this.Hide();
+		}
 	}
 }
