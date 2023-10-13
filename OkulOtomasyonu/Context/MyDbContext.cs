@@ -30,8 +30,8 @@ namespace OkulOtomasyonu.Context
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			//optionsBuilder.UseSqlServer(@"Data Source=OZGUVEN;Initial Catalog=EgitimOtomasyonu;Integrated Security=True");
-			optionsBuilder.UseSqlServer(@"Data Source=CD-BT02\FERRA;Initial Catalog=EgitimOtomasyonu;Integrated Security=True");
+			optionsBuilder.UseSqlServer(@"Data Source=OZGUVEN;Initial Catalog=EgitimOtomasyonu;Integrated Security=True");
+			//optionsBuilder.UseSqlServer(@"Data Source=CD-BT02\FERRA;Initial Catalog=EgitimOtomasyonu;Integrated Security=True");
 		}
 
 		

@@ -125,7 +125,7 @@ namespace OkulOtomasyonu.DbScript
 //BEGIN
 //CREATE TABLE[dbo].[Dersler](
 //	[dersID][int] IDENTITY(1, 1) NOT NULL,
-//	[dersAdi][varchar](255) COLLATE Turkish_CI_AS NULL,
+//	[dersAdi][varchar] (255) COLLATE Turkish_CI_AS NULL,
 // CONSTRAINT[PK__Dersler__B069CEB48C6E5219] PRIMARY KEY CLUSTERED
 //(
 //	[dersID] ASC
@@ -135,7 +135,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING OFF
 //GO
-//ALTER AUTHORIZATION ON[dbo].[Dersler] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[Dersler] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[Kullanicilar]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
@@ -144,14 +144,15 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Kullanicilar]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Kullanicilar]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[Kullanicilar](
+//CREATE TABLE[dbo].[Kullanicilar]
+//		(
 //	[kullaniciID][int] IDENTITY(1, 1) NOT NULL,
 //	[tipID][int] NULL,
-//	[kullaniciAdi][varchar](255) COLLATE Turkish_CI_AS NULL,
-//	[sifre][varchar](255) COLLATE Turkish_CI_AS NULL,
-//	[eposta][nvarchar](50) COLLATE Turkish_CI_AS NULL,
+//	[kullaniciAdi][varchar] (255) COLLATE Turkish_CI_AS NULL,
+//	[sifre][varchar] (255) COLLATE Turkish_CI_AS NULL,
+//	[eposta][nvarchar] (50) COLLATE Turkish_CI_AS NULL,
 //	[telefon][int] NULL,
 // CONSTRAINT[PK__Kullanic__848DC54B6FCC88F1] PRIMARY KEY CLUSTERED
 //(
@@ -162,7 +163,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING OFF
 //GO
-//ALTER AUTHORIZATION ON[dbo].[Kullanicilar] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[Kullanicilar] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[KullaniciTipleri]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
@@ -171,11 +172,12 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[KullaniciTipleri]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[KullaniciTipleri]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[KullaniciTipleri](
+//CREATE TABLE[dbo].[KullaniciTipleri]
+//		(
 //	[tipID][int] IDENTITY(1, 1) NOT NULL,
-//	[tipAdi][varchar](255) COLLATE Turkish_CI_AS NULL,
+//	[tipAdi][varchar] (255) COLLATE Turkish_CI_AS NULL,
 // CONSTRAINT[PK__Kullanic__E4250CDB78DFD36D] PRIMARY KEY CLUSTERED
 //(
 //	[tipID] ASC
@@ -185,7 +187,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING OFF
 //GO
-//ALTER AUTHORIZATION ON[dbo].[KullaniciTipleri] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[KullaniciTipleri] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[Mudurler]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
@@ -194,13 +196,14 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Mudurler]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Mudurler]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[Mudurler](
+//CREATE TABLE[dbo].[Mudurler]
+//		(
 //	[mudurID][int] IDENTITY(1, 1) NOT NULL,
 //	[kullaniciID][int] NULL,
-//	[ad][varchar](255) COLLATE Turkish_CI_AS NULL,
-//	[soyad][varchar](255) COLLATE Turkish_CI_AS NULL,
+//	[ad][varchar] (255) COLLATE Turkish_CI_AS NULL,
+//	[soyad][varchar] (255) COLLATE Turkish_CI_AS NULL,
 //	[dogumtarihi][datetime] NULL,
 //	[tcno][int] NULL,
 // CONSTRAINT[PK__Müdürler__27A6DB1DCA055500] PRIMARY KEY CLUSTERED
@@ -212,18 +215,19 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING OFF
 //GO
-//ALTER AUTHORIZATION ON[dbo].[Mudurler] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[Mudurler] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[OgrenciDersleri]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[OgrenciDersleri](
+//CREATE TABLE[dbo].[OgrenciDersleri]
+//		(
 //	[ogrencidersID][int] IDENTITY(1, 1) NOT NULL,
-//	[DersAdı][nvarchar](50) COLLATE Turkish_CI_AS NULL,
+//	[DersAdı][nvarchar] (50) COLLATE Turkish_CI_AS NULL,
 //	[ogrenciID][int] NULL,
 //	[dersID][int] NULL,
 // CONSTRAINT[PK_ÖğrenciDersleri] PRIMARY KEY CLUSTERED
@@ -233,7 +237,7 @@ namespace OkulOtomasyonu.DbScript
 //) ON[PRIMARY]
 //END
 //GO
-//ALTER AUTHORIZATION ON[dbo].[OgrenciDersleri] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[OgrenciDersleri] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[Ogrenciler]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
@@ -242,19 +246,20 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Ogrenciler]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Ogrenciler]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[Ogrenciler](
+//CREATE TABLE[dbo].[Ogrenciler]
+//		(
 //	[ogrenciID][int] IDENTITY(1, 1) NOT NULL,
 //	[kullaniciID][int] NULL,
 //	[sinifID][int] NULL,
 //	[veliID][int] NULL,
-//	[ad][varchar](255) COLLATE Turkish_CI_AS NULL,
-//	[soyad][varchar](255) COLLATE Turkish_CI_AS NULL,
+//	[ad][varchar] (255) COLLATE Turkish_CI_AS NULL,
+//	[soyad][varchar] (255) COLLATE Turkish_CI_AS NULL,
 //	[ogrencino][int] NULL,
 //	[dogumtarihi][datetime] NULL,
 //	[tcno][int] NULL,
-//	[adres][varchar](255) COLLATE Turkish_CI_AS NULL,
+//	[adres][varchar] (255) COLLATE Turkish_CI_AS NULL,
 // CONSTRAINT[PK__Öğrencil__91C9526C930A5FAA] PRIMARY KEY CLUSTERED
 //(
 //	[ogrenciID] ASC
@@ -264,16 +269,17 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING OFF
 //GO
-//ALTER AUTHORIZATION ON[dbo].[Ogrenciler] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[Ogrenciler] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[OgretmenBranslari]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OgretmenBranslari]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OgretmenBranslari]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[OgretmenBranslari](
+//CREATE TABLE[dbo].[OgretmenBranslari]
+//		(
 //	[OgretmenBransID][int] IDENTITY(1, 1) NOT NULL,
 //	[dersID][int] NULL,
 // CONSTRAINT[PK_OgretmenBranslari] PRIMARY KEY CLUSTERED
@@ -283,7 +289,7 @@ namespace OkulOtomasyonu.DbScript
 //) ON[PRIMARY]
 //END
 //GO
-//ALTER AUTHORIZATION ON[dbo].[OgretmenBranslari] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[OgretmenBranslari] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[Ogretmenler]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
@@ -292,13 +298,14 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Ogretmenler]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Ogretmenler]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[Ogretmenler](
+//CREATE TABLE[dbo].[Ogretmenler]
+//		(
 //	[ogretmenID][int] IDENTITY(1, 1) NOT NULL,
 //	[kullaniciID][int] NULL,
-//	[ad][varchar](255) COLLATE Turkish_CI_AS NULL,
-//	[soyad][varchar](255) COLLATE Turkish_CI_AS NULL,
+//	[ad][varchar] (255) COLLATE Turkish_CI_AS NULL,
+//	[soyad][varchar] (255) COLLATE Turkish_CI_AS NULL,
 //	[tcno][int] NULL,
 //	[dogumtarihi][datetime] NULL,
 //	[OgretmenBransID][int] NULL,
@@ -311,16 +318,17 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING OFF
 //GO
-//ALTER AUTHORIZATION ON[dbo].[Ogretmenler] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[Ogretmenler] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[Sinavlar]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Sinavlar]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Sinavlar]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[Sinavlar](
+//CREATE TABLE[dbo].[Sinavlar]
+//		(
 //	[sinavID][int] IDENTITY(1, 1) NOT NULL,
 //	[dersID][int] NULL,
 //	[tarih][date] NULL,
@@ -331,16 +339,17 @@ namespace OkulOtomasyonu.DbScript
 //) ON[PRIMARY]
 //END
 //GO
-//ALTER AUTHORIZATION ON[dbo].[Sinavlar] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[Sinavlar] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[SinavSonuclari]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[SinavSonuclari](
+//CREATE TABLE[dbo].[SinavSonuclari]
+//		(
 //	[sonucID][int] IDENTITY(1, 1) NOT NULL,
 //	[ogrenciID][int] NULL,
 //	[sinavID][int] NULL,
@@ -352,7 +361,7 @@ namespace OkulOtomasyonu.DbScript
 //) ON[PRIMARY]
 //END
 //GO
-//ALTER AUTHORIZATION ON[dbo].[SinavSonuclari] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[SinavSonuclari] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[Siniflar]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
@@ -361,11 +370,12 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Siniflar]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Siniflar]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[Siniflar](
+//CREATE TABLE[dbo].[Siniflar]
+//		(
 //	[sinifID][int] IDENTITY(1, 1) NOT NULL,
-//	[sinifAdi][varchar](255) COLLATE Turkish_CI_AS NULL,
+//	[sinifAdi][varchar] (255) COLLATE Turkish_CI_AS NULL,
 // CONSTRAINT[PK__Sınıflar__9CCB809F254FE9B1] PRIMARY KEY CLUSTERED
 //(
 //	[sinifID] ASC
@@ -375,7 +385,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING OFF
 //GO
-//ALTER AUTHORIZATION ON[dbo].[Siniflar] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[Siniflar] TO SCHEMA OWNER
 //GO
 ///****** Object:  Table [dbo].[Veliler]    Script Date: 13.10.2023 14:22:45 ******/
 //SET ANSI_NULLS ON
@@ -384,13 +394,14 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING ON
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Veliler]') AND type in (N'U'))
+//IF NOT EXISTS(SELECT* FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Veliler]') AND type in (N'U'))
 //BEGIN
-//CREATE TABLE[dbo].[Veliler](
+//CREATE TABLE[dbo].[Veliler]
+//		(
 //	[veliID][int] IDENTITY(1, 1) NOT NULL,
-//	[ad][varchar](255) COLLATE Turkish_CI_AS NULL,
-//	[soyad][varchar](255) COLLATE Turkish_CI_AS NULL,
-//	[telefon][varchar](255) COLLATE Turkish_CI_AS NULL,
+//	[ad][varchar] (255) COLLATE Turkish_CI_AS NULL,
+//	[soyad][varchar] (255) COLLATE Turkish_CI_AS NULL,
+//	[telefon][varchar] (255) COLLATE Turkish_CI_AS NULL,
 // CONSTRAINT[PK__Veliler__934C88C042E9126B] PRIMARY KEY CLUSTERED
 //(
 //	[veliID] ASC
@@ -400,194 +411,265 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //SET ANSI_PADDING OFF
 //GO
-//ALTER AUTHORIZATION ON[dbo].[Veliler] TO  SCHEMA OWNER
+//ALTER AUTHORIZATION ON[dbo].[Veliler] TO SCHEMA OWNER
 //GO
-//SET IDENTITY_INSERT[dbo].[Dersler] ON
+//SET IDENTITY_INSERT[dbo].[Dersler]
+//		ON
 //GO
-//INSERT[dbo].[Dersler]([dersID], [dersAdi]) VALUES(1, N'Matematik')
+//INSERT[dbo].[Dersler]
+//		([dersID], [dersAdi]) VALUES(1, N'Matematik')
 //GO
-//INSERT[dbo].[Dersler]([dersID], [dersAdi]) VALUES(2, N'Kimya')
+//INSERT[dbo].[Dersler]
+//		([dersID], [dersAdi]) VALUES(2, N'Kimya')
 //GO
-//INSERT[dbo].[Dersler]([dersID], [dersAdi]) VALUES(3, N'Fizik')
+//INSERT[dbo].[Dersler]
+//		([dersID], [dersAdi]) VALUES(3, N'Fizik')
 //GO
-//INSERT[dbo].[Dersler]([dersID], [dersAdi]) VALUES(4, N'Beden Eğitimi')
+//INSERT[dbo].[Dersler]
+//		([dersID], [dersAdi]) VALUES(4, N'Beden Eğitimi')
 //GO
-//INSERT[dbo].[Dersler]([dersID], [dersAdi]) VALUES(5, N'Müzik')
+//INSERT[dbo].[Dersler]
+//		([dersID], [dersAdi]) VALUES(5, N'Müzik')
 //GO
-//INSERT[dbo].[Dersler]([dersID], [dersAdi]) VALUES(6, N'Bilgisayar')
+//INSERT[dbo].[Dersler]
+//		([dersID], [dersAdi]) VALUES(6, N'Bilgisayar')
 //GO
-//INSERT[dbo].[Dersler]([dersID], [dersAdi]) VALUES(7, N'Biyoloji')
+//INSERT[dbo].[Dersler]
+//		([dersID], [dersAdi]) VALUES(7, N'Biyoloji')
 //GO
-//SET IDENTITY_INSERT[dbo].[Dersler] OFF
+//SET IDENTITY_INSERT[dbo].[Dersler]
+//		OFF
 //GO
-//SET IDENTITY_INSERT[dbo].[Kullanicilar] ON
+//SET IDENTITY_INSERT[dbo].[Kullanicilar]
+//		ON
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(1, 1, N'1', N'1', N'adasdsad', 123123)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(1, 1, N'1', N'1', N'adasdsad', 123123)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(2, 2, N'2', N'2', N'asdasd', 123)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(2, 2, N'2', N'2', N'asdasd', 123)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(3, 3, N'3', N'3', N'asda', 123)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(3, 3, N'3', N'3', N'asda', 123)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(5, 1, N'asdad', N'a', N'asda', 123)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(5, 1, N'asdad', N'a', N'asda', 123)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(6, 2, N'asda', N'asda', N'asdasd', 231)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(6, 2, N'asda', N'asda', N'asdasd', 231)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(7, 2, N'asdas', N'asda', N'zxcx', 13123)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(7, 2, N'asdas', N'asda', N'zxcx', 13123)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(8, 3, N'2', N'2', N'asd', 1231)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(8, 3, N'2', N'2', N'asd', 1231)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(9, 3, N'asdasd', N'asda', N'asdads', 123)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(9, 3, N'asdasd', N'asda', N'asdads', 123)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(10, 2, N'zxcz', N'xzczx', N'zxcz', 231)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(10, 2, N'zxcz', N'xzczx', N'zxcz', 231)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(11, 2, N'deneme', N'asdsa', N'asdasd', 1231)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(11, 2, N'deneme', N'asdsa', N'asdasd', 1231)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(12, 2, N'asd', N'asd', N'dsa', 123)
+//INSERT[dbo].[Kullanicilar]
+//		([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(12, 2, N'asd', N'asd', N'dsa', 123)
 //GO
-//SET IDENTITY_INSERT[dbo].[Kullanicilar] OFF
+//SET IDENTITY_INSERT[dbo].[Kullanicilar]
+//		OFF
 //GO
-//SET IDENTITY_INSERT[dbo].[KullaniciTipleri] ON
+//SET IDENTITY_INSERT[dbo].[KullaniciTipleri]
+//		ON
 //GO
-//INSERT[dbo].[KullaniciTipleri]([tipID], [tipAdi]) VALUES(1, N'Müdür')
+//INSERT[dbo].[KullaniciTipleri]
+//		([tipID], [tipAdi]) VALUES(1, N'Müdür')
 //GO
-//INSERT[dbo].[KullaniciTipleri]([tipID], [tipAdi]) VALUES(2, N'Öğretmen')
+//INSERT[dbo].[KullaniciTipleri]
+//		([tipID], [tipAdi]) VALUES(2, N'Öğretmen')
 //GO
-//INSERT[dbo].[KullaniciTipleri]([tipID], [tipAdi]) VALUES(3, N'Öğrenci')
+//INSERT[dbo].[KullaniciTipleri]
+//		([tipID], [tipAdi]) VALUES(3, N'Öğrenci')
 //GO
-//SET IDENTITY_INSERT[dbo].[KullaniciTipleri] OFF
+//SET IDENTITY_INSERT[dbo].[KullaniciTipleri]
+//		OFF
 //GO
-//SET IDENTITY_INSERT[dbo].[Mudurler] ON
+//SET IDENTITY_INSERT[dbo].[Mudurler]
+//		ON
 //GO
-//INSERT[dbo].[Mudurler]([mudurID], [kullaniciID], [ad], [soyad], [dogumtarihi], [tcno]) VALUES(1, 5, N'asda', N'asda', CAST(N'2023-10-05T21:36:14.000' AS DateTime), 1231)
+//INSERT[dbo].[Mudurler] ([mudurID], [kullaniciID], [ad], [soyad], [dogumtarihi], [tcno]) VALUES(1, 5, N'asda', N'asda', CAST(N'2023-10-05T21:36:14.000' AS DateTime), 1231)
 //GO
-//SET IDENTITY_INSERT[dbo].[Mudurler] OFF
+//SET IDENTITY_INSERT[dbo].[Mudurler]
+//		OFF
 //GO
-//SET IDENTITY_INSERT[dbo].[Ogrenciler] ON
+//SET IDENTITY_INSERT[dbo].[Ogrenciler]
+//		ON
 //GO
-//INSERT[dbo].[Ogrenciler]([ogrenciID], [kullaniciID], [sinifID], [veliID], [ad], [soyad], [ogrencino], [dogumtarihi], [tcno], [adres]) VALUES(2, 9, 2, 1, N'asdas', N'asda', 123, CAST(N'2023-10-05T21:50:53.000' AS DateTime), 1231, N'asdsa')
+//INSERT[dbo].[Ogrenciler] ([ogrenciID], [kullaniciID], [sinifID], [veliID], [ad], [soyad], [ogrencino], [dogumtarihi], [tcno], [adres]) VALUES(2, 9, 2, 1, N'asdas', N'asda', 123, CAST(N'2023-10-05T21:50:53.000' AS DateTime), 1231, N'asdsa')
 //GO
-//SET IDENTITY_INSERT[dbo].[Ogrenciler] OFF
+//SET IDENTITY_INSERT[dbo].[Ogrenciler]
+//		OFF
 //GO
-//SET IDENTITY_INSERT[dbo].[OgretmenBranslari] ON
+//SET IDENTITY_INSERT[dbo].[OgretmenBranslari]
+//		ON
 //GO
-//INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(2, 4)
+//INSERT[dbo].[OgretmenBranslari]
+//		([OgretmenBransID], [dersID]) VALUES(2, 4)
 //GO
-//SET IDENTITY_INSERT[dbo].[OgretmenBranslari] OFF
+//SET IDENTITY_INSERT[dbo].[OgretmenBranslari]
+//		OFF
 //GO
-//SET IDENTITY_INSERT[dbo].[Ogretmenler] ON
+//SET IDENTITY_INSERT[dbo].[Ogretmenler]
+//		ON
 //GO
-//INSERT[dbo].[Ogretmenler]([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID]) VALUES(1, 12, N'asd', N'asd', 123, CAST(N'2023-10-13T14:20:43.857' AS DateTime), 2)
+//INSERT[dbo].[Ogretmenler] ([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID]) VALUES(1, 12, N'asd', N'asd', 123, CAST(N'2023-10-13T14:20:43.857' AS DateTime), 2)
 //GO
-//SET IDENTITY_INSERT[dbo].[Ogretmenler] OFF
+//SET IDENTITY_INSERT[dbo].[Ogretmenler]
+//		OFF
 //GO
-//SET IDENTITY_INSERT[dbo].[Siniflar] ON
+//SET IDENTITY_INSERT[dbo].[Siniflar]
+//		ON
 //GO
-//INSERT[dbo].[Siniflar]([sinifID], [sinifAdi]) VALUES(1, N'1.Sınıf')
+//INSERT[dbo].[Siniflar]
+//		([sinifID], [sinifAdi]) VALUES(1, N'1.Sınıf')
 //GO
-//INSERT[dbo].[Siniflar]([sinifID], [sinifAdi]) VALUES(2, N'2.Sınıf')
+//INSERT[dbo].[Siniflar]
+//		([sinifID], [sinifAdi]) VALUES(2, N'2.Sınıf')
 //GO
-//INSERT[dbo].[Siniflar]([sinifID], [sinifAdi]) VALUES(3, N'3.Sınıf')
+//INSERT[dbo].[Siniflar]
+//		([sinifID], [sinifAdi]) VALUES(3, N'3.Sınıf')
 //GO
-//INSERT[dbo].[Siniflar]([sinifID], [sinifAdi]) VALUES(4, N'4.Sınıf')
+//INSERT[dbo].[Siniflar]
+//		([sinifID], [sinifAdi]) VALUES(4, N'4.Sınıf')
 //GO
-//SET IDENTITY_INSERT[dbo].[Siniflar] OFF
+//SET IDENTITY_INSERT[dbo].[Siniflar]
+//		OFF
 //GO
-//SET IDENTITY_INSERT[dbo].[Veliler] ON
+//SET IDENTITY_INSERT[dbo].[Veliler]
+//		ON
 //GO
-//INSERT[dbo].[Veliler]([veliID], [ad], [soyad], [telefon]) VALUES(1, N'sda', N'asda', N'123')
+//INSERT[dbo].[Veliler]
+//		([veliID], [ad], [soyad], [telefon]) VALUES(1, N'sda', N'asda', N'123')
 //GO
-//SET IDENTITY_INSERT[dbo].[Veliler] OFF
+//SET IDENTITY_INSERT[dbo].[Veliler]
+//		OFF
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Kullanici__tipID__398D8EEE]') AND parent_object_id = OBJECT_ID(N'[dbo].[Kullanicilar]'))
-//ALTER TABLE[dbo].[Kullanicilar]  WITH CHECK ADD  CONSTRAINT[FK__Kullanici__tipID__398D8EEE] FOREIGN KEY([tipID])
-//REFERENCES[dbo].[KullaniciTipleri]([tipID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Kullanici__tipID__398D8EEE]') AND parent_object_id = OBJECT_ID(N'[dbo].[Kullanicilar]'))
+//ALTER TABLE[dbo].[Kullanicilar] WITH CHECK ADD CONSTRAINT[FK__Kullanici__tipID__398D8EEE] FOREIGN KEY([tipID])
+//REFERENCES[dbo].[KullaniciTipleri]
+//		([tipID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Kullanici__tipID__398D8EEE]') AND parent_object_id = OBJECT_ID(N'[dbo].[Kullanicilar]'))
-//ALTER TABLE[dbo].[Kullanicilar] CHECK CONSTRAINT[FK__Kullanici__tipID__398D8EEE]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Kullanici__tipID__398D8EEE]') AND parent_object_id = OBJECT_ID(N'[dbo].[Kullanicilar]'))
+//ALTER TABLE[dbo].[Kullanicilar]
+//		CHECK CONSTRAINT[FK__Kullanici__tipID__398D8EEE]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Müdürler__kullan__4BAC3F29]') AND parent_object_id = OBJECT_ID(N'[dbo].[Mudurler]'))
-//ALTER TABLE[dbo].[Mudurler]  WITH CHECK ADD  CONSTRAINT[FK__Müdürler__kullan__4BAC3F29] FOREIGN KEY([kullaniciID])
-//REFERENCES[dbo].[Kullanicilar]([kullaniciID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Müdürler__kullan__4BAC3F29]') AND parent_object_id = OBJECT_ID(N'[dbo].[Mudurler]'))
+//ALTER TABLE[dbo].[Mudurler] WITH CHECK ADD CONSTRAINT[FK__Müdürler__kullan__4BAC3F29] FOREIGN KEY([kullaniciID])
+//REFERENCES[dbo].[Kullanicilar]
+//		([kullaniciID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Müdürler__kullan__4BAC3F29]') AND parent_object_id = OBJECT_ID(N'[dbo].[Mudurler]'))
-//ALTER TABLE[dbo].[Mudurler] CHECK CONSTRAINT[FK__Müdürler__kullan__4BAC3F29]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Müdürler__kullan__4BAC3F29]') AND parent_object_id = OBJECT_ID(N'[dbo].[Mudurler]'))
+//ALTER TABLE[dbo].[Mudurler]
+//		CHECK CONSTRAINT[FK__Müdürler__kullan__4BAC3F29]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_ÖğrenciDersleri_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]'))
-//ALTER TABLE[dbo].[OgrenciDersleri]  WITH CHECK ADD  CONSTRAINT[FK_ÖğrenciDersleri_Dersler] FOREIGN KEY([dersID])
-//REFERENCES[dbo].[Dersler]([dersID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_ÖğrenciDersleri_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]'))
+//ALTER TABLE[dbo].[OgrenciDersleri] WITH CHECK ADD CONSTRAINT[FK_ÖğrenciDersleri_Dersler] FOREIGN KEY([dersID])
+//REFERENCES[dbo].[Dersler]
+//		([dersID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_ÖğrenciDersleri_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]'))
-//ALTER TABLE[dbo].[OgrenciDersleri] CHECK CONSTRAINT[FK_ÖğrenciDersleri_Dersler]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_ÖğrenciDersleri_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]'))
+//ALTER TABLE[dbo].[OgrenciDersleri]
+//		CHECK CONSTRAINT[FK_ÖğrenciDersleri_Dersler]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_ÖğrenciDersleri_Öğrenciler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]'))
-//ALTER TABLE[dbo].[OgrenciDersleri]  WITH CHECK ADD  CONSTRAINT[FK_ÖğrenciDersleri_Öğrenciler] FOREIGN KEY([ogrenciID])
-//REFERENCES[dbo].[Ogrenciler]([ogrenciID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_ÖğrenciDersleri_Öğrenciler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]'))
+//ALTER TABLE[dbo].[OgrenciDersleri] WITH CHECK ADD CONSTRAINT[FK_ÖğrenciDersleri_Öğrenciler] FOREIGN KEY([ogrenciID])
+//REFERENCES[dbo].[Ogrenciler]
+//		([ogrenciID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_ÖğrenciDersleri_Öğrenciler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]'))
-//ALTER TABLE[dbo].[OgrenciDersleri] CHECK CONSTRAINT[FK_ÖğrenciDersleri_Öğrenciler]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_ÖğrenciDersleri_Öğrenciler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]'))
+//ALTER TABLE[dbo].[OgrenciDersleri]
+//		CHECK CONSTRAINT[FK_ÖğrenciDersleri_Öğrenciler]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğrencile__kulla__4316F928]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
-//ALTER TABLE[dbo].[Ogrenciler]  WITH CHECK ADD  CONSTRAINT[FK__Öğrencile__kulla__4316F928] FOREIGN KEY([kullaniciID])
-//REFERENCES[dbo].[Kullanicilar]([kullaniciID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğrencile__kulla__4316F928]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
+//ALTER TABLE[dbo].[Ogrenciler] WITH CHECK ADD CONSTRAINT[FK__Öğrencile__kulla__4316F928] FOREIGN KEY([kullaniciID])
+//REFERENCES[dbo].[Kullanicilar]
+//		([kullaniciID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğrencile__kulla__4316F928]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
-//ALTER TABLE[dbo].[Ogrenciler] CHECK CONSTRAINT[FK__Öğrencile__kulla__4316F928]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğrencile__kulla__4316F928]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
+//ALTER TABLE[dbo].[Ogrenciler]
+//		CHECK CONSTRAINT[FK__Öğrencile__kulla__4316F928]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğrencile__sinif__440B1D61]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
-//ALTER TABLE[dbo].[Ogrenciler]  WITH CHECK ADD  CONSTRAINT[FK__Öğrencile__sinif__440B1D61] FOREIGN KEY([sinifID])
-//REFERENCES[dbo].[Siniflar]([sinifID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğrencile__sinif__440B1D61]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
+//ALTER TABLE[dbo].[Ogrenciler] WITH CHECK ADD CONSTRAINT[FK__Öğrencile__sinif__440B1D61] FOREIGN KEY([sinifID])
+//REFERENCES[dbo].[Siniflar]
+//		([sinifID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğrencile__sinif__440B1D61]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
-//ALTER TABLE[dbo].[Ogrenciler] CHECK CONSTRAINT[FK__Öğrencile__sinif__440B1D61]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğrencile__sinif__440B1D61]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
+//ALTER TABLE[dbo].[Ogrenciler]
+//		CHECK CONSTRAINT[FK__Öğrencile__sinif__440B1D61]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Öğrenciler_Veliler]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
-//ALTER TABLE[dbo].[Ogrenciler]  WITH CHECK ADD  CONSTRAINT[FK_Öğrenciler_Veliler] FOREIGN KEY([veliID])
-//REFERENCES[dbo].[Veliler]([veliID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Öğrenciler_Veliler]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
+//ALTER TABLE[dbo].[Ogrenciler] WITH CHECK ADD CONSTRAINT[FK_Öğrenciler_Veliler] FOREIGN KEY([veliID])
+//REFERENCES[dbo].[Veliler]
+//		([veliID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Öğrenciler_Veliler]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
-//ALTER TABLE[dbo].[Ogrenciler] CHECK CONSTRAINT[FK_Öğrenciler_Veliler]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Öğrenciler_Veliler]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogrenciler]'))
+//ALTER TABLE[dbo].[Ogrenciler]
+//		CHECK CONSTRAINT[FK_Öğrenciler_Veliler]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_OgretmenBranslari_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgretmenBranslari]'))
-//ALTER TABLE[dbo].[OgretmenBranslari]  WITH CHECK ADD  CONSTRAINT[FK_OgretmenBranslari_Dersler] FOREIGN KEY([dersID])
-//REFERENCES[dbo].[Dersler]([dersID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_OgretmenBranslari_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgretmenBranslari]'))
+//ALTER TABLE[dbo].[OgretmenBranslari] WITH CHECK ADD CONSTRAINT[FK_OgretmenBranslari_Dersler] FOREIGN KEY([dersID])
+//REFERENCES[dbo].[Dersler]
+//		([dersID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_OgretmenBranslari_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgretmenBranslari]'))
-//ALTER TABLE[dbo].[OgretmenBranslari] CHECK CONSTRAINT[FK_OgretmenBranslari_Dersler]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_OgretmenBranslari_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgretmenBranslari]'))
+//ALTER TABLE[dbo].[OgretmenBranslari]
+//		CHECK CONSTRAINT[FK_OgretmenBranslari_Dersler]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğretmenl__kulla__48CFD27E]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
-//ALTER TABLE[dbo].[Ogretmenler]  WITH CHECK ADD  CONSTRAINT[FK__Öğretmenl__kulla__48CFD27E] FOREIGN KEY([kullaniciID])
-//REFERENCES[dbo].[Kullanicilar]([kullaniciID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğretmenl__kulla__48CFD27E]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
+//ALTER TABLE[dbo].[Ogretmenler] WITH CHECK ADD CONSTRAINT[FK__Öğretmenl__kulla__48CFD27E] FOREIGN KEY([kullaniciID])
+//REFERENCES[dbo].[Kullanicilar]
+//		([kullaniciID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğretmenl__kulla__48CFD27E]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
-//ALTER TABLE[dbo].[Ogretmenler] CHECK CONSTRAINT[FK__Öğretmenl__kulla__48CFD27E]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Öğretmenl__kulla__48CFD27E]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
+//ALTER TABLE[dbo].[Ogretmenler]
+//		CHECK CONSTRAINT[FK__Öğretmenl__kulla__48CFD27E]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Ogretmenler_OgretmenBranslari]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
-//ALTER TABLE[dbo].[Ogretmenler]  WITH CHECK ADD  CONSTRAINT[FK_Ogretmenler_OgretmenBranslari] FOREIGN KEY([OgretmenBransID])
-//REFERENCES[dbo].[OgretmenBranslari]([OgretmenBransID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Ogretmenler_OgretmenBranslari]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
+//ALTER TABLE[dbo].[Ogretmenler] WITH CHECK ADD CONSTRAINT[FK_Ogretmenler_OgretmenBranslari] FOREIGN KEY([OgretmenBransID])
+//REFERENCES[dbo].[OgretmenBranslari]
+//		([OgretmenBransID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Ogretmenler_OgretmenBranslari]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
-//ALTER TABLE[dbo].[Ogretmenler] CHECK CONSTRAINT[FK_Ogretmenler_OgretmenBranslari]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Ogretmenler_OgretmenBranslari]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
+//ALTER TABLE[dbo].[Ogretmenler]
+//		CHECK CONSTRAINT[FK_Ogretmenler_OgretmenBranslari]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Sınavlar__dersID__403A8C7D]') AND parent_object_id = OBJECT_ID(N'[dbo].[Sinavlar]'))
-//ALTER TABLE[dbo].[Sinavlar]  WITH CHECK ADD  CONSTRAINT[FK__Sınavlar__dersID__403A8C7D] FOREIGN KEY([dersID])
-//REFERENCES[dbo].[Dersler]([dersID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Sınavlar__dersID__403A8C7D]') AND parent_object_id = OBJECT_ID(N'[dbo].[Sinavlar]'))
+//ALTER TABLE[dbo].[Sinavlar] WITH CHECK ADD CONSTRAINT[FK__Sınavlar__dersID__403A8C7D] FOREIGN KEY([dersID])
+//REFERENCES[dbo].[Dersler]
+//		([dersID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Sınavlar__dersID__403A8C7D]') AND parent_object_id = OBJECT_ID(N'[dbo].[Sinavlar]'))
-//ALTER TABLE[dbo].[Sinavlar] CHECK CONSTRAINT[FK__Sınavlar__dersID__403A8C7D]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Sınavlar__dersID__403A8C7D]') AND parent_object_id = OBJECT_ID(N'[dbo].[Sinavlar]'))
+//ALTER TABLE[dbo].[Sinavlar]
+//		CHECK CONSTRAINT[FK__Sınavlar__dersID__403A8C7D]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__SınavSonu__ogren__4E88ABD4]') AND parent_object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]'))
-//ALTER TABLE[dbo].[SinavSonuclari]  WITH CHECK ADD  CONSTRAINT[FK__SınavSonu__ogren__4E88ABD4] FOREIGN KEY([ogrenciID])
-//REFERENCES[dbo].[Ogrenciler]([ogrenciID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__SınavSonu__ogren__4E88ABD4]') AND parent_object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]'))
+//ALTER TABLE[dbo].[SinavSonuclari] WITH CHECK ADD CONSTRAINT[FK__SınavSonu__ogren__4E88ABD4] FOREIGN KEY([ogrenciID])
+//REFERENCES[dbo].[Ogrenciler]
+//		([ogrenciID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__SınavSonu__ogren__4E88ABD4]') AND parent_object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]'))
-//ALTER TABLE[dbo].[SinavSonuclari] CHECK CONSTRAINT[FK__SınavSonu__ogren__4E88ABD4]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__SınavSonu__ogren__4E88ABD4]') AND parent_object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]'))
+//ALTER TABLE[dbo].[SinavSonuclari]
+//		CHECK CONSTRAINT[FK__SınavSonu__ogren__4E88ABD4]
 //GO
-//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__SınavSonu__sinav__4F7CD00D]') AND parent_object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]'))
-//ALTER TABLE[dbo].[SinavSonuclari]  WITH CHECK ADD  CONSTRAINT[FK__SınavSonu__sinav__4F7CD00D] FOREIGN KEY([sinavID])
-//REFERENCES[dbo].[Sinavlar]([sinavID])
+//IF NOT EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__SınavSonu__sinav__4F7CD00D]') AND parent_object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]'))
+//ALTER TABLE[dbo].[SinavSonuclari] WITH CHECK ADD CONSTRAINT[FK__SınavSonu__sinav__4F7CD00D] FOREIGN KEY([sinavID])
+//REFERENCES[dbo].[Sinavlar]
+//		([sinavID])
 //GO
-//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__SınavSonu__sinav__4F7CD00D]') AND parent_object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]'))
-//ALTER TABLE[dbo].[SinavSonuclari] CHECK CONSTRAINT[FK__SınavSonu__sinav__4F7CD00D]
+//IF EXISTS(SELECT* FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__SınavSonu__sinav__4F7CD00D]') AND parent_object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]'))
+//ALTER TABLE[dbo].[SinavSonuclari]
+//		CHECK CONSTRAINT[FK__SınavSonu__sinav__4F7CD00D]
 //GO
 
 

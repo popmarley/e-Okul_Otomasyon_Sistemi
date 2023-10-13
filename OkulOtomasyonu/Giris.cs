@@ -34,7 +34,7 @@ namespace OkulOtomasyonu
 				}
 				else
 				{
-					MessageBox.Show("Hatalı kullanıcı adı veya şifre!");
+					MessageBox.Show("Hatalı kullanıcı adı veya şifre!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				}
 			}
 		}
@@ -44,6 +44,18 @@ namespace OkulOtomasyonu
 			KayitOl kayitOlForm = new KayitOl();
 			kayitOlForm.Show();
 			this.Hide();
+		}
+
+		private void lbl_SifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			SifremiUnuttum sifremiUnuttumForm = new SifremiUnuttum();
+			sifremiUnuttumForm.Show();
+			this.Hide();
+		}
+
+		private void btnSistemdenCikis_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }
