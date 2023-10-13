@@ -40,7 +40,7 @@ namespace OkulOtomasyonu
 
 		private void lblOgrenciGiris_Click(object sender, EventArgs e)
 		{
-			Giris girisForm = new Giris();
+			OgrenciGiris girisForm = new OgrenciGiris();
 			girisForm.Show();
 			this.Hide();
 		}

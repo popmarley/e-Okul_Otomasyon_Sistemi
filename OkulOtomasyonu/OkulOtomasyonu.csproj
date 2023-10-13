@@ -219,6 +219,12 @@
     <Compile Include="OgrenciAnaMenu.Designer.cs">
       <DependentUpon>OgrenciAnaMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="OgrenciGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciGiris.Designer.cs">
+      <DependentUpon>OgrenciGiris.cs</DependentUpon>
+    </Compile>
     <Compile Include="OgretmenAnaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OgrenciAnaMenu.resx">
       <DependentUpon>OgrenciAnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciGiris.resx">
+      <DependentUpon>OgrenciGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OgretmenAnaMenu.resx">
       <DependentUpon>OgretmenAnaMenu.cs</DependentUpon>
@@ -279,6 +288,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resimler\giris__.png" />
+    <Content Include="Resimler\ogrencilogin.png" />
+    <Content Include="Resimler\ogretmenlogin.png" />
     <Content Include="Resimler\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

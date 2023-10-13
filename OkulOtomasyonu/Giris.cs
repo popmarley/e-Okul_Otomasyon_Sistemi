@@ -22,40 +22,50 @@ namespace OkulOtomasyonu
 		{
 			using (var context = new MyDbContext())
 			{
-				var userInDb = context.Kullanicilar
-									  .FirstOrDefault(u => u.KullaniciAdi == txt_UserName.Text && u.Sifre == txt_Password.Text);
-
-				if (userInDb != null)
+				// Güvenlik kodu kontrolü
+				if (txtCapca.Text != "5341")
 				{
-					switch (userInDb.TipID)
-					{
-						case 1: // Mudur
-							MudurAnaMenu mudurMenuForm = new MudurAnaMenu();
-							mudurMenuForm.Show();
-							break;
-
-						case 2: // Ogretmen
-							OgretmenAnaMenu ogretmenMenuForm = new OgretmenAnaMenu();
-							ogretmenMenuForm.Show();
-							break;
-
-						case 3: // Ogrenci
-							OgrenciAnaMenu ogrenciMenuForm = new OgrenciAnaMenu();
-							ogrenciMenuForm.Show();
-							break;
-
-						default:
-							MessageBox.Show("Tanımsız kullanıcı tipi!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-							break;
-					}
-					this.Hide();
+					MessageBox.Show("Güvenlik kodu hatalı!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					txtCapca.Clear(); // Güvenlik kodu alanını temizle
+					txtCapca.Focus(); // Güvenlik kodu alanına odakla
+					return; // Diğer kontrollere geçmeden fonksiyonu sonlandır
 				}
-				else
+
+				var userInDb = context.Kullanicilar
+									  .FirstOrDefault(u => (u.KullaniciAdi == txt_UserName.Text || u.Eposta == txt_UserName.Text) && u.Sifre == txt_Password.Text);
+
+				// Kullanıcı adı ve şifre kontrolü
+				if (userInDb == null)
 				{
+					MessageBox.Show("Hatalı kullanıcı adı,e-posta veya şifre!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					txt_UserName.Clear();
 					txt_Password.Clear();
-					MessageBox.Show("Hatalı kullanıcı adı veya şifre!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					txt_UserName.Focus(); // Kullanıcı adı/e-posta alanına odakla
+					return; // Diğer kontrollere geçmeden fonksiyonu sonlandır
 				}
+
+				switch (userInDb.TipID)
+				{
+					case 1: // Mudur
+						MudurAnaMenu mudurMenuForm = new MudurAnaMenu();
+						mudurMenuForm.Show();
+						break;
+
+					case 2: // Ogretmen
+						OgretmenAnaMenu ogretmenMenuForm = new OgretmenAnaMenu();
+						ogretmenMenuForm.Show();
+						break;
+
+					case 3: // Ogrenci
+						OgrenciAnaMenu ogrenciMenuForm = new OgrenciAnaMenu();
+						ogrenciMenuForm.Show();
+						break;
+
+					default:
+						MessageBox.Show("Tanımsız kullanıcı tipi!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						break;
+				}
+				this.Hide();
 			}
 		}
 
