@@ -47,8 +47,17 @@ namespace OkulOtomasyonu
 				switch (userInDb.TipID)
 				{
 					case 1: // Mudur
-						MudurAnaMenu mudurMenuForm = new MudurAnaMenu();
-						mudurMenuForm.Show();
+						var mudur = context.Mudurler.FirstOrDefault(m => m.KullaniciID == userInDb.KullaniciID);
+						if (mudur != null)
+						{
+							MudurAnaMenu mudurMenuForm = new MudurAnaMenu(mudur.Ad);
+							mudurMenuForm.Show();
+							this.Hide();
+						}
+						else
+						{
+							MessageBox.Show("Müdür bilgisi bulunamadı!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						}
 						break;
 
 					case 2: // Ogretmen

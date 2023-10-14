@@ -12,14 +12,21 @@ namespace OkulOtomasyonu
 {
 	public partial class MudurAnaMenu : Form
 	{
+		public string GirisYapanMudurKullaniciAdi { get; set; }
 		public MudurAnaMenu()
 		{
 			InitializeComponent();
+			
 		}
-
+		public MudurAnaMenu(string mudurAdi)
+		{
+			InitializeComponent();
+			GirisYapanMudurKullaniciAdi = mudurAdi;
+			lblGirisYapanMudurKullaniciAdi.Text = mudurAdi;
+		}
 		private void btn_Cikis_Click(object sender, EventArgs e)
 		{
-			Giris girisForm = new Giris();
+			e_Okul girisForm = new e_Okul();
 			girisForm.Show();
 			this.Hide();
 		}

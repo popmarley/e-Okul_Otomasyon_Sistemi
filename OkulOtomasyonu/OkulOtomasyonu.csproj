@@ -168,6 +168,10 @@
     <Compile Include="e_Okul.Designer.cs">
       <DependentUpon>e_Okul.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20231014215131_4.cs" />
+    <Compile Include="Migrations\20231014215131_4.designer.cs">
+      <DependentUpon>20231014215131_4.cs</DependentUpon>
+    </Compile>
     <Compile Include="MudurAnaMenu.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -30,32 +30,30 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgrenciAnaMenu));
-			System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Sınav Bilgileri");
-			System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Sınav Bilgileri", new System.Windows.Forms.TreeNode[] {
-            treeNode15});
-			System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Duyurular");
-			System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Devamsızlık Bilgisi");
-			System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Haftalık Ders Programı");
-			System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Sınav Tarihleri");
-			System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Burs Ödeme Bilgileri");
-			System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Aldığı Belgeler");
-			System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Pansiyon Ödeme Bilgileri");
-			System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Yıl Sonu Notları");
-			System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Ortalama Yükseltme Puanları");
-			System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Nakil Durumu");
-			System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Şube Yazılı Ortalamaları");
-			System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Öğrenci Bilgileri", new System.Windows.Forms.TreeNode[] {
-            treeNode17,
-            treeNode18,
-            treeNode19,
-            treeNode20,
-            treeNode21,
-            treeNode22,
-            treeNode23,
-            treeNode24,
-            treeNode25,
-            treeNode26,
-            treeNode27});
+			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Sınav Tarihleri");
+			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Sınav Sonuçları");
+			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Sınav Bilgileri", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Duyurular");
+			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Devamsızlık Bilgisi");
+			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Haftalık Ders Programı");
+			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Kişisel Bilgiler");
+			System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Aldığı Belgeler");
+			System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Pansiyon Ödeme Bilgileri");
+			System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Ortalama Yükseltme Puanları");
+			System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Nakil Durumu");
+			System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Şube Yazılı Ortalamaları");
+			System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Öğrenci Bilgileri", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12});
 			this.btn_Cikis = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.lblGirisYapanKullaniciAdi = new System.Windows.Forms.Label();
@@ -109,37 +107,35 @@
 			// 
 			this.treeView1.Location = new System.Drawing.Point(1, 216);
 			this.treeView1.Name = "treeView1";
-			treeNode15.Name = "Node13";
-			treeNode15.Text = "Sınav Bilgileri";
-			treeNode16.Name = "Node0";
-			treeNode16.Text = "Sınav Bilgileri";
-			treeNode17.Name = "Node1";
-			treeNode17.Text = "Duyurular";
-			treeNode18.Name = "Node2";
-			treeNode18.Text = "Devamsızlık Bilgisi";
-			treeNode19.Name = "Node4";
-			treeNode19.Text = "Haftalık Ders Programı";
-			treeNode20.Name = "Node5";
-			treeNode20.Text = "Sınav Tarihleri";
-			treeNode21.Name = "Node6";
-			treeNode21.Text = "Burs Ödeme Bilgileri";
-			treeNode22.Name = "Node7";
-			treeNode22.Text = "Aldığı Belgeler";
-			treeNode23.Name = "Node8";
-			treeNode23.Text = "Pansiyon Ödeme Bilgileri";
-			treeNode24.Name = "Node9";
-			treeNode24.Text = "Yıl Sonu Notları";
-			treeNode25.Name = "Node10";
-			treeNode25.Text = "Ortalama Yükseltme Puanları";
-			treeNode26.Name = "Node11";
-			treeNode26.Text = "Nakil Durumu";
-			treeNode27.Name = "Node12";
-			treeNode27.Text = "Şube Yazılı Ortalamaları";
-			treeNode28.Name = "Node0";
-			treeNode28.Text = "Öğrenci Bilgileri";
+			treeNode1.Name = "Node13";
+			treeNode1.Text = "Sınav Tarihleri";
+			treeNode2.Name = "Node0";
+			treeNode2.Text = "Sınav Sonuçları";
+			treeNode3.Name = "Node0";
+			treeNode3.Text = "Sınav Bilgileri";
+			treeNode4.Name = "Node1";
+			treeNode4.Text = "Duyurular";
+			treeNode5.Name = "Node2";
+			treeNode5.Text = "Devamsızlık Bilgisi";
+			treeNode6.Name = "Node4";
+			treeNode6.Text = "Haftalık Ders Programı";
+			treeNode7.Name = "Node6";
+			treeNode7.Text = "Kişisel Bilgiler";
+			treeNode8.Name = "Node7";
+			treeNode8.Text = "Aldığı Belgeler";
+			treeNode9.Name = "Node8";
+			treeNode9.Text = "Pansiyon Ödeme Bilgileri";
+			treeNode10.Name = "Node10";
+			treeNode10.Text = "Ortalama Yükseltme Puanları";
+			treeNode11.Name = "Node11";
+			treeNode11.Text = "Nakil Durumu";
+			treeNode12.Name = "Node12";
+			treeNode12.Text = "Şube Yazılı Ortalamaları";
+			treeNode13.Name = "Node0";
+			treeNode13.Text = "Öğrenci Bilgileri";
 			this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode16,
-            treeNode28});
+            treeNode3,
+            treeNode13});
 			this.treeView1.Size = new System.Drawing.Size(229, 396);
 			this.treeView1.TabIndex = 4;
 			// 
