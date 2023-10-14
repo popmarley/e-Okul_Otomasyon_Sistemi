@@ -30,9 +30,9 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MudurAnaMenu));
-			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Öğretmen Ekle/Sil");
-			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Öğretmen Listesi");
-			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Öğretmen Bilgi Güncelle");
+			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Öğretmen Listesi");
+			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Öğretmen Bilgi Güncelle");
+			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Öğretmen Ekle/Sil");
 			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Öğretmen İşlemleri", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
@@ -62,7 +62,9 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btn_Cikis
@@ -127,17 +129,17 @@
 			// 
 			this.treeView1.Location = new System.Drawing.Point(0, 234);
 			this.treeView1.Name = "treeView1";
-			treeNode1.Name = "Node6";
-			treeNode1.Text = "Öğretmen Ekle/Sil";
-			treeNode2.Name = "Node7";
-			treeNode2.Text = "Öğretmen Listesi";
-			treeNode3.Name = "Node10";
-			treeNode3.Text = "Öğretmen Bilgi Güncelle";
+			treeNode1.Name = "ogretmenListesi";
+			treeNode1.Text = "Öğretmen Listesi";
+			treeNode2.Name = "Node10";
+			treeNode2.Text = "Öğretmen Bilgi Güncelle";
+			treeNode3.Name = "Node6";
+			treeNode3.Text = "Öğretmen Ekle/Sil";
 			treeNode4.Name = "Node0";
 			treeNode4.Text = "Öğretmen İşlemleri";
 			treeNode5.Name = "Node8";
 			treeNode5.Text = "Öğrenci Ekle/Sil";
-			treeNode6.Name = "Node9";
+			treeNode6.Name = "ogrenciListesi";
 			treeNode6.Text = "Öğrenci Listesi";
 			treeNode7.Name = "Node12";
 			treeNode7.Text = "Öğrenci Bilgi Güncelle";
@@ -162,12 +164,24 @@
             treeNode14});
 			this.treeView1.Size = new System.Drawing.Size(210, 387);
 			this.treeView1.TabIndex = 11;
+			this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Location = new System.Drawing.Point(216, 234);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.RowHeadersWidth = 51;
+			this.dataGridView1.RowTemplate.Height = 24;
+			this.dataGridView1.Size = new System.Drawing.Size(1119, 387);
+			this.dataGridView1.TabIndex = 12;
 			// 
 			// MudurAnaMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1347, 633);
+			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.treeView1);
 			this.Controls.Add(this.lblAnlikSaat);
 			this.Controls.Add(this.lblOgrenciSinif);
@@ -180,7 +194,9 @@
 			this.Name = "MudurAnaMenu";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "BÇAL Yönetim Bilgi Sistemi ";
+			this.Load += new System.EventHandler(this.MudurAnaMenu_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -196,5 +212,6 @@
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.TreeView treeView1;
 		private System.Windows.Forms.Timer timer1;
+		private System.Windows.Forms.DataGridView dataGridView1;
 	}
 }
