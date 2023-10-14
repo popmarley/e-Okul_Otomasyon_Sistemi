@@ -35,9 +35,9 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnSistemdenCikis = new System.Windows.Forms.Button();
 			this.btn_Giris = new System.Windows.Forms.Button();
-			this.txt_Password = new System.Windows.Forms.TextBox();
+			this.txt_OkulNo = new System.Windows.Forms.TextBox();
 			this.txtCapca = new System.Windows.Forms.TextBox();
-			this.txt_UserName = new System.Windows.Forms.TextBox();
+			this.txt_TCNo = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -55,11 +55,11 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label2.Location = new System.Drawing.Point(400, 295);
+			this.label2.Location = new System.Drawing.Point(311, 295);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(99, 27);
+			this.label2.Size = new System.Drawing.Size(188, 27);
 			this.label2.TabIndex = 10;
-			this.label2.Text = "Şifreniz:";
+			this.label2.Text = "Okul Numaranız:";
 			// 
 			// label3
 			// 
@@ -75,11 +75,11 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-			this.label1.Location = new System.Drawing.Point(309, 193);
+			this.label1.Location = new System.Drawing.Point(367, 195);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(190, 54);
+			this.label1.Size = new System.Drawing.Size(132, 54);
 			this.label1.TabIndex = 12;
-			this.label1.Text = "Kullanıcı Adınız\r\nyada E-postanız :";
+			this.label1.Text = "T.C. Kimlik \r\nNumaranız:";
 			// 
 			// btnSistemdenCikis
 			// 
@@ -104,16 +104,17 @@
 			this.btn_Giris.TabIndex = 9;
 			this.btn_Giris.Text = "Giriş";
 			this.btn_Giris.UseVisualStyleBackColor = false;
+			this.btn_Giris.Click += new System.EventHandler(this.btn_Giris_Click);
 			// 
-			// txt_Password
+			// txt_OkulNo
 			// 
-			this.txt_Password.Location = new System.Drawing.Point(515, 300);
-			this.txt_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txt_Password.MaxLength = 8;
-			this.txt_Password.Name = "txt_Password";
-			this.txt_Password.PasswordChar = '*';
-			this.txt_Password.Size = new System.Drawing.Size(221, 22);
-			this.txt_Password.TabIndex = 8;
+			this.txt_OkulNo.Location = new System.Drawing.Point(515, 300);
+			this.txt_OkulNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txt_OkulNo.MaxLength = 8;
+			this.txt_OkulNo.Name = "txt_OkulNo";
+			this.txt_OkulNo.PasswordChar = '*';
+			this.txt_OkulNo.Size = new System.Drawing.Size(221, 22);
+			this.txt_OkulNo.TabIndex = 8;
 			// 
 			// txtCapca
 			// 
@@ -124,14 +125,14 @@
 			this.txtCapca.Size = new System.Drawing.Size(221, 22);
 			this.txtCapca.TabIndex = 6;
 			// 
-			// txt_UserName
+			// txt_TCNo
 			// 
-			this.txt_UserName.Location = new System.Drawing.Point(515, 211);
-			this.txt_UserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txt_UserName.MaxLength = 32;
-			this.txt_UserName.Name = "txt_UserName";
-			this.txt_UserName.Size = new System.Drawing.Size(221, 22);
-			this.txt_UserName.TabIndex = 7;
+			this.txt_TCNo.Location = new System.Drawing.Point(515, 211);
+			this.txt_TCNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txt_TCNo.MaxLength = 32;
+			this.txt_TCNo.Name = "txt_TCNo";
+			this.txt_TCNo.Size = new System.Drawing.Size(221, 22);
+			this.txt_TCNo.TabIndex = 7;
 			// 
 			// OgrenciGiris
 			// 
@@ -143,13 +144,13 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnSistemdenCikis);
 			this.Controls.Add(this.btn_Giris);
-			this.Controls.Add(this.txt_Password);
+			this.Controls.Add(this.txt_OkulNo);
 			this.Controls.Add(this.txtCapca);
-			this.Controls.Add(this.txt_UserName);
+			this.Controls.Add(this.txt_TCNo);
 			this.Controls.Add(this.pictureBox1);
 			this.Name = "OgrenciGiris";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "OgrenciGiris";
+			this.Text = "BÇAL Yönetim Bilgi Sistemi ";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -164,8 +165,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnSistemdenCikis;
 		private System.Windows.Forms.Button btn_Giris;
-		private System.Windows.Forms.TextBox txt_Password;
+		private System.Windows.Forms.TextBox txt_OkulNo;
 		private System.Windows.Forms.TextBox txtCapca;
-		private System.Windows.Forms.TextBox txt_UserName;
+		private System.Windows.Forms.TextBox txt_TCNo;
 	}
 }

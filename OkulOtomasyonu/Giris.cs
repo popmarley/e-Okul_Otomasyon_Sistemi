@@ -57,8 +57,7 @@ namespace OkulOtomasyonu
 						break;
 
 					case 3: // Ogrenci
-						OgrenciAnaMenu ogrenciMenuForm = new OgrenciAnaMenu();
-						ogrenciMenuForm.Show();
+						MessageBox.Show("Yetkisiz giriş! Lütfen öğrenci giriş ekranını kullanın...", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 						break;
 
 					default:
