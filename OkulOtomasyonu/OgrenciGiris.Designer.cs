@@ -92,6 +92,7 @@
 			this.btnSistemdenCikis.TabIndex = 13;
 			this.btnSistemdenCikis.Text = "Ana Menüye Dön";
 			this.btnSistemdenCikis.UseVisualStyleBackColor = false;
+			this.btnSistemdenCikis.Click += new System.EventHandler(this.btnSistemdenCikis_Click);
 			// 
 			// btn_Giris
 			// 

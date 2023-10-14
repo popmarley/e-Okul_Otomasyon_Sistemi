@@ -1,4 +1,5 @@
-﻿using OkulOtomasyonu.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using OkulOtomasyonu.Context;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,7 +39,7 @@ namespace OkulOtomasyonu
 					return; // Geçersiz TC veya öğrenci numarası girilirse fonksiyonu sonlandır
 				}
 
-				var ogrenci = context.Ogrenciler.FirstOrDefault(u => u.TCNo == tcNo && u.OgrenciNo == ogrenciNo);
+				var ogrenci = context.Ogrenciler.Include(o => o.Sinif).FirstOrDefault(u => u.TCNo == tcNo && u.OgrenciNo == ogrenciNo);
 
 				// TC ve öğrenci numarası kontrolü
 				if (ogrenci == null)
@@ -62,8 +63,13 @@ namespace OkulOtomasyonu
 				switch (kullanici.TipID)
 				{
 					case 3: // Ogrenci
-						OgrenciAnaMenu ogrenciMenuForm = new OgrenciAnaMenu();
+						OgrenciAnaMenu ogrenciMenuForm = new OgrenciAnaMenu
+						{
+							GirisYapanKullaniciAdi = ogrenci.Ad,
+							OgrenciSinifi = ogrenci.Sinif.SinifAdi.ToString()
+						};
 						ogrenciMenuForm.Show();
+						this.Hide();  // Bu formu gizle
 						break;
 
 					case 1: // Mudur
@@ -77,6 +83,13 @@ namespace OkulOtomasyonu
 				}
 				this.Hide();
 			}
+		}
+
+		private void btnSistemdenCikis_Click(object sender, EventArgs e)
+		{
+			e_Okul girisForm = new e_Okul();
+			girisForm.Show();
+			this.Hide();
 		}
 	}
 }

@@ -12,6 +12,8 @@ namespace OkulOtomasyonu
 {
 	public partial class OgrenciAnaMenu : Form
 	{
+		public string GirisYapanKullaniciAdi { get; set; }
+		public string OgrenciSinifi { get; set; }
 		public OgrenciAnaMenu()
 		{
 			InitializeComponent();
@@ -19,9 +21,26 @@ namespace OkulOtomasyonu
 
 		private void btn_Cikis_Click(object sender, EventArgs e)
 		{
-			Giris girisForm = new Giris();
+			e_Okul girisForm = new e_Okul();
 			girisForm.Show();
 			this.Hide();
+		}
+
+		private void OgrenciAnaMenu_Load(object sender, EventArgs e)
+		{
+			lblGirisYapanKullaniciAdi.Text = GirisYapanKullaniciAdi;
+			lblOgrenciSinif.Text = OgrenciSinifi;
+
+			// Saatin anlık olarak güncellenmesi için bir Timer oluşturalım
+			Timer saatTimer = new Timer();
+			saatTimer.Interval = 1000; // her saniye
+			saatTimer.Tick += SaatTimer_Tick;
+			saatTimer.Start();
+		}
+
+		private void SaatTimer_Tick(object sender, EventArgs e)
+		{
+			lblAnlikSaat.Text = DateTime.Now.ToString("HH:mm:ss");
 		}
 	}
 }
