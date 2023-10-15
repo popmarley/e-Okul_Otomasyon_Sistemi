@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OkulOtomasyonu.Context;
 
 namespace OkulOtomasyonu.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231015101010_6")]
+    partial class _6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -201,6 +203,9 @@ namespace OkulOtomasyonu.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TCNo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TelNo")
                         .HasColumnType("int");
 
                     b.HasKey("OgretmenID");
