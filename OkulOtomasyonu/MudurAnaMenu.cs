@@ -16,6 +16,7 @@ namespace OkulOtomasyonu
 	{
 		public string GirisYapanMudurKullaniciAdi { get; set; }
 		private bool isInitialLoad = true;
+		private bool isInitialLoadOgrenci = true;
 		public MudurAnaMenu()
 		{
 			InitializeComponent();
@@ -61,6 +62,7 @@ namespace OkulOtomasyonu
 					dataGridView1.Visible = true;
 					gOgretmenGuncelle.Visible = false;
 					gOgretmenSil.Visible = false;
+					gOgrenciGuncelle.Visible=false;
 
 
 					var ogretmenListesi = (from o in context.Ogretmenler
@@ -85,6 +87,7 @@ namespace OkulOtomasyonu
 					dataGridView1.Visible = true;
 					gOgretmenGuncelle.Visible = false;
 					gOgretmenSil.Visible = false;
+					gOgrenciGuncelle.Visible = false;
 					var ogrenciListesi = (from ogr in context.Ogrenciler
 										  join k in context.Kullanicilar on ogr.KullaniciID equals k.KullaniciID
 										  join s in context.Siniflar on ogr.SinifID equals s.SinifID
@@ -111,7 +114,7 @@ namespace OkulOtomasyonu
 					dataGridView1.Visible = false;
 					gOgretmenSil.Visible = false;
 					gOgretmenGuncelle.Visible = true;
-
+					gOgrenciGuncelle.Visible = false;
 
 
 					var ogretmenler = context.Ogretmenler.ToList();
@@ -135,6 +138,7 @@ namespace OkulOtomasyonu
 					dataGridView1.Visible = false;
 					gOgretmenGuncelle.Visible = false;
 					gOgretmenSil.Visible = true;
+					gOgrenciGuncelle.Visible = false;
 
 					var ogretmenListesi = (from o in context.Ogretmenler
 										   join k in context.Kullanicilar on o.KullaniciID equals k.KullaniciID
@@ -164,6 +168,24 @@ namespace OkulOtomasyonu
 						gOgretmenSil.Columns.Add(btnSil);
 					}
 				}
+
+				else if (e.Node.Name == "ogrenciBilgiGuncelle")
+				{
+					dataGridView1.Visible = false;
+					gOgretmenGuncelle.Visible = false;
+					gOgretmenSil.Visible = false;
+					gOgrenciGuncelle.Visible = true;
+
+					// Öğrencileri veritabanından çekip combobox'a ekliyoruz
+					var ogrenciler = context.Ogrenciler.ToList();
+					cOgrenciGuncelleme.DataSource = ogrenciler;
+					cOgrenciGuncelleme.DisplayMember = "Ad";
+					cOgrenciGuncelleme.ValueMember = "OgrenciID";
+					
+					isInitialLoadOgrenci = false; // İlk yükleme bittiğini belirtin.
+
+				}
+
 				else
 				{
 					if (gOgretmenSil.Columns.Contains("btnSil"))
@@ -198,9 +220,6 @@ namespace OkulOtomasyonu
 					{
 						cOgretmenBrans.SelectedValue = ogretmenBrans.DersID;
 					}
-
-					// Eğer bir sınıf bilgisi de tutuyorsanız, aşağıdaki gibi sınıf bilgisini de ayarlayabilirsiniz:
-					// cOgretmenSinif.SelectedValue = ogretmen.SinifID;
 				}
 			}
 			else
@@ -290,5 +309,69 @@ namespace OkulOtomasyonu
 			}
 		}
 
+		private void cOgrenciGuncelleme_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (isInitialLoadOgrenci) // İlk yükleme ise bu olayı geç.
+			{
+				return;
+			}
+
+			try
+			{
+				int ogrenciId = (int)cOgrenciGuncelleme.SelectedValue;
+
+				using (var context = new MyDbContext())
+				{
+					var ogrenci = context.Ogrenciler.Find(ogrenciId);
+
+					if (ogrenci != null)
+					{
+						txtOgrenciAdi.Text = ogrenci.Ad;
+						txtOgrenciSoyadi.Text = ogrenci.Soyad;
+						txtOgrenciTC.Text = ogrenci.TCNo.ToString();
+						dOgrenciDogumTarihi.Value = ogrenci.DogumTarihi;
+						txtOgrenciNo.Text = ogrenci.OgrenciNo.ToString();
+						txtOgrenciAdresi.Text = ogrenci.Adres;
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Bir hata oluştu: " + ex.Message);
+			}
+		}
+
+		private void btnOgrenciGuncelle_Click(object sender, EventArgs e)
+		{
+			int ogrenciId;
+			if (int.TryParse(cOgrenciGuncelleme.SelectedValue.ToString(), out ogrenciId))
+			{
+				using (var context = new MyDbContext())
+				{
+					var ogrenciToUpdate = context.Ogrenciler.Find(ogrenciId);
+
+					if (ogrenciToUpdate != null)
+					{
+						ogrenciToUpdate.Ad = txtOgrenciAdi.Text;
+						ogrenciToUpdate.Soyad = txtOgrenciSoyadi.Text;
+						ogrenciToUpdate.TCNo = int.Parse(txtOgrenciTC.Text);
+						ogrenciToUpdate.DogumTarihi = dOgrenciDogumTarihi.Value;
+						ogrenciToUpdate.OgrenciNo = int.Parse(txtOgrenciNo.Text);
+						ogrenciToUpdate.Adres = txtOgrenciAdresi.Text;
+
+						context.SaveChanges();
+						MessageBox.Show("Öğrenci bilgileri başarıyla güncellendi.");
+					}
+					else
+					{
+						MessageBox.Show("Seçili öğrenci bulunamadı.");
+					}
+				}
+			}
+			else
+			{
+				MessageBox.Show("Seçili öğrenci ID'si geçerli bir tam sayı değil.");
+			}
+		}
 	}
 }
