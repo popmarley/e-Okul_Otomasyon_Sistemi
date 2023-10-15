@@ -59,10 +59,11 @@ namespace OkulOtomasyonu
 			{
 				if (e.Node.Name == "ogretmenListesi")
 				{
-					dataGridView1.Visible = true;
+					dgOgretmenListele.Visible = true;
 					gOgretmenGuncelle.Visible = false;
 					gOgretmenSil.Visible = false;
 					gOgrenciGuncelle.Visible=false;
+					dgOgrenciSil.Visible = false;
 
 
 					var ogretmenListesi = (from o in context.Ogretmenler
@@ -80,14 +81,16 @@ namespace OkulOtomasyonu
 										   }).ToList();
 
 
-					dataGridView1.DataSource = ogretmenListesi;
+					dgOgretmenListele.DataSource = ogretmenListesi;
 				}
 				else if (e.Node.Name == "ogrenciListesi")
 				{
-					dataGridView1.Visible = true;
+					dgOgretmenListele.Visible = true;
 					gOgretmenGuncelle.Visible = false;
 					gOgretmenSil.Visible = false;
 					gOgrenciGuncelle.Visible = false;
+					dgOgrenciSil.Visible = false;
+
 					var ogrenciListesi = (from ogr in context.Ogrenciler
 										  join k in context.Kullanicilar on ogr.KullaniciID equals k.KullaniciID
 										  join s in context.Siniflar on ogr.SinifID equals s.SinifID
@@ -107,14 +110,15 @@ namespace OkulOtomasyonu
 											  VeliSoyadi = v.Soyad,
 											  VeliTelefonu = v.Telefon
 										  }).ToList();
-					dataGridView1.DataSource = ogrenciListesi;
+					dgOgretmenListele.DataSource = ogrenciListesi;
 				}
 				else if (e.Node.Name == "ogretmenBilgiGuncelle")
 				{
-					dataGridView1.Visible = false;
+					dgOgretmenListele.Visible = false;
 					gOgretmenSil.Visible = false;
 					gOgretmenGuncelle.Visible = true;
 					gOgrenciGuncelle.Visible = false;
+					dgOgrenciSil.Visible = false;
 
 
 					var ogretmenler = context.Ogretmenler.ToList();
@@ -133,12 +137,13 @@ namespace OkulOtomasyonu
 					isInitialLoad = false; // ComboBox doldurulduktan sonra bayrağı false yap.
 				}
 
-				else if (e.Node.Name == "OgretmenSil")
+				else if (e.Node.Name == "OgretmenSil") 
 				{
-					dataGridView1.Visible = false;
+					dgOgretmenListele.Visible=false;
 					gOgretmenGuncelle.Visible = false;
 					gOgretmenSil.Visible = true;
 					gOgrenciGuncelle.Visible = false;
+					dgOgrenciSil.Visible = false;
 
 					var ogretmenListesi = (from o in context.Ogretmenler
 										   join k in context.Kullanicilar on o.KullaniciID equals k.KullaniciID
@@ -171,10 +176,11 @@ namespace OkulOtomasyonu
 
 				else if (e.Node.Name == "ogrenciBilgiGuncelle")
 				{
-					dataGridView1.Visible = false;
+					dgOgretmenListele.Visible = false;
 					gOgretmenGuncelle.Visible = false;
 					gOgretmenSil.Visible = false;
-					gOgrenciGuncelle.Visible = true;
+					gOgrenciGuncelle.Visible = true; 
+					dgOgrenciSil.Visible = false;
 
 					// Öğrencileri veritabanından çekip combobox'a ekliyoruz
 					var ogrenciler = context.Ogrenciler.ToList();
@@ -186,6 +192,47 @@ namespace OkulOtomasyonu
 
 				}
 
+				else if (e.Node.Name == "ogrenciSil")
+				{
+					dgOgrenciSil.Visible = true;
+					gOgretmenGuncelle.Visible = false;
+					gOgretmenSil.Visible = false;
+					gOgrenciGuncelle.Visible = false;
+
+					var ogrenciListesi = (from ogr in context.Ogrenciler
+										  join k in context.Kullanicilar on ogr.KullaniciID equals k.KullaniciID
+										  join s in context.Siniflar on ogr.SinifID equals s.SinifID
+										  join v in context.Veliler on ogr.VeliID equals v.VeliID
+										  select new
+										  {
+											  ogr.OgrenciID,
+											  ogr.Ad,
+											  ogr.Soyad,
+											  ogr.TCNo,
+											  ogr.DogumTarihi,
+											  Telefon = k.Telefon,
+											  KullaniciAdi = k.KullaniciAdi,
+											  SinifAdi = s.SinifAdi,
+											  ogr.Adres,
+											  VeliAdi = v.Ad,
+											  VeliSoyadi = v.Soyad,
+											  VeliTelefonu = v.Telefon
+										  }).ToList();
+
+					dgOgrenciSil.DataSource = ogrenciListesi;
+
+					if (!dgOgrenciSil.Columns.Contains("btnSilOgrenci"))
+					{
+						DataGridViewButtonColumn btnSilOgrenci = new DataGridViewButtonColumn();
+						btnSilOgrenci.Name = "btnSilOgrenci";
+						btnSilOgrenci.Text = "Sil";
+						btnSilOgrenci.HeaderText = "Sil";
+						btnSilOgrenci.UseColumnTextForButtonValue = true;
+						dgOgrenciSil.Columns.Add(btnSilOgrenci);
+					}
+
+				}
+				
 				else
 				{
 					if (gOgretmenSil.Columns.Contains("btnSil"))
@@ -256,7 +303,7 @@ namespace OkulOtomasyonu
 
 		// DataGridViewButtonColumn oluştur
 
-
+		#region öğretmen silme 
 		private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			using (var context = new MyDbContext())
@@ -287,6 +334,10 @@ namespace OkulOtomasyonu
 				}
 			}
 		}
+
+		#endregion
+
+		#region ögretmen silince anlık tablo güncelleme
 		private void YenidenListele()
 		{
 			using (var context = new MyDbContext())
@@ -308,6 +359,7 @@ namespace OkulOtomasyonu
 				gOgretmenSil.DataSource = ogretmenListesi;
 			}
 		}
+		#endregion
 
 		private void cOgrenciGuncelleme_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -373,5 +425,74 @@ namespace OkulOtomasyonu
 				MessageBox.Show("Seçili öğrenci ID'si geçerli bir tam sayı değil.");
 			}
 		}
+
+		private void dgOgrenciSil_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			if (dgOgrenciSil.Columns[e.ColumnIndex].Name == "btnSilOgrenci")
+			{
+				using (var context = new MyDbContext())
+				{
+					int ogrenciId = Convert.ToInt32(dgOgrenciSil.Rows[e.RowIndex].Cells["OgrenciID"].Value);
+
+					var ogrenci = context.Ogrenciler.Find(ogrenciId);
+					var result = MessageBox.Show("Bu öğrenciyi silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo);
+					if (result == DialogResult.Yes)
+					{
+						if (ogrenci != null)
+						{
+							context.Ogrenciler.Remove(ogrenci);
+							context.SaveChanges();
+
+							MessageBox.Show("Öğrenci başarıyla silindi.");
+							OgrenciListesiYenidenYukle();
+						}
+						else
+						{
+							MessageBox.Show("Öğrenci bulunamadı ve silinemedi.");
+						}
+					}
+				}
+			}
+		}
+		private void OgrenciListesiYenidenYukle()
+		{
+			using (var context = new MyDbContext())
+			{
+				var ogrenciListesi = (from ogr in context.Ogrenciler
+									  join k in context.Kullanicilar on ogr.KullaniciID equals k.KullaniciID
+									  join s in context.Siniflar on ogr.SinifID equals s.SinifID
+									  join v in context.Veliler on ogr.VeliID equals v.VeliID
+									  select new
+									  {
+										  ogr.Ad,
+										  ogr.Soyad,
+										  ogr.TCNo,
+										  ogr.DogumTarihi,
+										  ogr.OgrenciNo,
+										  Telefon = k.Telefon,
+										  KullaniciAdi = k.KullaniciAdi,
+										  SinifAdi = s.SinifAdi,
+										  ogr.Adres,
+										  VeliAdi = v.Ad,
+										  VeliSoyadi = v.Soyad,
+										  VeliTelefonu = v.Telefon
+									  }).ToList();
+
+				dgOgrenciSil.DataSource = ogrenciListesi;
+
+				// Öğrenci silme işlevi için DataGridView'da butonu kontrol ediyoruz
+				if (!dgOgrenciSil.Columns.Contains("btnOgrenciSil"))
+				{
+					DataGridViewButtonColumn btnOgrenciSil = new DataGridViewButtonColumn();
+					btnOgrenciSil.Name = "btnOgrenciSil";
+					btnOgrenciSil.Text = "Sil";
+					btnOgrenciSil.HeaderText = "Sil";
+					btnOgrenciSil.UseColumnTextForButtonValue = true;
+					dgOgrenciSil.Columns.Add(btnOgrenciSil);
+				}
+			}
+		}
+
+
 	}
 }
