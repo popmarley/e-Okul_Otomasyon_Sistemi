@@ -29,12 +29,7 @@ namespace OkulOtomasyonu
 			btnTurMudur.Click += RadyoButon_Tiklandi;
 		}
 
-		private void btn_Geri_Click(object sender, EventArgs e)
-		{
-			e_Okul girisForm = new e_Okul();
-			girisForm.Show();
-			this.Hide();
-		}
+		
 
 		private void RadyoButon_Tiklandi(object sender, EventArgs e)
 		{
@@ -200,6 +195,13 @@ namespace OkulOtomasyonu
 			{
 				lblSifreUyari.Text = ""; // Şifreler eşleştiğinde uyarı mesajını temizle
 			}
+		}
+
+		private void pSistemdenCikis_Click(object sender, EventArgs e)
+		{
+			e_Okul girisForm = new e_Okul();
+			girisForm.Show();
+			this.Hide();
 		}
 	}
 }

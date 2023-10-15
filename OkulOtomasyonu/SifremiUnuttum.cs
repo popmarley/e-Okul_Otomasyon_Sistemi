@@ -16,8 +16,7 @@ namespace OkulOtomasyonu
 		public SifremiUnuttum()
 		{
 			InitializeComponent();
-
-			lblSifremiUnuttumYeniSifre.Visible = false;
+			lblYeniSifre.Visible = false;
 			txtSifremiUnuttumYeniSifre.Visible = false;
 			btnSifremiUnuttumSifreDegistir.Visible = false;
 		}
@@ -30,9 +29,9 @@ namespace OkulOtomasyonu
 				return;
 			}
 
-			if (txtSifremiUnuttumBotKontrol.Text != "10")
+			if (txtSifremiUnuttumBotKontrol.Text != "7111")
 			{
-				MessageBox.Show("Bot kontrolü başarısız. Lütfen tekrar deneyin.");
+				MessageBox.Show("Güvenlik kodu yanlış. Lütfen tekrar deneyin.");
 				return;
 			}
 
@@ -41,7 +40,7 @@ namespace OkulOtomasyonu
 				var kullanici = context.Kullanicilar.FirstOrDefault(k => k.KullaniciAdi == txtSifremiUnuttumKullaniciAdi.Text && k.Eposta == txtSifremiUnuttumEposta.Text);
 				if (kullanici != null)
 				{
-					lblSifremiUnuttumYeniSifre.Visible = true;
+					lblYeniSifre.Visible = true;
 					txtSifremiUnuttumYeniSifre.Visible = true;
 					btnSifremiUnuttumSifreDegistir.Visible = true;
 				}
@@ -81,12 +80,14 @@ namespace OkulOtomasyonu
 				}
 			}
 
-			Giris girisForm = new Giris();
+			e_Okul girisForm = new e_Okul();
 			girisForm.Show();
 			this.Hide();
 		}
 
-		private void btnSifremiUnuttumGeri_Click(object sender, EventArgs e)
+		
+
+		private void pSifremiUnuttumGeri_Click(object sender, EventArgs e)
 		{
 			e_Okul girisForm = new e_Okul();
 			girisForm.Show();

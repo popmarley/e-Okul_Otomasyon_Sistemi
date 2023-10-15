@@ -303,9 +303,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resimler\geritusu.png" />
     <Content Include="Resimler\giris__.png" />
     <Content Include="Resimler\ogrencilogin.png" />
     <Content Include="Resimler\ogretmenlogin.png" />
+    <Content Include="Resimler\sifremiunuttum.png" />
     <Content Include="Resimler\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

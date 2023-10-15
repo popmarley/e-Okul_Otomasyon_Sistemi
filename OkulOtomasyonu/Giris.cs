@@ -77,9 +77,7 @@ namespace OkulOtomasyonu
 			}
 		}
 
-		
-
-		private void btnSistemdenCikis_Click(object sender, EventArgs e)
+		private void pSistemdenCikis_Click(object sender, EventArgs e)
 		{
 			e_Okul girisForm = new e_Okul();
 			girisForm.Show();

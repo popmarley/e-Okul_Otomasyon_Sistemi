@@ -34,11 +34,12 @@
 			this.btn_Giris = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.btnSistemdenCikis = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.txtCapca = new System.Windows.Forms.TextBox();
+			this.pSistemdenCikis = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pSistemdenCikis)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// txt_UserName
@@ -93,19 +94,6 @@
 			this.label2.TabIndex = 5;
 			this.label2.Text = "Şifreniz:";
 			// 
-			// btnSistemdenCikis
-			// 
-			this.btnSistemdenCikis.BackColor = System.Drawing.Color.IndianRed;
-			this.btnSistemdenCikis.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.btnSistemdenCikis.Location = new System.Drawing.Point(734, 37);
-			this.btnSistemdenCikis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.btnSistemdenCikis.Name = "btnSistemdenCikis";
-			this.btnSistemdenCikis.Size = new System.Drawing.Size(116, 73);
-			this.btnSistemdenCikis.TabIndex = 5;
-			this.btnSistemdenCikis.Text = "Ana Menüye Dön";
-			this.btnSistemdenCikis.UseVisualStyleBackColor = false;
-			this.btnSistemdenCikis.Click += new System.EventHandler(this.btnSistemdenCikis_Click);
-			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -135,15 +123,27 @@
 			this.txtCapca.Size = new System.Drawing.Size(221, 22);
 			this.txtCapca.TabIndex = 1;
 			// 
+			// pSistemdenCikis
+			// 
+			this.pSistemdenCikis.BackColor = System.Drawing.Color.Transparent;
+			this.pSistemdenCikis.Image = ((System.Drawing.Image)(resources.GetObject("pSistemdenCikis.Image")));
+			this.pSistemdenCikis.Location = new System.Drawing.Point(754, 41);
+			this.pSistemdenCikis.Name = "pSistemdenCikis";
+			this.pSistemdenCikis.Size = new System.Drawing.Size(72, 38);
+			this.pSistemdenCikis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pSistemdenCikis.TabIndex = 7;
+			this.pSistemdenCikis.TabStop = false;
+			this.pSistemdenCikis.Click += new System.EventHandler(this.pSistemdenCikis_Click);
+			// 
 			// Giris
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1347, 633);
+			this.Controls.Add(this.pSistemdenCikis);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.btnSistemdenCikis);
 			this.Controls.Add(this.btn_Giris);
 			this.Controls.Add(this.txt_Password);
 			this.Controls.Add(this.txtCapca);
@@ -154,6 +154,7 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "BÇAL Yönetim Bilgi Sistemi ";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pSistemdenCikis)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -166,10 +167,10 @@
 		private System.Windows.Forms.Button btn_Giris;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button btnSistemdenCikis;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox txtCapca;
+		private System.Windows.Forms.PictureBox pSistemdenCikis;
 	}
 }
 
