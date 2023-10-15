@@ -51,7 +51,7 @@ namespace OkulOtomasyonu
 						var mudur = context.Mudurler.FirstOrDefault(m => m.KullaniciID == userInDb.KullaniciID);
 						if (mudur != null)
 						{
-							MudurAnaMenu mudurMenuForm = new MudurAnaMenu(mudur.Ad);
+							MudurAnaMenu mudurMenuForm = new MudurAnaMenu(mudur.Ad + " " + mudur.Soyad);
 							mudurMenuForm.Show();
 							this.Hide();
 						}

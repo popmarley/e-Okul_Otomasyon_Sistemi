@@ -65,7 +65,7 @@ namespace OkulOtomasyonu
 					case 3: // Ogrenci
 						OgrenciAnaMenu ogrenciMenuForm = new OgrenciAnaMenu
 						{
-							GirisYapanKullaniciAdi = ogrenci.Ad,
+							GirisYapanKullaniciAdi = ogrenci.Ad + " " + ogrenci.Soyad,
 							OgrenciSinifi = ogrenci.Sinif.SinifAdi.ToString()
 						};
 						ogrenciMenuForm.Show();
