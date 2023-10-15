@@ -30,9 +30,13 @@ namespace OkulOtomasyonu
 		}
 		private void btn_Cikis_Click(object sender, EventArgs e)
 		{
-			e_Okul girisForm = new e_Okul();
-			girisForm.Show();
-			this.Hide();
+			DialogResult dr = MessageBox.Show("Sistemden çıkmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (dr == DialogResult.Yes)
+			{
+				e_Okul girisForm = new e_Okul();
+				girisForm.Show();
+				this.Hide();
+			}
 		}
 
 		private void MudurAnaMenu_Load(object sender, EventArgs e)

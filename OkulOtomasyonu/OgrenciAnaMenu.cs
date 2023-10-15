@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OkulOtomasyonu.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,9 +22,13 @@ namespace OkulOtomasyonu
 
 		private void btn_Cikis_Click(object sender, EventArgs e)
 		{
-			e_Okul girisForm = new e_Okul();
-			girisForm.Show();
-			this.Hide();
+			DialogResult dr = MessageBox.Show("Sistemden çıkmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (dr == DialogResult.Yes)
+			{
+				e_Okul girisForm = new e_Okul();
+				girisForm.Show();
+				this.Hide();
+			}
 		}
 
 		private void OgrenciAnaMenu_Load(object sender, EventArgs e)
@@ -41,6 +46,19 @@ namespace OkulOtomasyonu
 		private void SaatTimer_Tick(object sender, EventArgs e)
 		{
 			lblAnlikSaat.Text = DateTime.Now.ToString("HH:mm:ss");
+		}
+
+		private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+		{
+			using (var context = new MyDbContext())
+			{
+
+				if (e.Node.Name == "ogrenciDuyuru")
+				{
+					pDuyuru.Visible = true;
+				}
+
+			}
 		}
 	}
 }

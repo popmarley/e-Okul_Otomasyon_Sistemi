@@ -29,30 +29,30 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("Öğretmen Listesi");
-			System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("Öğretmen Bilgi Güncelle");
-			System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("Öğretmen Sil");
-			System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("Öğretmen İşlemleri", new System.Windows.Forms.TreeNode[] {
-            treeNode99,
-            treeNode100,
-            treeNode101});
-			System.Windows.Forms.TreeNode treeNode103 = new System.Windows.Forms.TreeNode("Öğrenci Listesi");
-			System.Windows.Forms.TreeNode treeNode104 = new System.Windows.Forms.TreeNode("Öğrenci Bilgi Güncelle");
-			System.Windows.Forms.TreeNode treeNode105 = new System.Windows.Forms.TreeNode("Öğrenci Sil");
-			System.Windows.Forms.TreeNode treeNode106 = new System.Windows.Forms.TreeNode("Veli Bilgileri");
-			System.Windows.Forms.TreeNode treeNode107 = new System.Windows.Forms.TreeNode("Öğrenci Not Düzenle");
-			System.Windows.Forms.TreeNode treeNode108 = new System.Windows.Forms.TreeNode("Öğrenci İşlemleri", new System.Windows.Forms.TreeNode[] {
-            treeNode103,
-            treeNode104,
-            treeNode105,
-            treeNode106,
-            treeNode107});
-			System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("Haftalık Ders Programı");
-			System.Windows.Forms.TreeNode treeNode110 = new System.Windows.Forms.TreeNode("Ders ve Sınıf İşlemleri", new System.Windows.Forms.TreeNode[] {
-            treeNode109});
-			System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("Genel Rapor");
-			System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("Raporlama", new System.Windows.Forms.TreeNode[] {
-            treeNode111});
+			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Öğretmen Listesi");
+			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Öğretmen Bilgi Güncelle");
+			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Öğretmen Sil");
+			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Öğretmen İşlemleri", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Öğrenci Listesi");
+			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Öğrenci Bilgi Güncelle");
+			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Öğrenci Sil");
+			System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Veli Bilgileri");
+			System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Öğrenci Not Düzenle");
+			System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Öğrenci İşlemleri", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8,
+            treeNode9});
+			System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Haftalık Ders Programı");
+			System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Ders ve Sınıf İşlemleri", new System.Windows.Forms.TreeNode[] {
+            treeNode11});
+			System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Genel Rapor");
+			System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Raporlama", new System.Windows.Forms.TreeNode[] {
+            treeNode13});
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MudurAnaMenu));
 			this.btn_Cikis = new System.Windows.Forms.Button();
 			this.lblAnlikSaat = new System.Windows.Forms.Label();
@@ -61,8 +61,20 @@
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.dgOgrenciSil = new System.Windows.Forms.DataGridView();
 			this.gOgretmenGuncelle = new System.Windows.Forms.GroupBox();
+			this.txtOgretmenSoyad = new System.Windows.Forms.TextBox();
+			this.txtOgretmenAd = new System.Windows.Forms.TextBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.cOgretmenBrans = new System.Windows.Forms.ComboBox();
+			this.cOgretmenListesi = new System.Windows.Forms.ComboBox();
+			this.txtOgretmenTCNo = new System.Windows.Forms.TextBox();
+			this.txtOgretmenDogumTarihi = new System.Windows.Forms.DateTimePicker();
+			this.btnGuncelle = new System.Windows.Forms.Button();
 			this.gOgrenciGuncelle = new System.Windows.Forms.GroupBox();
-			this.dgOgretmenListele = new System.Windows.Forms.DataGridView();
 			this.btnOgrenciGuncelle = new System.Windows.Forms.Button();
 			this.dOgrenciDogumTarihi = new System.Windows.Forms.DateTimePicker();
 			this.txtOgrenciAdresi = new System.Windows.Forms.TextBox();
@@ -78,21 +90,8 @@
 			this.label11 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
 			this.cOgrenciGuncelleme = new System.Windows.Forms.ComboBox();
-			this.txtOgretmenSoyad = new System.Windows.Forms.TextBox();
-			this.txtOgretmenAd = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.cOgretmenBrans = new System.Windows.Forms.ComboBox();
-			this.cOgretmenListesi = new System.Windows.Forms.ComboBox();
-			this.txtOgretmenTCNo = new System.Windows.Forms.TextBox();
-			this.txtOgretmenDogumTarihi = new System.Windows.Forms.DateTimePicker();
-			this.btnGuncelle = new System.Windows.Forms.Button();
+			this.dgOgretmenListele = new System.Windows.Forms.DataGridView();
 			this.gOgretmenSil = new System.Windows.Forms.DataGridView();
-			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgOgrenciSil)).BeginInit();
 			this.gOgretmenGuncelle.SuspendLayout();
@@ -141,39 +140,39 @@
 			this.treeView1.Location = new System.Drawing.Point(0, 234);
 			this.treeView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.treeView1.Name = "treeView1";
-			treeNode99.Name = "ogretmenListesi";
-			treeNode99.Text = "Öğretmen Listesi";
-			treeNode100.Name = "ogretmenBilgiGuncelle";
-			treeNode100.Text = "Öğretmen Bilgi Güncelle";
-			treeNode101.Name = "OgretmenSil";
-			treeNode101.Text = "Öğretmen Sil";
-			treeNode102.Name = "Node0";
-			treeNode102.Text = "Öğretmen İşlemleri";
-			treeNode103.Name = "ogrenciListesi";
-			treeNode103.Text = "Öğrenci Listesi";
-			treeNode104.Name = "ogrenciBilgiGuncelle";
-			treeNode104.Text = "Öğrenci Bilgi Güncelle";
-			treeNode105.Name = "ogrenciSil";
-			treeNode105.Text = "Öğrenci Sil";
-			treeNode106.Name = "Node13";
-			treeNode106.Text = "Veli Bilgileri";
-			treeNode107.Name = "Node17";
-			treeNode107.Text = "Öğrenci Not Düzenle";
-			treeNode108.Name = "Node1";
-			treeNode108.Text = "Öğrenci İşlemleri";
-			treeNode109.Name = "Node16";
-			treeNode109.Text = "Haftalık Ders Programı";
-			treeNode110.Name = "Node15";
-			treeNode110.Text = "Ders ve Sınıf İşlemleri";
-			treeNode111.Name = "Node14";
-			treeNode111.Text = "Genel Rapor";
-			treeNode112.Name = "Node3";
-			treeNode112.Text = "Raporlama";
+			treeNode1.Name = "ogretmenListesi";
+			treeNode1.Text = "Öğretmen Listesi";
+			treeNode2.Name = "ogretmenBilgiGuncelle";
+			treeNode2.Text = "Öğretmen Bilgi Güncelle";
+			treeNode3.Name = "OgretmenSil";
+			treeNode3.Text = "Öğretmen Sil";
+			treeNode4.Name = "Node0";
+			treeNode4.Text = "Öğretmen İşlemleri";
+			treeNode5.Name = "ogrenciListesi";
+			treeNode5.Text = "Öğrenci Listesi";
+			treeNode6.Name = "ogrenciBilgiGuncelle";
+			treeNode6.Text = "Öğrenci Bilgi Güncelle";
+			treeNode7.Name = "ogrenciSil";
+			treeNode7.Text = "Öğrenci Sil";
+			treeNode8.Name = "Node13";
+			treeNode8.Text = "Veli Bilgileri";
+			treeNode9.Name = "Node17";
+			treeNode9.Text = "Öğrenci Not Düzenle";
+			treeNode10.Name = "Node1";
+			treeNode10.Text = "Öğrenci İşlemleri";
+			treeNode11.Name = "Node16";
+			treeNode11.Text = "Haftalık Ders Programı";
+			treeNode12.Name = "Node15";
+			treeNode12.Text = "Ders ve Sınıf İşlemleri";
+			treeNode13.Name = "Node14";
+			treeNode13.Text = "Genel Rapor";
+			treeNode14.Name = "Node3";
+			treeNode14.Text = "Raporlama";
 			this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode102,
-            treeNode108,
-            treeNode110,
-            treeNode112});
+            treeNode4,
+            treeNode10,
+            treeNode12,
+            treeNode14});
 			this.treeView1.Size = new System.Drawing.Size(209, 387);
 			this.treeView1.TabIndex = 11;
 			this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -215,6 +214,122 @@
 			this.gOgretmenGuncelle.TabStop = false;
 			this.gOgretmenGuncelle.Visible = false;
 			// 
+			// txtOgretmenSoyad
+			// 
+			this.txtOgretmenSoyad.Location = new System.Drawing.Point(211, 108);
+			this.txtOgretmenSoyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtOgretmenSoyad.Name = "txtOgretmenSoyad";
+			this.txtOgretmenSoyad.Size = new System.Drawing.Size(176, 22);
+			this.txtOgretmenSoyad.TabIndex = 2;
+			// 
+			// txtOgretmenAd
+			// 
+			this.txtOgretmenAd.Location = new System.Drawing.Point(211, 69);
+			this.txtOgretmenAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtOgretmenAd.Name = "txtOgretmenAd";
+			this.txtOgretmenAd.Size = new System.Drawing.Size(176, 22);
+			this.txtOgretmenAd.TabIndex = 2;
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(145, 241);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(48, 16);
+			this.label6.TabIndex = 1;
+			this.label6.Text = "Branşı:";
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(101, 199);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(91, 16);
+			this.label5.TabIndex = 1;
+			this.label5.Text = "Doğum Tarihi:";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(139, 153);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(55, 16);
+			this.label4.TabIndex = 1;
+			this.label4.Text = "T.C. No:";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(140, 114);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(53, 16);
+			this.label3.TabIndex = 1;
+			this.label3.Text = "Soyadı:";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(163, 75);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(30, 16);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "Adı:";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(91, 30);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(103, 32);
+			this.label1.TabIndex = 1;
+			this.label1.Text = "İşlem Yapılacak\r\nÖğretmen:\r\n";
+			// 
+			// cOgretmenBrans
+			// 
+			this.cOgretmenBrans.FormattingEnabled = true;
+			this.cOgretmenBrans.Location = new System.Drawing.Point(211, 233);
+			this.cOgretmenBrans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.cOgretmenBrans.Name = "cOgretmenBrans";
+			this.cOgretmenBrans.Size = new System.Drawing.Size(176, 24);
+			this.cOgretmenBrans.TabIndex = 0;
+			// 
+			// cOgretmenListesi
+			// 
+			this.cOgretmenListesi.FormattingEnabled = true;
+			this.cOgretmenListesi.Location = new System.Drawing.Point(211, 30);
+			this.cOgretmenListesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.cOgretmenListesi.Name = "cOgretmenListesi";
+			this.cOgretmenListesi.Size = new System.Drawing.Size(176, 24);
+			this.cOgretmenListesi.TabIndex = 0;
+			this.cOgretmenListesi.SelectedIndexChanged += new System.EventHandler(this.cOgretmenListesi_SelectedIndexChanged);
+			// 
+			// txtOgretmenTCNo
+			// 
+			this.txtOgretmenTCNo.Location = new System.Drawing.Point(211, 149);
+			this.txtOgretmenTCNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtOgretmenTCNo.Name = "txtOgretmenTCNo";
+			this.txtOgretmenTCNo.Size = new System.Drawing.Size(176, 22);
+			this.txtOgretmenTCNo.TabIndex = 2;
+			// 
+			// txtOgretmenDogumTarihi
+			// 
+			this.txtOgretmenDogumTarihi.Location = new System.Drawing.Point(211, 194);
+			this.txtOgretmenDogumTarihi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtOgretmenDogumTarihi.Name = "txtOgretmenDogumTarihi";
+			this.txtOgretmenDogumTarihi.Size = new System.Drawing.Size(176, 22);
+			this.txtOgretmenDogumTarihi.TabIndex = 3;
+			// 
+			// btnGuncelle
+			// 
+			this.btnGuncelle.Location = new System.Drawing.Point(247, 290);
+			this.btnGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.btnGuncelle.Name = "btnGuncelle";
+			this.btnGuncelle.Size = new System.Drawing.Size(89, 34);
+			this.btnGuncelle.TabIndex = 4;
+			this.btnGuncelle.Text = "Güncelle";
+			this.btnGuncelle.UseVisualStyleBackColor = true;
+			this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+			// 
 			// gOgrenciGuncelle
 			// 
 			this.gOgrenciGuncelle.Controls.Add(this.btnOgrenciGuncelle);
@@ -240,18 +355,6 @@
 			this.gOgrenciGuncelle.TabIndex = 14;
 			this.gOgrenciGuncelle.TabStop = false;
 			this.gOgrenciGuncelle.Visible = false;
-			// 
-			// dgOgretmenListele
-			// 
-			this.dgOgretmenListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgOgretmenListele.Location = new System.Drawing.Point(215, 234);
-			this.dgOgretmenListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.dgOgretmenListele.Name = "dgOgretmenListele";
-			this.dgOgretmenListele.RowHeadersWidth = 51;
-			this.dgOgretmenListele.RowTemplate.Height = 24;
-			this.dgOgretmenListele.Size = new System.Drawing.Size(1132, 402);
-			this.dgOgretmenListele.TabIndex = 15;
-			this.dgOgretmenListele.Visible = false;
 			// 
 			// btnOgrenciGuncelle
 			// 
@@ -385,121 +488,17 @@
 			this.cOgrenciGuncelleme.TabIndex = 0;
 			this.cOgrenciGuncelleme.SelectedIndexChanged += new System.EventHandler(this.cOgrenciGuncelleme_SelectedIndexChanged);
 			// 
-			// txtOgretmenSoyad
+			// dgOgretmenListele
 			// 
-			this.txtOgretmenSoyad.Location = new System.Drawing.Point(211, 108);
-			this.txtOgretmenSoyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txtOgretmenSoyad.Name = "txtOgretmenSoyad";
-			this.txtOgretmenSoyad.Size = new System.Drawing.Size(176, 22);
-			this.txtOgretmenSoyad.TabIndex = 2;
-			// 
-			// txtOgretmenAd
-			// 
-			this.txtOgretmenAd.Location = new System.Drawing.Point(211, 69);
-			this.txtOgretmenAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txtOgretmenAd.Name = "txtOgretmenAd";
-			this.txtOgretmenAd.Size = new System.Drawing.Size(176, 22);
-			this.txtOgretmenAd.TabIndex = 2;
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(145, 241);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(48, 16);
-			this.label6.TabIndex = 1;
-			this.label6.Text = "Branşı:";
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(101, 199);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(91, 16);
-			this.label5.TabIndex = 1;
-			this.label5.Text = "Doğum Tarihi:";
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(139, 153);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(55, 16);
-			this.label4.TabIndex = 1;
-			this.label4.Text = "T.C. No:";
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(140, 114);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(53, 16);
-			this.label3.TabIndex = 1;
-			this.label3.Text = "Soyadı:";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(163, 75);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(30, 16);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Adı:";
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(91, 30);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(103, 32);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "İşlem Yapılacak\r\nÖğretmen:\r\n";
-			// 
-			// cOgretmenBrans
-			// 
-			this.cOgretmenBrans.FormattingEnabled = true;
-			this.cOgretmenBrans.Location = new System.Drawing.Point(211, 233);
-			this.cOgretmenBrans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.cOgretmenBrans.Name = "cOgretmenBrans";
-			this.cOgretmenBrans.Size = new System.Drawing.Size(176, 24);
-			this.cOgretmenBrans.TabIndex = 0;
-			// 
-			// cOgretmenListesi
-			// 
-			this.cOgretmenListesi.FormattingEnabled = true;
-			this.cOgretmenListesi.Location = new System.Drawing.Point(211, 30);
-			this.cOgretmenListesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.cOgretmenListesi.Name = "cOgretmenListesi";
-			this.cOgretmenListesi.Size = new System.Drawing.Size(176, 24);
-			this.cOgretmenListesi.TabIndex = 0;
-			this.cOgretmenListesi.SelectedIndexChanged += new System.EventHandler(this.cOgretmenListesi_SelectedIndexChanged);
-			// 
-			// txtOgretmenTCNo
-			// 
-			this.txtOgretmenTCNo.Location = new System.Drawing.Point(211, 149);
-			this.txtOgretmenTCNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txtOgretmenTCNo.Name = "txtOgretmenTCNo";
-			this.txtOgretmenTCNo.Size = new System.Drawing.Size(176, 22);
-			this.txtOgretmenTCNo.TabIndex = 2;
-			// 
-			// txtOgretmenDogumTarihi
-			// 
-			this.txtOgretmenDogumTarihi.Location = new System.Drawing.Point(211, 194);
-			this.txtOgretmenDogumTarihi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txtOgretmenDogumTarihi.Name = "txtOgretmenDogumTarihi";
-			this.txtOgretmenDogumTarihi.Size = new System.Drawing.Size(176, 22);
-			this.txtOgretmenDogumTarihi.TabIndex = 3;
-			// 
-			// btnGuncelle
-			// 
-			this.btnGuncelle.Location = new System.Drawing.Point(247, 290);
-			this.btnGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.btnGuncelle.Name = "btnGuncelle";
-			this.btnGuncelle.Size = new System.Drawing.Size(89, 34);
-			this.btnGuncelle.TabIndex = 4;
-			this.btnGuncelle.Text = "Güncelle";
-			this.btnGuncelle.UseVisualStyleBackColor = true;
-			this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+			this.dgOgretmenListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgOgretmenListele.Location = new System.Drawing.Point(215, 234);
+			this.dgOgretmenListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.dgOgretmenListele.Name = "dgOgretmenListele";
+			this.dgOgretmenListele.RowHeadersWidth = 51;
+			this.dgOgretmenListele.RowTemplate.Height = 24;
+			this.dgOgretmenListele.Size = new System.Drawing.Size(1132, 402);
+			this.dgOgretmenListele.TabIndex = 15;
+			this.dgOgretmenListele.Visible = false;
 			// 
 			// gOgretmenSil
 			// 
@@ -580,7 +579,6 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.ComboBox cOgretmenBrans;
 		private System.Windows.Forms.ComboBox cOgretmenListesi;
-		private System.ComponentModel.BackgroundWorker backgroundWorker1;
 		private System.Windows.Forms.DataGridView gOgretmenSil;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.GroupBox gOgrenciGuncelle;

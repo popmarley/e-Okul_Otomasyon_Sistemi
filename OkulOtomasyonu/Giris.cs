@@ -1,4 +1,5 @@
-﻿using OkulOtomasyonu.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using OkulOtomasyonu.Context;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,8 +62,21 @@ namespace OkulOtomasyonu
 						break;
 
 					case 2: // Ogretmen
-						OgretmenAnaMenu ogretmenMenuForm = new OgretmenAnaMenu();
-						ogretmenMenuForm.Show();
+						var ogretmen = context.Ogretmenler
+							.Include(o => o.OgretmenBrans)
+							.FirstOrDefault(o => o.KullaniciID == userInDb.KullaniciID);
+						if (ogretmen != null)
+						{
+							var ders = context.Dersler.FirstOrDefault(d => d.DersID == ogretmen.OgretmenBrans.DersID);
+							var dersAdi = ders != null ? ders.DersAdi : "Bilinmeyen Ders";
+							OgretmenAnaMenu ogretmenMenuForm = new OgretmenAnaMenu(ogretmen.Ad + " " + ogretmen.Soyad, dersAdi);
+							ogretmenMenuForm.Show();
+							this.Hide();
+						}
+						else
+						{
+							MessageBox.Show("Öğretmen bilgisi bulunamadı!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						}
 						break;
 
 					case 3: // Ogrenci
@@ -73,15 +87,19 @@ namespace OkulOtomasyonu
 						MessageBox.Show("Tanımsız kullanıcı tipi!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 						break;
 				}
-				this.Hide();
+			
 			}
 		}
 
 		private void pSistemdenCikis_Click(object sender, EventArgs e)
 		{
-			e_Okul girisForm = new e_Okul();
-			girisForm.Show();
-			this.Hide();
+			DialogResult dr = MessageBox.Show("Sistemden çıkmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (dr == DialogResult.Yes)
+			{
+				e_Okul girisForm = new e_Okul();
+				girisForm.Show();
+				this.Hide();
+			}
 		}
 	}
 }
