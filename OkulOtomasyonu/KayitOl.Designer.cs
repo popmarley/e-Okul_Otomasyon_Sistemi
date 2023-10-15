@@ -88,10 +88,12 @@
 			this.btnKayitOl = new System.Windows.Forms.Button();
 			this.lblSifreUyari = new System.Windows.Forms.Label();
 			this.pSistemdenCikis = new System.Windows.Forms.PictureBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.gboxOgrenci.SuspendLayout();
 			this.gboxOgretmen.SuspendLayout();
 			this.gboxMudur.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pSistemdenCikis)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -580,7 +582,7 @@
 			this.gboxMudur.Controls.Add(this.label23);
 			this.gboxMudur.Controls.Add(this.txtMudurAdi);
 			this.gboxMudur.Controls.Add(this.label22);
-			this.gboxMudur.Location = new System.Drawing.Point(595, 343);
+			this.gboxMudur.Location = new System.Drawing.Point(595, 298);
 			this.gboxMudur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.gboxMudur.Name = "gboxMudur";
 			this.gboxMudur.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -662,7 +664,7 @@
 			// 
 			// btnKayitOl
 			// 
-			this.btnKayitOl.Location = new System.Drawing.Point(701, 537);
+			this.btnKayitOl.Location = new System.Drawing.Point(702, 497);
 			this.btnKayitOl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnKayitOl.Name = "btnKayitOl";
 			this.btnKayitOl.Size = new System.Drawing.Size(75, 34);
@@ -692,6 +694,16 @@
 			this.pSistemdenCikis.TabStop = false;
 			this.pSistemdenCikis.Click += new System.EventHandler(this.pSistemdenCikis_Click);
 			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(919, 635);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 11;
+			this.pictureBox1.TabStop = false;
+			// 
 			// KayitOl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -717,6 +729,7 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnKayitOl);
+			this.Controls.Add(this.pictureBox1);
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "KayitOl";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -729,6 +742,7 @@
 			this.gboxMudur.ResumeLayout(false);
 			this.gboxMudur.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pSistemdenCikis)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -794,5 +808,6 @@
 		private System.Windows.Forms.DateTimePicker dateMudurDogumTarihi;
 		private System.Windows.Forms.Label lblSifreUyari;
 		private System.Windows.Forms.PictureBox pSistemdenCikis;
+		private System.Windows.Forms.PictureBox pictureBox1;
 	}
 }

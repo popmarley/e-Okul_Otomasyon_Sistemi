@@ -30,30 +30,30 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgrenciAnaMenu));
-			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Sınav Tarihleri");
-			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Sınav Sonuçları");
-			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Sınav Bilgileri", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Duyurular");
-			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Devamsızlık Bilgisi");
-			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Haftalık Ders Programı");
-			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Kişisel Bilgiler");
-			System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Aldığı Belgeler");
-			System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Pansiyon Ödeme Bilgileri");
-			System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Ortalama Yükseltme Puanları");
-			System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Nakil Durumu");
-			System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Şube Yazılı Ortalamaları");
-			System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Öğrenci Bilgileri", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12});
+			System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Sınav Tarihleri");
+			System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Sınav Sonuçları");
+			System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Sınav Bilgileri", new System.Windows.Forms.TreeNode[] {
+            treeNode40,
+            treeNode41});
+			System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Duyurular");
+			System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Devamsızlık Bilgisi");
+			System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Haftalık Ders Programı");
+			System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Kişisel Bilgiler");
+			System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Aldığı Belgeler");
+			System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Pansiyon Ödeme Bilgileri");
+			System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Ortalama Yükseltme Puanları");
+			System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Nakil Durumu");
+			System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Şube Yazılı Ortalamaları");
+			System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Öğrenci Bilgileri", new System.Windows.Forms.TreeNode[] {
+            treeNode43,
+            treeNode44,
+            treeNode45,
+            treeNode46,
+            treeNode47,
+            treeNode48,
+            treeNode49,
+            treeNode50,
+            treeNode51});
 			this.btn_Cikis = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.lblGirisYapanKullaniciAdi = new System.Windows.Forms.Label();
@@ -66,10 +66,10 @@
 			// 
 			// btn_Cikis
 			// 
-			this.btn_Cikis.Location = new System.Drawing.Point(42, 188);
+			this.btn_Cikis.Location = new System.Drawing.Point(31, 179);
 			this.btn_Cikis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btn_Cikis.Name = "btn_Cikis";
-			this.btn_Cikis.Size = new System.Drawing.Size(115, 23);
+			this.btn_Cikis.Size = new System.Drawing.Size(115, 32);
 			this.btn_Cikis.TabIndex = 1;
 			this.btn_Cikis.Text = "Çıkış Yap";
 			this.btn_Cikis.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(26, 9);
+			this.pictureBox1.Location = new System.Drawing.Point(1, 0);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(146, 121);
+			this.pictureBox1.Size = new System.Drawing.Size(1350, 631);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 2;
 			this.pictureBox1.TabStop = false;
@@ -88,18 +88,22 @@
 			// lblGirisYapanKullaniciAdi
 			// 
 			this.lblGirisYapanKullaniciAdi.AutoSize = true;
-			this.lblGirisYapanKullaniciAdi.Location = new System.Drawing.Point(59, 133);
+			this.lblGirisYapanKullaniciAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblGirisYapanKullaniciAdi.ForeColor = System.Drawing.Color.SkyBlue;
+			this.lblGirisYapanKullaniciAdi.Location = new System.Drawing.Point(38, 128);
 			this.lblGirisYapanKullaniciAdi.Name = "lblGirisYapanKullaniciAdi";
-			this.lblGirisYapanKullaniciAdi.Size = new System.Drawing.Size(80, 16);
+			this.lblGirisYapanKullaniciAdi.Size = new System.Drawing.Size(108, 20);
 			this.lblGirisYapanKullaniciAdi.TabIndex = 3;
 			this.lblGirisYapanKullaniciAdi.Text = "adı yazacak";
 			// 
 			// lblOgrenciSinif
 			// 
 			this.lblOgrenciSinif.AutoSize = true;
-			this.lblOgrenciSinif.Location = new System.Drawing.Point(59, 160);
+			this.lblOgrenciSinif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblOgrenciSinif.ForeColor = System.Drawing.Color.Red;
+			this.lblOgrenciSinif.Location = new System.Drawing.Point(39, 159);
 			this.lblOgrenciSinif.Name = "lblOgrenciSinif";
-			this.lblOgrenciSinif.Size = new System.Drawing.Size(87, 16);
+			this.lblOgrenciSinif.Size = new System.Drawing.Size(110, 18);
 			this.lblOgrenciSinif.TabIndex = 3;
 			this.lblOgrenciSinif.Text = "sınıfı yazacak";
 			// 
@@ -107,44 +111,46 @@
 			// 
 			this.treeView1.Location = new System.Drawing.Point(1, 216);
 			this.treeView1.Name = "treeView1";
-			treeNode1.Name = "Node13";
-			treeNode1.Text = "Sınav Tarihleri";
-			treeNode2.Name = "Node0";
-			treeNode2.Text = "Sınav Sonuçları";
-			treeNode3.Name = "Node0";
-			treeNode3.Text = "Sınav Bilgileri";
-			treeNode4.Name = "Node1";
-			treeNode4.Text = "Duyurular";
-			treeNode5.Name = "Node2";
-			treeNode5.Text = "Devamsızlık Bilgisi";
-			treeNode6.Name = "Node4";
-			treeNode6.Text = "Haftalık Ders Programı";
-			treeNode7.Name = "Node6";
-			treeNode7.Text = "Kişisel Bilgiler";
-			treeNode8.Name = "Node7";
-			treeNode8.Text = "Aldığı Belgeler";
-			treeNode9.Name = "Node8";
-			treeNode9.Text = "Pansiyon Ödeme Bilgileri";
-			treeNode10.Name = "Node10";
-			treeNode10.Text = "Ortalama Yükseltme Puanları";
-			treeNode11.Name = "Node11";
-			treeNode11.Text = "Nakil Durumu";
-			treeNode12.Name = "Node12";
-			treeNode12.Text = "Şube Yazılı Ortalamaları";
-			treeNode13.Name = "Node0";
-			treeNode13.Text = "Öğrenci Bilgileri";
+			treeNode40.Name = "Node13";
+			treeNode40.Text = "Sınav Tarihleri";
+			treeNode41.Name = "Node0";
+			treeNode41.Text = "Sınav Sonuçları";
+			treeNode42.Name = "Node0";
+			treeNode42.Text = "Sınav Bilgileri";
+			treeNode43.Name = "Node1";
+			treeNode43.Text = "Duyurular";
+			treeNode44.Name = "Node2";
+			treeNode44.Text = "Devamsızlık Bilgisi";
+			treeNode45.Name = "Node4";
+			treeNode45.Text = "Haftalık Ders Programı";
+			treeNode46.Name = "Node6";
+			treeNode46.Text = "Kişisel Bilgiler";
+			treeNode47.Name = "Node7";
+			treeNode47.Text = "Aldığı Belgeler";
+			treeNode48.Name = "Node8";
+			treeNode48.Text = "Pansiyon Ödeme Bilgileri";
+			treeNode49.Name = "Node10";
+			treeNode49.Text = "Ortalama Yükseltme Puanları";
+			treeNode50.Name = "Node11";
+			treeNode50.Text = "Nakil Durumu";
+			treeNode51.Name = "Node12";
+			treeNode51.Text = "Şube Yazılı Ortalamaları";
+			treeNode52.Name = "Node0";
+			treeNode52.Text = "Öğrenci Bilgileri";
 			this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode13});
+            treeNode42,
+            treeNode52});
 			this.treeView1.Size = new System.Drawing.Size(229, 396);
 			this.treeView1.TabIndex = 4;
 			// 
 			// lblAnlikSaat
 			// 
 			this.lblAnlikSaat.AutoSize = true;
-			this.lblAnlikSaat.Location = new System.Drawing.Point(1200, 9);
+			this.lblAnlikSaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblAnlikSaat.ForeColor = System.Drawing.Color.IndianRed;
+			this.lblAnlikSaat.Location = new System.Drawing.Point(1230, 20);
 			this.lblAnlikSaat.Name = "lblAnlikSaat";
-			this.lblAnlikSaat.Size = new System.Drawing.Size(135, 16);
+			this.lblAnlikSaat.Size = new System.Drawing.Size(188, 20);
 			this.lblAnlikSaat.TabIndex = 3;
 			this.lblAnlikSaat.Text = "anlık saat gösterecek";
 			// 
@@ -157,8 +163,8 @@
 			this.Controls.Add(this.lblAnlikSaat);
 			this.Controls.Add(this.lblOgrenciSinif);
 			this.Controls.Add(this.lblGirisYapanKullaniciAdi);
-			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.btn_Cikis);
+			this.Controls.Add(this.pictureBox1);
 			this.Name = "OgrenciAnaMenu";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "BÇAL Yönetim Bilgi Sistemi ";
