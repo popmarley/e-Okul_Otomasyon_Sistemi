@@ -48,8 +48,10 @@
 			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.lblOgretmenBrans = new System.Windows.Forms.Label();
 			this.dgOgrenciListele = new System.Windows.Forms.DataGridView();
+			this.dgOgrenciVeliListele = new System.Windows.Forms.DataGridView();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgOgrenciListele)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgOgrenciVeliListele)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblAnlikSaat
@@ -104,7 +106,7 @@
 			this.treeView1.Name = "treeView1";
 			treeNode1.Name = "ogrenciListesi";
 			treeNode1.Text = "Öğrenci Listesi";
-			treeNode2.Name = "Node13";
+			treeNode2.Name = "ogrenciVeliBilgi";
 			treeNode2.Text = "Veli Bilgileri";
 			treeNode3.Name = "Node17";
 			treeNode3.Text = "Öğrenci Not Düzenle";
@@ -144,11 +146,24 @@
 			this.dgOgrenciListele.TabIndex = 17;
 			this.dgOgrenciListele.Visible = false;
 			// 
+			// dgOgrenciVeliListele
+			// 
+			this.dgOgrenciVeliListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgOgrenciVeliListele.Location = new System.Drawing.Point(217, 235);
+			this.dgOgrenciVeliListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.dgOgrenciVeliListele.Name = "dgOgrenciVeliListele";
+			this.dgOgrenciVeliListele.RowHeadersWidth = 51;
+			this.dgOgrenciVeliListele.RowTemplate.Height = 24;
+			this.dgOgrenciVeliListele.Size = new System.Drawing.Size(1132, 387);
+			this.dgOgrenciVeliListele.TabIndex = 18;
+			this.dgOgrenciVeliListele.Visible = false;
+			// 
 			// OgretmenAnaMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1347, 633);
+			this.Controls.Add(this.dgOgrenciVeliListele);
 			this.Controls.Add(this.dgOgrenciListele);
 			this.Controls.Add(this.lblOgretmenBrans);
 			this.Controls.Add(this.treeView1);
@@ -162,6 +177,7 @@
 			this.Load += new System.EventHandler(this.OgretmenAnaMenu_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgOgrenciListele)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgOgrenciVeliListele)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -176,5 +192,6 @@
 		private System.Windows.Forms.TreeView treeView1;
 		private System.Windows.Forms.Label lblOgretmenBrans;
 		private System.Windows.Forms.DataGridView dgOgrenciListele;
+		private System.Windows.Forms.DataGridView dgOgrenciVeliListele;
 	}
 }

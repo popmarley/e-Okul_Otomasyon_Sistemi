@@ -162,6 +162,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbScript\siniflarnotdefteri.cs" />
     <Compile Include="Entity\Not.cs" />
     <Compile Include="e_Okul.cs">
       <SubType>Form</SubType>
