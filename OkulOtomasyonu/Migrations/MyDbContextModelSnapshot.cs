@@ -107,6 +107,45 @@ namespace OkulOtomasyonu.Migrations
                     b.ToTable("Mudurler");
                 });
 
+            modelBuilder.Entity("OkulOtomasyonu.Entity.Not", b =>
+                {
+                    b.Property<int>("NotID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("DersID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OgrenciID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OgretmenID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Performans")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sinav1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sinav2")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sozlu")
+                        .HasColumnType("int");
+
+                    b.HasKey("NotID");
+
+                    b.HasIndex("DersID");
+
+                    b.HasIndex("OgrenciID");
+
+                    b.HasIndex("OgretmenID");
+
+                    b.ToTable("Notlar");
+                });
+
             modelBuilder.Entity("OkulOtomasyonu.Entity.Ogrenci", b =>
                 {
                     b.Property<int>("OgrenciID")
@@ -319,6 +358,27 @@ namespace OkulOtomasyonu.Migrations
                     b.HasOne("OkulOtomasyonu.Entity.Kullanici", "Kullanici")
                         .WithMany()
                         .HasForeignKey("KullaniciID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OkulOtomasyonu.Entity.Not", b =>
+                {
+                    b.HasOne("OkulOtomasyonu.Entity.Ders", "Ders")
+                        .WithMany()
+                        .HasForeignKey("DersID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OkulOtomasyonu.Entity.Ogrenci", "Ogrenci")
+                        .WithMany("Not")
+                        .HasForeignKey("OgrenciID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OkulOtomasyonu.Entity.Ogretmen", "Ogretmen")
+                        .WithMany("Not")
+                        .HasForeignKey("OgretmenID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

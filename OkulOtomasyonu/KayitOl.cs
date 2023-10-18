@@ -23,7 +23,7 @@ namespace OkulOtomasyonu
 			gboxOgretmen.Enabled = false;
 			gboxMudur.Enabled = false;
 
-			// Radyo butonlarına tıklama olayını ekleyin
+			// Radyo butonlarına tıklama olayı
 			btnTurOgrenci.Click += RadyoButon_Tiklandi;
 			btnTurOgretmen.Click += RadyoButon_Tiklandi;
 			btnTurMudur.Click += RadyoButon_Tiklandi;
@@ -90,7 +90,7 @@ namespace OkulOtomasyonu
 				else if (btnTurMudur.Checked)
 					secilenTipID = 1;
 
-				// Öncelikle Kullanicilar tablosuna verileri ekleyelim
+				// Öncelikle Kullanicilar tablosuna verileri ekleme
 				var kullanici = new Kullanici
 				{
 					KullaniciAdi = txtKullaniciAdi.Text,

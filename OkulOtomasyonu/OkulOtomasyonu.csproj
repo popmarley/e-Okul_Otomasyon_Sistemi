@@ -162,6 +162,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\Not.cs" />
     <Compile Include="e_Okul.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +184,10 @@
     <Compile Include="Migrations\20231015101136_7.cs" />
     <Compile Include="Migrations\20231015101136_7.designer.cs">
       <DependentUpon>20231015101136_7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20231017180142_8.cs" />
+    <Compile Include="Migrations\20231017180142_8.designer.cs">
+      <DependentUpon>20231017180142_8.cs</DependentUpon>
     </Compile>
     <Compile Include="MudurAnaMenu.cs">
       <SubType>Form</SubType>
@@ -304,7 +309,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resimler\geritusu.png" />
-    <Content Include="Resimler\giris__.png" />
+    <Content Include="Resimler\giris___.png" />
     <Content Include="Resimler\müdürekran.png" />
     <Content Include="Resimler\ogrenciekran.png" />
     <Content Include="Resimler\ogrencilogin.png" />

@@ -293,10 +293,7 @@ namespace OkulOtomasyonu
 					ogretmen.TCNo = int.Parse(txtOgretmenTCNo.Text);
 					ogretmen.DogumTarihi = txtOgretmenDogumTarihi.Value;
 
-					// Brans ve Sinif combobox'larından alınan değerleri de güncelleyin.
-					// Örneğin:
-					//ogretmen.OgretmenBransID = (int)cOgretmenBrans.SelectedValue;
-					// ve diğerleri...
+					
 
 					context.SaveChanges();
 

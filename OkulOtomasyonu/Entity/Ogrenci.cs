@@ -28,5 +28,6 @@ namespace OkulOtomasyonu.Entity
 		public Sinif Sinif { get; set; }
 		public Veli Veli { get; set; }
 		public List<SinavSonucu> SinavSonuclari { get; set; }
+		public List<Not> Not { get; set; }
 	}
 }

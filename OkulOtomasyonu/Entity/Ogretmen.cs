@@ -22,6 +22,7 @@ namespace OkulOtomasyonu.Entity
 
 		public Kullanici Kullanici { get; set; }
 		public OgretmenBrans OgretmenBrans { get; set; }
+		public List<Not> Not { get; set; }
 
 	}
 }
