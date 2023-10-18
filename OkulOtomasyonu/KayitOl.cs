@@ -66,6 +66,11 @@ namespace OkulOtomasyonu
 				cboxOgretmenBrans.DataSource=context.Dersler.ToList();
 				cboxOgretmenBrans.DisplayMember = "DersAdi";
 				cboxOgretmenBrans.ValueMember = "DersID";
+
+				// Öğretmen Sınıflar için
+				cboxOgretmenSinif.DataSource = context.Siniflar.ToList();
+				cboxOgretmenSinif.DisplayMember = "SinifAdi";
+				cboxOgretmenSinif.ValueMember = "SinifID";
 			}
 		}
 
@@ -145,7 +150,9 @@ namespace OkulOtomasyonu
 						Soyad = txtOgretmenSoyadi.Text,
 						TCNo = int.Parse(txtOgretmenTC.Text),
 						DogumTarihi = dateOgretmenDogumTarihi.Value,
-						OgretmenBransID = ogretmenBrans.OgretmenBransID
+						OgretmenBransID = ogretmenBrans.OgretmenBransID,
+						SinifID = (int)cboxOgretmenSinif.SelectedValue
+
 					};
 					context.Ogretmenler.Add(ogretmen);
 				}

@@ -69,7 +69,7 @@ namespace OkulOtomasyonu
 						{
 							var ders = context.Dersler.FirstOrDefault(d => d.DersID == ogretmen.OgretmenBrans.DersID);
 							var dersAdi = ders != null ? ders.DersAdi : "Bilinmeyen Ders";
-							OgretmenAnaMenu ogretmenMenuForm = new OgretmenAnaMenu(ogretmen.Ad + " " + ogretmen.Soyad, dersAdi);
+							OgretmenAnaMenu ogretmenMenuForm = new OgretmenAnaMenu(ogretmen.Ad + " " + ogretmen.Soyad, dersAdi, ogretmen.OgretmenID, ogretmen.SinifID);
 							ogretmenMenuForm.Show();
 							this.Hide();
 						}

@@ -13,6 +13,8 @@ namespace OkulOtomasyonu.Entity
 		public int KullaniciID { get; set; }
 		[ForeignKey("OgretmenBrans")]
 		public int OgretmenBransID { get; set; }
+		[ForeignKey("Sinif")]
+		public int SinifID { get; set; }
 		public string Ad { get; set; }
 		public string Soyad { get; set; }
 		public int TCNo { get; set; }
@@ -23,6 +25,7 @@ namespace OkulOtomasyonu.Entity
 		public Kullanici Kullanici { get; set; }
 		public OgretmenBrans OgretmenBrans { get; set; }
 		public List<Not> Not { get; set; }
+		public Sinif Sinif { get; set; }
 
 	}
 }

@@ -89,6 +89,8 @@
 			this.lblSifreUyari = new System.Windows.Forms.Label();
 			this.pSistemdenCikis = new System.Windows.Forms.PictureBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.label27 = new System.Windows.Forms.Label();
+			this.cboxOgretmenSinif = new System.Windows.Forms.ComboBox();
 			this.gboxOgrenci.SuspendLayout();
 			this.gboxOgretmen.SuspendLayout();
 			this.gboxMudur.SuspendLayout();
@@ -460,8 +462,10 @@
 			// gboxOgretmen
 			// 
 			this.gboxOgretmen.Controls.Add(this.dateOgretmenDogumTarihi);
+			this.gboxOgretmen.Controls.Add(this.cboxOgretmenSinif);
 			this.gboxOgretmen.Controls.Add(this.cboxOgretmenBrans);
 			this.gboxOgretmen.Controls.Add(this.label18);
+			this.gboxOgretmen.Controls.Add(this.label27);
 			this.gboxOgretmen.Controls.Add(this.label19);
 			this.gboxOgretmen.Controls.Add(this.label26);
 			this.gboxOgretmen.Controls.Add(this.label20);
@@ -473,7 +477,7 @@
 			this.gboxOgretmen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.gboxOgretmen.Name = "gboxOgretmen";
 			this.gboxOgretmen.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.gboxOgretmen.Size = new System.Drawing.Size(267, 209);
+			this.gboxOgretmen.Size = new System.Drawing.Size(267, 243);
 			this.gboxOgretmen.TabIndex = 4;
 			this.gboxOgretmen.TabStop = false;
 			this.gboxOgretmen.Text = "Öğretmen";
@@ -582,7 +586,7 @@
 			this.gboxMudur.Controls.Add(this.label23);
 			this.gboxMudur.Controls.Add(this.txtMudurAdi);
 			this.gboxMudur.Controls.Add(this.label22);
-			this.gboxMudur.Location = new System.Drawing.Point(595, 298);
+			this.gboxMudur.Location = new System.Drawing.Point(595, 343);
 			this.gboxMudur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.gboxMudur.Name = "gboxMudur";
 			this.gboxMudur.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -664,7 +668,7 @@
 			// 
 			// btnKayitOl
 			// 
-			this.btnKayitOl.Location = new System.Drawing.Point(702, 497);
+			this.btnKayitOl.Location = new System.Drawing.Point(702, 551);
 			this.btnKayitOl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnKayitOl.Name = "btnKayitOl";
 			this.btnKayitOl.Size = new System.Drawing.Size(75, 34);
@@ -703,6 +707,29 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 11;
 			this.pictureBox1.TabStop = false;
+			// 
+			// label27
+			// 
+			this.label27.AutoSize = true;
+			this.label27.Location = new System.Drawing.Point(61, 213);
+			this.label27.Name = "label27";
+			this.label27.Size = new System.Drawing.Size(38, 16);
+			this.label27.TabIndex = 1;
+			this.label27.Text = "Sınıfı:";
+			// 
+			// cboxOgretmenSinif
+			// 
+			this.cboxOgretmenSinif.FormattingEnabled = true;
+			this.cboxOgretmenSinif.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+			this.cboxOgretmenSinif.Location = new System.Drawing.Point(107, 210);
+			this.cboxOgretmenSinif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.cboxOgretmenSinif.Name = "cboxOgretmenSinif";
+			this.cboxOgretmenSinif.Size = new System.Drawing.Size(145, 24);
+			this.cboxOgretmenSinif.TabIndex = 5;
 			// 
 			// KayitOl
 			// 
@@ -809,5 +836,7 @@
 		private System.Windows.Forms.Label lblSifreUyari;
 		private System.Windows.Forms.PictureBox pSistemdenCikis;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.ComboBox cboxOgretmenSinif;
+		private System.Windows.Forms.Label label27;
 	}
 }

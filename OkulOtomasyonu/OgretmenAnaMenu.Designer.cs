@@ -30,16 +30,16 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgretmenAnaMenu));
-			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Öğrenci Listesi");
-			System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Veli Bilgileri");
-			System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Öğrenci Not Düzenle");
-			System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Öğrenci İşlemleri", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9});
-			System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Haftalık Ders Programı");
-			System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Ders ve Sınıf İşlemleri", new System.Windows.Forms.TreeNode[] {
-            treeNode11});
+			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Öğrenci Listesi");
+			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Veli Bilgileri");
+			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Öğrenci Not Düzenle");
+			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Öğrenci İşlemleri", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Haftalık Ders Programı");
+			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Ders ve Sınıf İşlemleri", new System.Windows.Forms.TreeNode[] {
+            treeNode5});
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.lblAnlikSaat = new System.Windows.Forms.Label();
 			this.lblGirisYapanOgretmenKullaniciAdi = new System.Windows.Forms.Label();
@@ -47,7 +47,9 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.lblOgretmenBrans = new System.Windows.Forms.Label();
+			this.dgOgrenciListele = new System.Windows.Forms.DataGridView();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgOgrenciListele)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblAnlikSaat
@@ -100,23 +102,24 @@
 			this.treeView1.Location = new System.Drawing.Point(2, 235);
 			this.treeView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.treeView1.Name = "treeView1";
-			treeNode7.Name = "ogrenciListesi";
-			treeNode7.Text = "Öğrenci Listesi";
-			treeNode8.Name = "Node13";
-			treeNode8.Text = "Veli Bilgileri";
-			treeNode9.Name = "Node17";
-			treeNode9.Text = "Öğrenci Not Düzenle";
-			treeNode10.Name = "Node1";
-			treeNode10.Text = "Öğrenci İşlemleri";
-			treeNode11.Name = "Node16";
-			treeNode11.Text = "Haftalık Ders Programı";
-			treeNode12.Name = "Node15";
-			treeNode12.Text = "Ders ve Sınıf İşlemleri";
+			treeNode1.Name = "ogrenciListesi";
+			treeNode1.Text = "Öğrenci Listesi";
+			treeNode2.Name = "Node13";
+			treeNode2.Text = "Veli Bilgileri";
+			treeNode3.Name = "Node17";
+			treeNode3.Text = "Öğrenci Not Düzenle";
+			treeNode4.Name = "Node1";
+			treeNode4.Text = "Öğrenci İşlemleri";
+			treeNode5.Name = "Node16";
+			treeNode5.Text = "Haftalık Ders Programı";
+			treeNode6.Name = "Node15";
+			treeNode6.Text = "Ders ve Sınıf İşlemleri";
 			this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode10,
-            treeNode12});
+            treeNode4,
+            treeNode6});
 			this.treeView1.Size = new System.Drawing.Size(209, 387);
 			this.treeView1.TabIndex = 15;
+			this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
 			// 
 			// lblOgretmenBrans
 			// 
@@ -129,11 +132,24 @@
 			this.lblOgretmenBrans.TabIndex = 16;
 			this.lblOgretmenBrans.Text = "bransı yazacak";
 			// 
+			// dgOgrenciListele
+			// 
+			this.dgOgrenciListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgOgrenciListele.Location = new System.Drawing.Point(217, 235);
+			this.dgOgrenciListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.dgOgrenciListele.Name = "dgOgrenciListele";
+			this.dgOgrenciListele.RowHeadersWidth = 51;
+			this.dgOgrenciListele.RowTemplate.Height = 24;
+			this.dgOgrenciListele.Size = new System.Drawing.Size(1132, 387);
+			this.dgOgrenciListele.TabIndex = 17;
+			this.dgOgrenciListele.Visible = false;
+			// 
 			// OgretmenAnaMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1347, 633);
+			this.Controls.Add(this.dgOgrenciListele);
 			this.Controls.Add(this.lblOgretmenBrans);
 			this.Controls.Add(this.treeView1);
 			this.Controls.Add(this.lblAnlikSaat);
@@ -145,6 +161,7 @@
 			this.Text = "BÇAL Yönetim Bilgi Sistemi ";
 			this.Load += new System.EventHandler(this.OgretmenAnaMenu_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgOgrenciListele)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -158,5 +175,6 @@
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.TreeView treeView1;
 		private System.Windows.Forms.Label lblOgretmenBrans;
+		private System.Windows.Forms.DataGridView dgOgrenciListele;
 	}
 }

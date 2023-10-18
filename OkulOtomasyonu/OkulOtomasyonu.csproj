@@ -189,6 +189,10 @@
     <Compile Include="Migrations\20231017180142_8.designer.cs">
       <DependentUpon>20231017180142_8.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20231018181546_10.cs" />
+    <Compile Include="Migrations\20231018181546_10.designer.cs">
+      <DependentUpon>20231018181546_10.cs</DependentUpon>
+    </Compile>
     <Compile Include="MudurAnaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
