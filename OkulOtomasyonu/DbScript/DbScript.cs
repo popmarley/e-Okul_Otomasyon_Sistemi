@@ -18,59 +18,58 @@ namespace OkulOtomasyonu.DbScript
 		//Dbadı=  EgitimOtomasyonu
 
 
-//		//		/*    ==Scripting Parameters==
+//		/*    ==Scripting Parameters==
 
-//		Source Server Version : SQL Server 2022 (16.0.1105)
-//    Source Database Engine Edition : Microsoft SQL Server Enterprise Edition
-//	Source Database Engine Type : Standalone SQL Server
+//			Source Server Version : SQL Server 2022 (16.0.1105)
+//			Source Database Engine Edition : Microsoft SQL Server Enterprise Edition
+//			Source Database Engine Type : Standalone SQL Server
 
-//	Target Server Version : SQL Server 2022
+//			Target Server Version : SQL Server 2022
+//			Target Database Engine Edition : Microsoft SQL Server Enterprise Edition
+//			Target Database Engine Type : Standalone SQL Server
+//		*/
 
-//	Target Database Engine Edition : Microsoft SQL Server Enterprise Edition
-//	Target Database Engine Type : Standalone SQL Server
-//*/
-
-//USE[master]
-//GO
+//		USE[master]
+//		GO
 ///* For security reasons the login is created disabled and with a random password. */
-//		/****** Object:  Login [##MS_PolicyEventProcessingLogin##]    Script Date: 15.10.2023 16:32:29 ******/
+//		/****** Object:  Login [##MS_PolicyEventProcessingLogin##]    Script Date: 18.10.2023 21:43:35 ******/
 //IF NOT EXISTS(SELECT* FROM sys.server_principals WHERE name = N'##MS_PolicyEventProcessingLogin##')
-//CREATE LOGIN[##MS_PolicyEventProcessingLogin##] WITH PASSWORD=N'/eYJEfRvhVzUcCRifrmQsXk8n0mDa02KcEaLN9/Z2C8=', DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=OFF, CHECK_POLICY=ON
+//CREATE LOGIN[##MS_PolicyEventProcessingLogin##] WITH PASSWORD=N'h7Qo2P+vC3NP7VCYHYqwsPQBYPogxwvtAYOhbl0t3O8=', DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=OFF, CHECK_POLICY=ON
 //GO
 //ALTER LOGIN[##MS_PolicyEventProcessingLogin##] DISABLE
 //GO
 ///* For security reasons the login is created disabled and with a random password. */
-///****** Object:  Login [##MS_PolicyTsqlExecutionLogin##]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Login [##MS_PolicyTsqlExecutionLogin##]    Script Date: 18.10.2023 21:43:35 ******/
 //IF NOT EXISTS(SELECT * FROM sys.server_principals WHERE name = N'##MS_PolicyTsqlExecutionLogin##')
-//CREATE LOGIN[##MS_PolicyTsqlExecutionLogin##] WITH PASSWORD=N'ULSe/YkkU/sjxUXHIUf1PqtqwK2QVh1ZMfbakuqguI8=', DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=OFF, CHECK_POLICY=ON
+//CREATE LOGIN[##MS_PolicyTsqlExecutionLogin##] WITH PASSWORD=N'bvu5DPAxMZvijEmNTKuPP5q83OcLXfbUBjHdX5CtHbk=', DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=OFF, CHECK_POLICY=ON
 //GO
 //ALTER LOGIN[##MS_PolicyTsqlExecutionLogin##] DISABLE
 //GO
-///****** Object:  Login [NT AUTHORITY\SYSTEM]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Login [NT AUTHORITY\SYSTEM]    Script Date: 18.10.2023 21:43:35 ******/
 //IF NOT EXISTS(SELECT * FROM sys.server_principals WHERE name = N'NT AUTHORITY\SYSTEM')
 //CREATE LOGIN[NT AUTHORITY\SYSTEM] FROM WINDOWS WITH DEFAULT_DATABASE = [master], DEFAULT_LANGUAGE = [us_english]
 //GO
-///****** Object:  Login [NT SERVICE\SQLSERVERAGENT]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Login [NT SERVICE\SQLSERVERAGENT]    Script Date: 18.10.2023 21:43:35 ******/
 //IF NOT EXISTS(SELECT * FROM sys.server_principals WHERE name = N'NT SERVICE\SQLSERVERAGENT')
 //CREATE LOGIN[NT SERVICE\SQLSERVERAGENT] FROM WINDOWS WITH DEFAULT_DATABASE = [master], DEFAULT_LANGUAGE = [us_english]
 //GO
-///****** Object:  Login [NT SERVICE\SQLTELEMETRY]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Login [NT SERVICE\SQLTELEMETRY]    Script Date: 18.10.2023 21:43:35 ******/
 //IF NOT EXISTS(SELECT * FROM sys.server_principals WHERE name = N'NT SERVICE\SQLTELEMETRY')
 //CREATE LOGIN[NT SERVICE\SQLTELEMETRY] FROM WINDOWS WITH DEFAULT_DATABASE = [master], DEFAULT_LANGUAGE = [us_english]
 //GO
-///****** Object:  Login [NT SERVICE\SQLWriter]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Login [NT SERVICE\SQLWriter]    Script Date: 18.10.2023 21:43:35 ******/
 //IF NOT EXISTS(SELECT * FROM sys.server_principals WHERE name = N'NT SERVICE\SQLWriter')
 //CREATE LOGIN[NT SERVICE\SQLWriter] FROM WINDOWS WITH DEFAULT_DATABASE = [master], DEFAULT_LANGUAGE = [us_english]
 //GO
-///****** Object:  Login [NT SERVICE\Winmgmt]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Login [NT SERVICE\Winmgmt]    Script Date: 18.10.2023 21:43:35 ******/
 //IF NOT EXISTS(SELECT * FROM sys.server_principals WHERE name = N'NT SERVICE\Winmgmt')
 //CREATE LOGIN[NT SERVICE\Winmgmt] FROM WINDOWS WITH DEFAULT_DATABASE = [master], DEFAULT_LANGUAGE = [us_english]
 //GO
-///****** Object:  Login [NT Service\MSSQLSERVER]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Login [NT Service\MSSQLSERVER]    Script Date: 18.10.2023 21:43:35 ******/
 //IF NOT EXISTS(SELECT * FROM sys.server_principals WHERE name = N'NT Service\MSSQLSERVER')
 //CREATE LOGIN[NT Service\MSSQLSERVER] FROM WINDOWS WITH DEFAULT_DATABASE = [master], DEFAULT_LANGUAGE = [us_english]
 //GO
-///****** Object:  Login [OZGUVEN\djpus]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Login [OZGUVEN\djpus]    Script Date: 18.10.2023 21:43:35 ******/
 //IF NOT EXISTS(SELECT * FROM sys.server_principals WHERE name = N'OZGUVEN\djpus')
 //CREATE LOGIN[OZGUVEN\djpus] FROM WINDOWS WITH DEFAULT_DATABASE = [master], DEFAULT_LANGUAGE = [us_english]
 //GO
@@ -86,7 +85,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //USE[EgitimOtomasyonu]
 //GO
-///****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -105,7 +104,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[__EFMigrationsHistory] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[Dersler]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[Dersler]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -128,7 +127,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[Dersler] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[Kullanicilar]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[Kullanicilar]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -155,7 +154,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[Kullanicilar] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[KullaniciTipleri]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[KullaniciTipleri]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -178,7 +177,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[KullaniciTipleri] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[Mudurler]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[Mudurler]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -205,7 +204,32 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[Mudurler] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[OgrenciDersleri]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[Notlar]    Script Date: 18.10.2023 21:43:36 ******/
+//SET ANSI_NULLS ON
+//GO
+//SET QUOTED_IDENTIFIER ON
+//GO
+//IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Notlar]') AND type in (N'U'))
+//BEGIN
+//CREATE TABLE[dbo].[Notlar](
+//	[NotID][int] IDENTITY(1, 1) NOT NULL,
+//	[OgrenciID][int] NULL,
+//	[OgretmenID][int] NULL,
+//	[DersID][int] NULL,
+//	[Sinav1][int] NULL,
+//	[Sinav2][int] NULL,
+//	[Sozlu][int] NULL,
+//	[Performans][int] NULL,
+// CONSTRAINT[PK_Notlar] PRIMARY KEY CLUSTERED
+//(
+//	[NotID] ASC
+//)WITH(PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON[PRIMARY]
+//) ON[PRIMARY]
+//END
+//GO
+//ALTER AUTHORIZATION ON[dbo].[Notlar] TO  SCHEMA OWNER
+//GO
+///****** Object:  Table [dbo].[OgrenciDersleri]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -226,7 +250,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[OgrenciDersleri] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[Ogrenciler]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[Ogrenciler]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -257,7 +281,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[Ogrenciler] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[OgretmenBranslari]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[OgretmenBranslari]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -276,7 +300,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[OgretmenBranslari] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[Ogretmenler]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[Ogretmenler]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -293,6 +317,7 @@ namespace OkulOtomasyonu.DbScript
 //	[tcno][int] NULL,
 //	[dogumtarihi][datetime] NULL,
 //	[OgretmenBransID][int] NULL,
+//	[sinifID][int] NULL,
 // CONSTRAINT[PK__Öğretmen__06E62308CE76E4F3] PRIMARY KEY CLUSTERED
 //(
 //	[ogretmenID] ASC
@@ -304,7 +329,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[Ogretmenler] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[Sinavlar]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[Sinavlar]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -324,7 +349,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[Sinavlar] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[SinavSonuclari]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[SinavSonuclari]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -345,7 +370,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[SinavSonuclari] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[Siniflar]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[Siniflar]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -368,7 +393,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //ALTER AUTHORIZATION ON[dbo].[Siniflar] TO  SCHEMA OWNER
 //GO
-///****** Object:  Table [dbo].[Veliler]    Script Date: 15.10.2023 16:32:29 ******/
+///****** Object:  Table [dbo].[Veliler]    Script Date: 18.10.2023 21:43:36 ******/
 //SET ANSI_NULLS ON
 //GO
 //SET QUOTED_IDENTIFIER ON
@@ -429,7 +454,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(9, 3, N'asdasd', N'asda', N'asdads', 123)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(10, 2, N'zxcz', N'xzczx', N'zxcz', 231)
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(10, 2, N'zxcz', N'0', N'zxcz', 231)
 //GO
 //INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(11, 2, N'deneme', N'asdsa', N'asdasd', 1231)
 //GO
@@ -445,7 +470,7 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(17, 2, N'asd', N'123', N'asda', 123)
 //GO
-//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(18, 3, N'asd', N'0', N'asd', 123)
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(18, 3, N'asd', N'123', N'asd', 123)
 //GO
 //INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(19, 1, N'asd', N'123', N'asda', 123)
 //GO
@@ -466,6 +491,44 @@ namespace OkulOtomasyonu.DbScript
 //INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(27, 2, N'asd', N'asd', N'asd', 123)
 //GO
 //INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(28, 2, N'sada', N'123', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(29, 3, N'deneme', N'1', N'asda', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(30, 2, N'asd', N'123', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(31, 1, N'asd', N'123', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(32, 3, N'deneme', N'123', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(33, 2, N'asd', N'123', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(34, 1, N'asda', N'123', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(35, 1, N'ahmetkaya', N'123', N'askdhalkjd', 0)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(36, 2, N'huseyinozguven', N'123', N'asdsa', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(37, 3, N'hasan', N'1234', N'asdsa', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(38, 3, N'123', N'123', N'sad', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(39, 2, N'123', N'123', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(40, 1, N'23', N'123', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(41, 2, N'e', N'e', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(42, 2, N'g', N'g', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(43, 2, N'asd', N'asd', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(44, 2, N'asd', N'asd', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(45, 3, N'ee', N'123', N'asd', 123)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(46, 2, N'asd', N'asd', N'asd', 23)
+//GO
+//INSERT[dbo].[Kullanicilar]([kullaniciID], [tipID], [kullaniciAdi], [sifre], [eposta], [telefon]) VALUES(47, 1, N'asd', N'asd', N'asd', 123)
 //GO
 //SET IDENTITY_INSERT[dbo].[Kullanicilar] OFF
 //GO
@@ -491,11 +554,19 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //INSERT[dbo].[Mudurler]([mudurID], [kullaniciID], [ad], [soyad], [dogumtarihi], [tcno]) VALUES(5, 26, N'asd', N'asd', CAST(N'2023-10-15T13:12:24.377' AS DateTime), 123)
 //GO
+//INSERT[dbo].[Mudurler]([mudurID], [kullaniciID], [ad], [soyad], [dogumtarihi], [tcno]) VALUES(6, 31, N'asd', N'asd', CAST(N'2023-10-15T16:43:06.640' AS DateTime), 123)
+//GO
+//INSERT[dbo].[Mudurler]([mudurID], [kullaniciID], [ad], [soyad], [dogumtarihi], [tcno]) VALUES(7, 34, N'asd', N'asd', CAST(N'2023-10-16T18:54:03.727' AS DateTime), 123)
+//GO
+//INSERT[dbo].[Mudurler]([mudurID], [kullaniciID], [ad], [soyad], [dogumtarihi], [tcno]) VALUES(8, 35, N'Ahmet', N'Kaya', CAST(N'2023-10-16T19:28:16.780' AS DateTime), 0)
+//GO
+//INSERT[dbo].[Mudurler]([mudurID], [kullaniciID], [ad], [soyad], [dogumtarihi], [tcno]) VALUES(9, 40, N'asd', N'asd', CAST(N'2023-10-18T20:52:41.683' AS DateTime), 123)
+//GO
+//INSERT[dbo].[Mudurler]([mudurID], [kullaniciID], [ad], [soyad], [dogumtarihi], [tcno]) VALUES(10, 47, N'asdasd', N'asd', CAST(N'2023-10-18T21:42:01.917' AS DateTime), 123)
+//GO
 //SET IDENTITY_INSERT[dbo].[Mudurler] OFF
 //GO
 //SET IDENTITY_INSERT[dbo].[Ogrenciler] ON
-//GO
-//INSERT[dbo].[Ogrenciler]([ogrenciID], [kullaniciID], [sinifID], [veliID], [ad], [soyad], [ogrencino], [dogumtarihi], [tcno], [adres]) VALUES(2, 9, 2, 1, N'asdas', N'asda', 123, CAST(N'2023-10-05T21:50:53.000' AS DateTime), 1231, N'asdsa')
 //GO
 //INSERT[dbo].[Ogrenciler]([ogrenciID], [kullaniciID], [sinifID], [veliID], [ad], [soyad], [ogrencino], [dogumtarihi], [tcno], [adres]) VALUES(3, 14, 3, 2, N'asda', N'asda', 123, CAST(N'2023-10-13T20:48:37.350' AS DateTime), 1231, N'asda')
 //GO
@@ -503,7 +574,13 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //INSERT[dbo].[Ogrenciler]([ogrenciID], [kullaniciID], [sinifID], [veliID], [ad], [soyad], [ogrencino], [dogumtarihi], [tcno], [adres]) VALUES(5, 18, 3, 4, N'Hasan', N'asd', 123, CAST(N'2023-10-04T12:54:52.000' AS DateTime), 123, N'asda')
 //GO
-//INSERT[dbo].[Ogrenciler]([ogrenciID], [kullaniciID], [sinifID], [veliID], [ad], [soyad], [ogrencino], [dogumtarihi], [tcno], [adres]) VALUES(6, 22, 3, 5, N'asd', N'asd', 123, CAST(N'2023-10-15T13:05:34.493' AS DateTime), 123, N'asadas')
+//INSERT[dbo].[Ogrenciler]([ogrenciID], [kullaniciID], [sinifID], [veliID], [ad], [soyad], [ogrencino], [dogumtarihi], [tcno], [adres]) VALUES(8, 29, 4, 7, N'Furkan', N'Demir', 123, CAST(N'2023-10-15T16:42:09.423' AS DateTime), 123, N'asda')
+//GO
+//INSERT[dbo].[Ogrenciler]([ogrenciID], [kullaniciID], [sinifID], [veliID], [ad], [soyad], [ogrencino], [dogumtarihi], [tcno], [adres]) VALUES(10, 37, 3, 9, N'Hasan', N'Güler', 123, CAST(N'2023-10-16T19:30:01.907' AS DateTime), 123, N'aasdasd')
+//GO
+//INSERT[dbo].[Ogrenciler]([ogrenciID], [kullaniciID], [sinifID], [veliID], [ad], [soyad], [ogrencino], [dogumtarihi], [tcno], [adres]) VALUES(11, 38, 3, 10, N'Melih', N'asd', 123, CAST(N'2023-10-18T20:52:13.093' AS DateTime), 123, N'asd')
+//GO
+//INSERT[dbo].[Ogrenciler]([ogrenciID], [kullaniciID], [sinifID], [veliID], [ad], [soyad], [ogrencino], [dogumtarihi], [tcno], [adres]) VALUES(12, 45, 3, 11, N'asd', N'asd', 123, CAST(N'2023-10-18T21:41:34.437' AS DateTime), 123, N'asd')
 //GO
 //SET IDENTITY_INSERT[dbo].[Ogrenciler] OFF
 //GO
@@ -525,15 +602,39 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(9, 1)
 //GO
+//INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(10, 5)
+//GO
+//INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(11, 6)
+//GO
+//INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(12, 4)
+//GO
+//INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(13, 1)
+//GO
+//INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(14, 1)
+//GO
+//INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(15, 3)
+//GO
+//INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(16, 3)
+//GO
+//INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(17, 1)
+//GO
+//INSERT[dbo].[OgretmenBranslari]([OgretmenBransID], [dersID]) VALUES(18, 5)
+//GO
 //SET IDENTITY_INSERT[dbo].[OgretmenBranslari] OFF
 //GO
 //SET IDENTITY_INSERT[dbo].[Ogretmenler] ON
 //GO
-//INSERT[dbo].[Ogretmenler]([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID]) VALUES(1, 12, N'Hacı', N'GÖKSUNGUR', 159, CAST(N'2023-10-01T14:20:43.000' AS DateTime), 2)
+//INSERT[dbo].[Ogretmenler]([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID], [sinifID]) VALUES(1, 12, N'Hacı', N'GÖKSUNGUR', 159, CAST(N'2023-10-01T14:20:43.000' AS DateTime), 2, 1)
 //GO
-//INSERT[dbo].[Ogretmenler]([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID]) VALUES(2, 13, N'Selim', N'BİLGİÇ', 0, CAST(N'2023-10-12T20:20:31.000' AS DateTime), 3)
+//INSERT[dbo].[Ogretmenler]([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID], [sinifID]) VALUES(2, 13, N'Selim', N'BİLGİÇ', 0, CAST(N'2023-10-12T20:20:31.000' AS DateTime), 3, 2)
 //GO
-//INSERT[dbo].[Ogretmenler]([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID]) VALUES(8, 28, N'asd', N'asd', 555, CAST(N'2023-10-15T13:52:34.310' AS DateTime), 9)
+//INSERT[dbo].[Ogretmenler]([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID], [sinifID]) VALUES(9, 30, N'Bekir', N'Deneme', 1, CAST(N'2023-10-15T16:42:44.420' AS DateTime), 10, 3)
+//GO
+//INSERT[dbo].[Ogretmenler]([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID], [sinifID]) VALUES(13, 41, N'e', N'e', 123, CAST(N'2023-10-18T20:54:55.337' AS DateTime), 14, 4)
+//GO
+//INSERT[dbo].[Ogretmenler]([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID], [sinifID]) VALUES(14, 44, N'asdas', N'asd', 23, CAST(N'2023-10-18T21:26:49.057' AS DateTime), 17, 4)
+//GO
+//INSERT[dbo].[Ogretmenler]([ogretmenID], [kullaniciID], [ad], [soyad], [tcno], [dogumtarihi], [OgretmenBransID], [sinifID]) VALUES(15, 46, N'asd', N'asd', 123, CAST(N'2023-10-18T21:41:50.583' AS DateTime), 18, 4)
 //GO
 //SET IDENTITY_INSERT[dbo].[Ogretmenler] OFF
 //GO
@@ -563,6 +664,16 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //INSERT[dbo].[Veliler]([veliID], [ad], [soyad], [telefon]) VALUES(6, N'asda', N'asd', N'123')
 //GO
+//INSERT[dbo].[Veliler]([veliID], [ad], [soyad], [telefon]) VALUES(7, N'asd', N'asd', N'123')
+//GO
+//INSERT[dbo].[Veliler]([veliID], [ad], [soyad], [telefon]) VALUES(8, N'asda', N'asd', N'123')
+//GO
+//INSERT[dbo].[Veliler]([veliID], [ad], [soyad], [telefon]) VALUES(9, N'Ahmet', N'Mehmet', N'123')
+//GO
+//INSERT[dbo].[Veliler]([veliID], [ad], [soyad], [telefon]) VALUES(10, N'asd', N'asd', N'123')
+//GO
+//INSERT[dbo].[Veliler]([veliID], [ad], [soyad], [telefon]) VALUES(11, N'asd', N'asd', N'123')
+//GO
 //SET IDENTITY_INSERT[dbo].[Veliler] OFF
 //GO
 //IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Kullanici__tipID__398D8EEE]') AND parent_object_id = OBJECT_ID(N'[dbo].[Kullanicilar]'))
@@ -578,6 +689,27 @@ namespace OkulOtomasyonu.DbScript
 //GO
 //IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Müdürler__kullan__4BAC3F29]') AND parent_object_id = OBJECT_ID(N'[dbo].[Mudurler]'))
 //ALTER TABLE[dbo].[Mudurler] CHECK CONSTRAINT[FK__Müdürler__kullan__4BAC3F29]
+//GO
+//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Notlar_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[Notlar]'))
+//ALTER TABLE[dbo].[Notlar]  WITH CHECK ADD  CONSTRAINT[FK_Notlar_Dersler] FOREIGN KEY([DersID])
+//REFERENCES[dbo].[Dersler]([dersID])
+//GO
+//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Notlar_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[Notlar]'))
+//ALTER TABLE[dbo].[Notlar] CHECK CONSTRAINT[FK_Notlar_Dersler]
+//GO
+//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Notlar_Ogrenciler]') AND parent_object_id = OBJECT_ID(N'[dbo].[Notlar]'))
+//ALTER TABLE[dbo].[Notlar]  WITH CHECK ADD  CONSTRAINT[FK_Notlar_Ogrenciler] FOREIGN KEY([OgrenciID])
+//REFERENCES[dbo].[Ogrenciler]([ogrenciID])
+//GO
+//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Notlar_Ogrenciler]') AND parent_object_id = OBJECT_ID(N'[dbo].[Notlar]'))
+//ALTER TABLE[dbo].[Notlar] CHECK CONSTRAINT[FK_Notlar_Ogrenciler]
+//GO
+//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Notlar_Ogretmenler]') AND parent_object_id = OBJECT_ID(N'[dbo].[Notlar]'))
+//ALTER TABLE[dbo].[Notlar]  WITH CHECK ADD  CONSTRAINT[FK_Notlar_Ogretmenler] FOREIGN KEY([OgretmenID])
+//REFERENCES[dbo].[Ogretmenler]([ogretmenID])
+//GO
+//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Notlar_Ogretmenler]') AND parent_object_id = OBJECT_ID(N'[dbo].[Notlar]'))
+//ALTER TABLE[dbo].[Notlar] CHECK CONSTRAINT[FK_Notlar_Ogretmenler]
 //GO
 //IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_ÖğrenciDersleri_Dersler]') AND parent_object_id = OBJECT_ID(N'[dbo].[OgrenciDersleri]'))
 //ALTER TABLE[dbo].[OgrenciDersleri]  WITH CHECK ADD  CONSTRAINT[FK_ÖğrenciDersleri_Dersler] FOREIGN KEY([dersID])
@@ -635,6 +767,13 @@ namespace OkulOtomasyonu.DbScript
 //IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Ogretmenler_OgretmenBranslari]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
 //ALTER TABLE[dbo].[Ogretmenler] CHECK CONSTRAINT[FK_Ogretmenler_OgretmenBranslari]
 //GO
+//IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Ogretmenler_Siniflar]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
+//ALTER TABLE[dbo].[Ogretmenler]  WITH CHECK ADD  CONSTRAINT[FK_Ogretmenler_Siniflar] FOREIGN KEY([sinifID])
+//REFERENCES[dbo].[Siniflar]([sinifID])
+//GO
+//IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Ogretmenler_Siniflar]') AND parent_object_id = OBJECT_ID(N'[dbo].[Ogretmenler]'))
+//ALTER TABLE[dbo].[Ogretmenler] CHECK CONSTRAINT[FK_Ogretmenler_Siniflar]
+//GO
 //IF NOT EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__Sınavlar__dersID__403A8C7D]') AND parent_object_id = OBJECT_ID(N'[dbo].[Sinavlar]'))
 //ALTER TABLE[dbo].[Sinavlar]  WITH CHECK ADD  CONSTRAINT[FK__Sınavlar__dersID__403A8C7D] FOREIGN KEY([dersID])
 //REFERENCES[dbo].[Dersler]([dersID])
@@ -656,6 +795,7 @@ namespace OkulOtomasyonu.DbScript
 //IF  EXISTS(SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK__SınavSonu__sinav__4F7CD00D]') AND parent_object_id = OBJECT_ID(N'[dbo].[SinavSonuclari]'))
 //ALTER TABLE[dbo].[SinavSonuclari] CHECK CONSTRAINT[FK__SınavSonu__sinav__4F7CD00D]
 //GO
+
 
 
 
