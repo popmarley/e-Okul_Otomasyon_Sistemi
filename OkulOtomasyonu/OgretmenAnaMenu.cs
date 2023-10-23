@@ -33,6 +33,7 @@ namespace OkulOtomasyonu
 			this.dersAdi = dersAdi;
 			GirisYapanOgretmenID = ogretmenID;
 			GirisYapanOgretmeninSinifID = sinifID;
+
 		}
 
 
@@ -58,73 +59,114 @@ namespace OkulOtomasyonu
 
 			lblGirisYapanOgretmenKullaniciAdi.Text = ogretmenAdiVeSoyadi;
 			lblOgretmenBrans.Text = dersAdi;
+
+			FillOgrenciComboBox();
+			FillNotTuruComboBox();
 		}
 
 		private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
 		{
 			using (var context = new MyDbContext())
 			{
-				
-					if (e.Node.Name == "ogrenciListesi")
-					{
-						dgOgrenciListele.Visible = true;
-						dgOgrenciVeliListele.Visible = false;
 
-						// Giriş yapan öğretmenin sınıfındaki öğrencileri listele
-						var ogretmeninOgrencileri = context.Ogrenciler
-															 .Include(o => o.Veli)  // Veli bilgisi için
-											   .Include(o => o.Sinif) // Sınıf bilgisi için
-											   .Where(o => o.SinifID == this.GirisYapanOgretmeninSinifID)
-											   .Select(o => new
-											   {
-												   Ad = o.Ad,
-												   Soyad = o.Soyad,
-												   Adres = o.Adres,
-												   OgrenciNo = o.OgrenciNo,
-												   TCNo = o.TCNo,
-												   DogumTarihi = o.DogumTarihi,
-												   Sinif = o.Sinif.SinifAdi,
-												   VeliAd = o.Veli.Ad,
-												   VeliSoyad = o.Veli.Soyad,
-												   VeliTelefon = o.Veli.Telefon
-											   })
-											   .ToList();
+				if (e.Node.Name == "ogrenciListesi")
+				{
+					dgOgrenciListele.Visible = true;
+					dgOgrenciVeliListele.Visible = false;
+					ogrenciNotDuzenle.Visible = false;
+					// Giriş yapan öğretmenin sınıfındaki öğrencileri listele
+					var ogretmeninOgrencileri = context.Ogrenciler
+														 .Include(o => o.Veli)  // Veli bilgisi için
+										   .Include(o => o.Sinif) // Sınıf bilgisi için
+										   .Where(o => o.SinifID == this.GirisYapanOgretmeninSinifID)
+										   .Select(o => new
+										   {
+											   Ad = o.Ad,
+											   Soyad = o.Soyad,
+											   Adres = o.Adres,
+											   OgrenciNo = o.OgrenciNo,
+											   TCNo = o.TCNo,
+											   DogumTarihi = o.DogumTarihi,
+											   Sinif = o.Sinif.SinifAdi,
+											   VeliAd = o.Veli.Ad,
+											   VeliSoyad = o.Veli.Soyad,
+											   VeliTelefon = o.Veli.Telefon
+										   })
+										   .ToList();
 
-						dgOgrenciListele.DataSource = ogretmeninOgrencileri; // DataGridView'in veri kaynağını belirledik
-					}
-					else if (e.Node.Name == "ogrenciVeliBilgi")
-					{
-						dgOgrenciListele.Visible = false;
-						dgOgrenciVeliListele.Visible = true;
+					dgOgrenciListele.DataSource = ogretmeninOgrencileri; // DataGridView'in veri kaynağını belirledik
+				}
+				else if (e.Node.Name == "ogrenciVeliBilgi")
+				{
+					dgOgrenciListele.Visible = false;
+					dgOgrenciVeliListele.Visible = true;
+					ogrenciNotDuzenle.Visible = false;
 
-						// Giriş yapan öğretmenin sınıfındaki öğrencileri listele
-						var ogretmeninOgrencileri = context.Ogrenciler
-															 .Include(o => o.Veli)  // Veli bilgisi için
-											   .Include(o => o.Sinif) // Sınıf bilgisi için
-											   .Where(o => o.SinifID == this.GirisYapanOgretmeninSinifID)
-											   .Select(o => new
-											   {
-												   Ad = o.Ad,
-												   Soyad = o.Soyad,
-												   Sinif = o.Sinif.SinifAdi,
-												   VeliAd = o.Veli.Ad,
-												   VeliSoyad = o.Veli.Soyad,
-												   VeliTelefon = o.Veli.Telefon
-											   })
-											   .ToList();
+					// Giriş yapan öğretmenin sınıfındaki öğrencileri listele
+					var ogretmeninOgrencileri = context.Ogrenciler
+														 .Include(o => o.Veli)  // Veli bilgisi için
+										   .Include(o => o.Sinif) // Sınıf bilgisi için
+										   .Where(o => o.SinifID == this.GirisYapanOgretmeninSinifID)
+										   .Select(o => new
+										   {
+											   Ad = o.Ad,
+											   Soyad = o.Soyad,
+											   Sinif = o.Sinif.SinifAdi,
+											   VeliAd = o.Veli.Ad,
+											   VeliSoyad = o.Veli.Soyad,
+											   VeliTelefon = o.Veli.Telefon
+										   })
+										   .ToList();
 
-						dgOgrenciVeliListele.DataSource = ogretmeninOgrencileri; // DataGridView'in veri kaynağını belirledik
-					}
-				
+					dgOgrenciVeliListele.DataSource = ogretmeninOgrencileri; // DataGridView'in veri kaynağını belirledik
+				}
+
+
+				else if (e.Node.Name == "ogrenciNotDuzenle")
+				{
+					dgOgrenciListele.Visible = false;
+					dgOgrenciVeliListele.Visible = false;
+					ogrenciNotDuzenle.Visible = true;
+				}
+
+
+
+
 			}
 		}
 
+		private void btnOgrenciNotKaydet_Click(object sender, EventArgs e)
+		{
+			
+		}
 
+		private void FillOgrenciComboBox()
+		{
+			using (var context = new MyDbContext())
+			{
+				// Giriş yapan öğretmenin sınıfındaki öğrencilerin isim ve soyadını getir
+				var ogrenciIsimleri = context.Ogrenciler
+							.Where(o => o.SinifID == this.GirisYapanOgretmeninSinifID)
+							.Select(o => o.Ad + " " + o.Soyad)
+							.ToList();
 
+				// Bu isimleri combobox'a ekleyin
+				cNotOgrenciAdi.Items.Clear();
+				foreach (var isim in ogrenciIsimleri)
+				{
+					cNotOgrenciAdi.Items.Add(isim);
+				}
+			}
+		}
 
-
-
-
-
+		private void FillNotTuruComboBox()
+		{
+			cNotTuru.Items.Clear();
+			cNotTuru.Items.Add("1. Sınav");
+			cNotTuru.Items.Add("2. Sınav");
+			cNotTuru.Items.Add("Sözlü");
+			cNotTuru.Items.Add("Performans");
+			
+		}
 	}
 }
