@@ -150,7 +150,7 @@ namespace OkulOtomasyonu
 							.Select(o => o.Ad + " " + o.Soyad)
 							.ToList();
 
-				// Bu isimleri combobox'a ekleyin
+				
 				cNotOgrenciAdi.Items.Clear();
 				foreach (var isim in ogrenciIsimleri)
 				{
