@@ -35,7 +35,7 @@ namespace OkulOtomasyonu
 			GirisYapanOgretmeninSinifID = sinifID;
 
 		}
-
+		//deneme
 
 		private void btn_Cikis_Click(object sender, EventArgs e)
 		{
